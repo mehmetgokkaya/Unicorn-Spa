@@ -194,11 +194,54 @@ img[usemap] {
     opacity: 0;
   }
 }
+		  .mainmenubtn {
+background-color: #93525d;
+color: white;
+border: none;
+cursor: pointer;
+margin-top: 20px;
+border: 3px solid;
+margin-left: 20px;
+}
+.mainmenubtn:hover {
+  background-color: #93525d;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-child {
+ display: none;
+background-color: #985f67;
+min-width: 100px;
+margin-left: 20px;
+}
+.dropdown-child a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border: 2px solid #9dc8df;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+}
+.dropdown-child a:hover  {
+  border: 2px solid #7b151c;
+}
 	  </style>
 		  </head>
   <body style="overflow-x:hidden" id="top">
-	  <english><a href="http://www.unicornspawellness.com/index.html"><div style="position:absolute; top:15px; left:20px; z-index:999;border: 2px solid #95656a;border-radius: 9px;background: wheat;height: 38px;width: 60px;margin: auto;" id="english"><center style="padding: 5px; color:black;">TR<img src="images/tr24.png"></center></div></a></english>
-    <div class="hero-wrap js-fullheight" style="  background-image: url(https://www.unicornspawellness.com/images/back1.jpg);background-attachment: fixed;" data-stellar-background-ratio="0.5">
+<div style="position:absolute;z-index: 99;">
+  <div class="dropdown">
+  <button class="mainmenubtn">English - <img src="images/english.png" /></button>
+  <div class="dropdown-child">
+    <a href="/en/index.html">English - <img src="/en/images/tr24.png" /></a>
+    <a href="/ru/index.html">русский - <img src="images/ru.png" /></a>
+    <a href="/de/index.html">Deutsch - <img src="images/de.png" /></a>
+  </div>
+</div>
+</div>    <div class="hero-wrap js-fullheight" style="  background-image: url(https://www.unicornspawellness.com/images/back1.jpg);background-attachment: fixed;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
