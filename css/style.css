@@ -7606,7 +7606,8 @@ h1, h2, h3, h4, h5,
   .btn.btn-primary {
     background: #fa5bdd;
     border: 1px solid #fa5bdd;
-    color: #fff; }
+    color: #fff;
+   border-radius: 20px;}
     .btn.btn-primary:hover {
       border: 1px solid #fa5bdd;
       background: transparent !important;
