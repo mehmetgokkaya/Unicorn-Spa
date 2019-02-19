@@ -37,6 +37,29 @@
     <link rel="stylesheet" href="https://www.unicornspawellness.com/css/flaticon.css">
     <link rel="stylesheet" href="https://www.unicornspawellness.com/css/icomoon.css">
     <link rel="stylesheet" href="https://www.unicornspawellness.com/css/style.css">
+	  	<script type="text/javascript">
+    window.onload=function(){
+var myform = $("form#myform");
+myform.submit(function(event){
+	event.preventDefault();
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "test";
+  myform.find("mailim").text("Gönderiliyor...");
+  emailjs.sendForm(service_id,template_id,myform[0])
+  	.then(function(){ 
+    	alert("Mesajınız Gönderildi!");
+       myform.find("mailim").text("Gönder");
+    }, function(err) {
+       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+       myform.find("mailim").text("Gönder");
+    });
+  return false;
+});
+
+    }
+
+</script>
 </style>
 	  <style type='text/css'>
 		  .logoIcon_2z {
@@ -1245,20 +1268,19 @@ td img {padding:8px 0}
 	    		</div>
 	    		<div class="col-md-6 appointment pl-md-5 ftco-animate">
 	    			<h3 class="mb-3">Contact Form</h3>
-	    			<form action="https://formspree.io/mehmet@mehmetgokkaya.com" method="POST"  class="appointment-form">
-					<input name='_language' type='hidden' value='en'/>
+	    			<form id="myform" method="post" class="appointment-form">
 	            <div class="row form-group d-flex">
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="name" class="form-control" placeholder="Name">
+	            		<input type="text" required='' name="isim" class="form-control" placeholder="Name">
 	            	</div>
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="Surname" class="form-control" placeholder="Surname">
+	            		<input type="text" required='' name="soyisim" class="form-control" placeholder="Surname">
 	            	</div>
 					<div class="col-md-6">
 	            		<input type="text" required='' name='otel' class="form-control" placeholder="Your Otel">
 	            	</div>
 			    <div class="col-md-6">
-	            		<input type="email" required='' name='mail' class="form-control" placeholder="E-mail">
+	            		<input type="email" required='' name='email' class="form-control" placeholder="E-mail">
 	            	</div>
 	            </div>
 	            <div class="row form-group d-flex">
@@ -1269,16 +1291,15 @@ td img {padding:8px 0}
 	            		</div>
 	            	</div>
 	            	<div class="col-md-6">
-	            		<input type="phone" required='' name='Telefon' class="form-control" placeholder="Phone">
+	            		<input type="phone" required='' name='telefon' class="form-control" placeholder="Phone">
 	            	</div>
 	            </div>
 	            <div class="form-group">
-	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="Your Message"></textarea>
+	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="Messages..."></textarea>
 	            </div>
 	            <div class="form-group">
-	              <input type="submit" style="border-color: black;color: black;" value="Submit" class="btn btn-white btn-outline-white py-3 px-4">
+	              <mailim class="btn btn-white btn-outline-white py-3 px-4"  style="border-color: black;color: black;position: initial;margin: 10px 0px;" ><input type="submit" value="Sand" style="cursor: pointer;background: none;border: none;"><mailim>
 	            </div>
-					<input name='_next' type='hidden' value='http://www.unicornspawellness.com/en/tesekkuren.html'></input>
 	          </form>
 <a href="https://www.picktime.com/10b827a9-b79a-4916-9790-b23ca12f380a" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}'>
     <img border="none"  src="https://www.unicornspawellness.com/images/book-button.png" alt="Book an appointment with Unicorn Spa Wellness"/>
@@ -1328,22 +1349,22 @@ td img {padding:8px 0}
 	  </div>
     </footer>
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-  <script src="https://www.unicornspawellness.com/js/jquery.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/popper.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/bootstrap.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.easing.1.3.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.waypoints.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.stellar.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/owl.carousel.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.magnific-popup.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/aos.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.animateNumber.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/bootstrap-datepicker.js"></script>
-  <script src="https://www.unicornspawellness.com/js/jquery.timepicker.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/scrollax.min.js"></script>
-  <script src="https://www.unicornspawellness.com/js/main.js"></script>
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
     <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>
 (function(){ var widget_id = '2ckuvhhFjY';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
@@ -1458,7 +1479,7 @@ document.body.addEventListener('mouseup', startScrolling, false);
 document.body.addEventListener('touchstart', startDragging, false);
 document.body.addEventListener('touchend', startScrolling, false);
 </script>
-<script src="http://www.unicornspawellness.com/js/Maps.min.js"></script>
+<script src="js/Maps.min.js"></script>
 <script>
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
@@ -1467,6 +1488,12 @@ $(document).ready(function(e) {
 
 	});
 });
+</script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_iiaLpjOt3AVeUja8wnA3U");
+   })();
 </script>
 
   </body>
