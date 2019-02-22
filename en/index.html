@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 	  <link href='http://www.unicornspawellness.com/logo192.png' rel='icon' sizes='192x192'/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Hayatın yoğun ve yorucu akışından uzaklaşarak dinlenme fırsatı bulacağınız bu yolculuk, uzman terapistlerimiz tarafından uygulanan özel bakım ve terapilerle kişinin bedensel ve zihinsel evrenini keşfederek yenilenmesini sağlıyor.">
+    <meta name="description" content="This journey, where you will have the opportunity to get away from the intense and exhausting flow of life, provides special care and therapies applied by our expert therapists to revive and revitalize the physical and mental universe of the person.">
 	<meta name="keywords" content="spa, wellness, unicorn spa, unicorn wellness, spa hamam rezervasyon, Rezervasyon yap, hamam, fethiye otelleri, fethiye spa hamam, Türk Hamamı, Turkish Hamam, Masaj, Terapi">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -16,10 +16,10 @@
 	<meta property="og:type" content="Website">  
 	<meta property="og:title" content="Unicorn Spa Wellness">  
 	<meta property="og:image" content="http://www.unicornspawellness.com/logo192.png"/>  
-	<meta property="og:description" content="Hayatın yoğun ve yorucu akışından uzaklaşarak dinlenme fırsatı bulacağınız bu yolculuk, uzman terapistlerimiz tarafından uygulanan özel bakım ve terapilerle kişinin bedensel ve zihinsel evrenini keşfederek yenilenmesini sağlıyor.">  
+	<meta property="og:description" content="This journey, where you will have the opportunity to get away from the intense and exhausting flow of life, provides special care and therapies applied by our expert therapists to revive and revitalize the physical and mental universe of the person.">  
 	<meta property="og:site_name" content="Unicorn Spa Wellness"> 
 	<meta itemprop="name" content="Unicorn Spa Wellness">  
-	<meta itemprop="description" content="Hayatın yoğun ve yorucu akışından uzaklaşarak dinlenme fırsatı bulacağınız bu yolculuk, uzman terapistlerimiz tarafından uygulanan özel bakım ve terapilerle kişinin bedensel ve zihinsel evrenini keşfederek yenilenmesini sağlıyor.">  
+	<meta itemprop="description" content="This journey, where you will have the opportunity to get away from the intense and exhausting flow of life, provides special care and therapies applied by our expert therapists to revive and revitalize the physical and mental universe of the person.">  
 	<meta itemprop="image" content="http://www.unicornspawellness.com/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -48,11 +48,11 @@ myform.submit(function(event){
   myform.find("mailim").text("Gönderiliyor...");
   emailjs.sendForm(service_id,template_id,myform[0])
   	.then(function(){ 
-    	alert("Mesajınız Gönderildi!");
-       myform.find("mailim").text("Gönder");
+    	alert("Your message has been sent!");
+       myform.find("mailim").text("Send");
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("mailim").text("Gönder");
+       myform.find("mailim").text("Send");
     });
   return false;
 });
@@ -69,7 +69,7 @@ myform.submit(function(event){
 	visibility: hidden;
 }
 .animated-modal {
-  border-radius: 4px;
+  border-radius: 20px;
   overflow: hidden;
   
   transform: translateY(-50px);
@@ -87,6 +87,9 @@ myform.submit(function(event){
 .fancybox-slide--current .animated-modal p {
   transform: translateY(0);
   opacity: 1;
+}
+.fancybox-close-small {
+    visibility: hidden;
 }
 .fancybox-slide--current .animated-modal h2 {
   transition-delay: .1s;
@@ -110,10 +113,10 @@ myform.submit(function(event){
     margin: -12px -41px;
     border-radius: 20px;
 }
-#our-packages .btn {
+#paketler .btn {
     position: absolute;
     bottom: 0;
-    margin: 10px -55px;
+    margin: 10px -60px;
     border-radius: 20px;
 }
 .slider {
@@ -133,7 +136,7 @@ img[usemap] {
 	}
 	.pricing-entry {
     background-color: white;
-	height: 467px;
+	height: 100%;
 }
 .pricing-entry h3 {
     font-size: 18px;
@@ -156,8 +159,12 @@ img[usemap] {
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
  .fancybox-content {
-    max-width: 55%;
+    width: 50%;
+	
   }
+  #ourservices .fancybox-content {
+    width: 30%;
+}
 }
 /* ---------------------------------------------- /*
  * Mouse animate icon
@@ -271,23 +278,24 @@ span { color:black}
   <body style="overflow-x:hidden" id="top">
 <div style="position:absolute;z-index: 99;">
   <div class="dropdown">
-  <button class="mainmenubtn">English - <img src="images/english.png" /></button>
+  <button class="mainmenubtn">Türkçe - <img src="en/images/tr24.png" /></button>
   <div class="dropdown-child">
-    <a href="/index.html">Türkçe - <img src="images/tr24.png" /></a>
-    <a href="https://translate.google.com.tr/translate?sl=en&tl=ru&u=http%3A%2F%2Fspa.mehmetgokkaya.com%2Fen%2Findex.html">русский - <img src="images/ru.png" /></a>
-    <a href="https://translate.google.com.tr/translate?sl=en&tl=de&u=http%3A%2F%2Fspa.mehmetgokkaya.com%2Fen%2Findex.html">Deutsch - <img src="images/de.png" /></a>
+    <a href="/en/index.html">English - <img src="images/english.png" /></a>
+    <a href="https://translate.google.com.tr/translate?sl=en&tl=ru&u=http%3A%2F%2Fwww.unicornspawellness.com%2Fen%2Findex.html">русский - <img src="images/ru.png" /></a>
+    <a href="https://translate.google.com.tr/translate?sl=en&tl=de&u=http%3A%2F%2Fwww.unicornspawellness.com%2Fen%2Findex.html">Deutsch - <img src="images/de.png" /></a>
   </div>
 </div>
-</div>    <div class="hero-wrap js-fullheight" style="  background-image: url(https://www.unicornspawellness.com/images/back1.jpg);background-attachment: fixed;" data-stellar-background-ratio="0.5">
+</div>
+	  <div class="hero-wrap js-fullheight" style="  background-image: url(images/back1.jpg);background-attachment: fixed;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
           	<div class="icon">
-          		<a href="index.html" class="logo"><img src="https://www.unicornspawellness.com/logo.png" style="width: 75%;"/></a>
+          		<a href="index.html" class="logo"><img src="logo.png" style="width: 75%;"/></a>
           	</div>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><resim class="resim"><img src="https://www.unicornspawellness.com/images/logoalt.png" style="height: 100px;"></resim></h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#contact" style="color: #965a61;" class="btn btn-white btn-outline-white px-4 py-3">Make Reservation</a></p>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><resim class="resim"><img src="images/logoalt.png" style="height: 100px;"></resim></h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#iletisim" style="color: #965a61;" class="btn btn-white btn-outline-white px-4 py-3">Make Reservation</a></p>
 					<center><div class="mouse-icon"><div class="wheel"></div></div></center>
           </div>
         </div>
@@ -296,22 +304,20 @@ span { color:black}
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">UNICORN SPA & WELLNESS</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span>Menu
-	      </button>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span>Menu</button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="#top" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
-	          <li class="nav-item"><a href="#ourservice" class="nav-link">Our services</a></li>
-	          <li class="nav-item"><a href="#our-packages" class="nav-link">Our Packages</a></li>
-			  <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="#top" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="#hakkimizda" class="nav-link">About us</a></li>
+	          <li class="nav-item"><a href="#ourservices" class="nav-link">Our Services</a></li>
+	          <li class="nav-item"><a href="#paketler" class="nav-link">Our Packages</a></li>
+			  <li class="nav-item"><a href="#iletisim" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-		<section id="about-us" class="ftco-section ftco-discount img" style="background-image: url(https://www.unicornspawellness.com/images/bg_2.jpg);background-attachment: fixed; padding: 11em 0;">
+		<section id="hakkimizda" class="ftco-section ftco-discount img" style="background-image: url(images/bg_2.jpg);background-attachment: fixed; padding: 11em 0;">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row justify-content-end">
@@ -324,44 +330,44 @@ span { color:black}
 				</div>
 			</div>
 			<div style="display: none;" id="animatedModal71" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<a href="#contact" style="color: black;font-size: 40px;">ABOUT US</a>
+      					<a href="#iletisim" style="color: black;font-size: 40px;">About us</a>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/logo.png" style="width: 50%;-webkit-filter: drop-shadow(1px 1px 5px #232323);filter: drop-shadow(1px 1px 5px #232323);">
+						<img src="logo.png" style="width: 50%;-webkit-filter: drop-shadow(1px 1px 5px #232323);filter: drop-shadow(1px 1px 5px #232323);">
 	        				<p>Unicorn Spa & Wellness is always bringing new ones to you. Get ready to pamper yourself with traditional and world-class spa services wich Unicorn Spa & Wellness. Let us have a spa journey with our expert therapists. You will find the opportunity to get away from the tiring and intense flow of life, to have the opportunity of physical and mental regeneration and relaxation, enriching the peace you live with our special rituals without sacrificing the understanding of ethical spa. In order to meet the expectations of your five senses, we have adopted the principle of providing maximum quality and satisfaction.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 		</section>
-<section id="ourservice"/>
-<center><h3 style="padding-top: 65px; font-weight: bold;"">OUR SERVICES</h3></center>
+<section id="ourservices"/>
+<center><h3 style="padding-top: 65px; font-weight: bold;">Our Services</h3></center>
     <section class="ftco-section">
     	<div class="container">
     		<div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" style="margin: auto;" width="100" height="100" src="https://www.unicornspawellness.com/images/damlaicon.png"/></span></div>
+              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" style="margin: auto;" width="100" height="100" src="images/damlaicon.png"/></span></div>
               <div class="media-body">
                 <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" >Turkish Hammam</h3>
-                <p>You will spend a pleasant time pampering yourself with our modernized and practical treatments of Turkish bath. You can find the health and energy provided by the water in our baths with our natural products.</p>
+                <p>You will spend a pleasant time with our modernized and practical treatments of Turkish bath. You can find the health and energy provided by the water in our baths with our natural products.</p>
 				</p>
         <p class="mb-0">
           <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
-          <center><h2><b style="color: black;">Our Hammam Care</b></h2></center>
+          <center><h3><b style="color: black;">HAMMAM THERAPIES</b></h3></center>
 		  <!-- hamam bakımları anlatım başlangıç -->
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div1>
-We invite you to renew with the healing energy that water gives to your body. In addition to physical and mental relaxation, relax with the therapies you choose, relax away from stress and fatigue and enjoy your vacation.
+We invite you to renew with the healing energy that water gives to your body. In addition to physical and mental relaxation, relax with the therapies you choose, relax away from stress and fatigue and enjoy your vacation. 
 <table border="0" cellpadding="3" cellspacing="0">
 <tbody>
 <tr>
 <td><img border="0" src="https://2.bp.blogspot.com/-7DkKR1GPgt8/XGJneH5NvdI/AAAAAAAAH68/YlwHbs2_t9U-URPq1jkiXfULpkpsMTGnACEwYBhgL/s200/peeling.jpg" /></td>
-<td><div style="text-align: center;">
+<td><div style="text-align: left;">
 <h3>
 <span style="color: #444444; font-size: large;"><b style="color: black;">PEELING</b></span></h3>
 </div>
@@ -375,7 +381,7 @@ Our service as a classical Turkish bath; we start a peeling with natural silk gl
 <tbody>
 <tr>
 <td><img border="0" src="https://4.bp.blogspot.com/-66-wEUWgvVM/XGJoUpfRomI/AAAAAAAAH7E/HfO-KLa3d6QfdCslkPeSjEzO_oFJSmV2gCEwYBhgL/s200/peelingfoam.jpg" /></td>
-<td><h3 style="text-align: center;"><span style="color: #444444;font-size: large;"><b style="color: black;">PEELING AND FOAM MASSAGE</b></span></h3>
+<td><h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">PEELING AND FOAM MASSAGE</b></span></h3>
 Which is after the peeling with  natural silk gloves, body massage with natural soap bubbles.
 </td>
 </tr>
@@ -389,7 +395,7 @@ Which is after the peeling with  natural silk gloves, body massage with natural 
 <td>
 <img border="0" src="https://4.bp.blogspot.com/-QGWiBuPqC5k/XGJpn_k2mBI/AAAAAAAAH7M/9PCnYjn-PvkjbWpnajxWvjhzJ0qW2KhaQCLcBGAs/s200/mud-therapy-pic.jpg" /></td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444; font-size: large;"><b style="color: black;"> MUD / CLAY THERAPY </b></span></h3>
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">MUD / CLAY THERAPY</b></span></h3>
 The treatment which  regeneration of  toxins in the body after healing mud / clay body wrapping
 </td>
 </tr>
@@ -402,7 +408,7 @@ The treatment which  regeneration of  toxins in the body after healing mud / cla
 <tr>
 <td>
 <img border="0" src="https://4.bp.blogspot.com/-XxHGCIKR-K4/XGJpzLKr1XI/AAAAAAAAH7Q/9E_Xa1x9ZigRIcorxTbKjqiQIVWGEpcVACLcBGAs/s200/bal.jpg" /></td>
-<td><h3 style="text-align: center;">
+<td><h3 style="text-align: left;">
 <span style="color: #444444; font-size: large;"><b style="color: black;">HONEY THERAPY</b></span></h3>
 Our honey care, which is a very rich and natural mineral source in terms of health, is a very effective treatment in insomnia and muscle aches as well as physical and mental fatigue. Honey therapy is a foam washing process after massage with honey in our bath area.
 </td>
@@ -415,9 +421,9 @@ Our honey care, which is a very rich and natural mineral source in terms of heal
 <tbody>
 <tr>
 <td>
-<img style="height: 178px;" border="0" src="https://www.unicornspawellness.com/images/coffee.jpg" /></td>
+<img style="height: 178px;" border="0" src="images/coffee.jpg" /></td>
 <td>
-<h3 style="text-align: center;">
+<h3 style="text-align: left;">
 <span style="color: #444444; font-size: large;"><b style="color: black;">COFFEE PEELING</b></span></h3>
 The skin surface is cleaned deeply by removing the dead cells from the coffee peeling process. Caffeine oils is fat burning, anti-oxidants increase the body resistance and accelerates the metabolism helps regulate blood circulation. Foam washing ends your care.
 </td>
@@ -430,9 +436,9 @@ The skin surface is cleaned deeply by removing the dead cells from the coffee pe
 <tbody>
 <tr>
 <td>
-<img border="0" src="https://www.unicornspawellness.com/images/deniz-tuzu-peeling.jpg" /></td>
+<img border="0" src="images/deniz-tuzu-peeling.jpg" /></td>
 <td>
-<h3 style="text-align: center;">
+<h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">SEA SALT PEELING</b></span></h3>
 Natural sea salt peeling is rich in sea minerals and has the ability to revitalize your skin.
 </td>
@@ -447,7 +453,7 @@ Natural sea salt peeling is rich in sea minerals and has the ability to revitali
 <td>
 <img border="0" src="https://4.bp.blogspot.com/-rIjTJHUWw_E/XGJrWDYstzI/AAAAAAAAH7s/LyI305eHO38h1v6ndRf2JulYzBERuyLvQCLcBGAs/s200/yosun_maskes.jpg" /></td>
 <td>
-<h3 style="text-align: center;">
+<h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">SEAWED MASK</b></span></h3>
 Natural seawed treatment in bath therapies; anti age, anti oxidant and dehydrolized feature, after the maintenance feature of moisturizing your skin with the ability to increase the cell renewal. The bath is completed by washing with the foam  after special peeling and seaweed mask. We bring you a relaxing area and experience with special seawed mask in your face.
 </td>
@@ -460,9 +466,9 @@ Natural seawed treatment in bath therapies; anti age, anti oxidant and dehydroli
 <tbody>
 <tr>
 <td>
-<img style="height: 200px;" border="0" src="https://www.unicornspawellness.com/images/cikolata.jpg" /></td>
+<img style="height: 200px;" border="0" src="images/cikolata.jpg" /></td>
 <td>
-<h3 style="text-align: center;">
+<h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">CHOCOLATE MASK</b></span></h3>
 The anti-oxidant property of chocolate reduces the wrinkles and increases the skin elasticity and protects the sun from harmful rays. With its deep moisturizing feature, it revitalizes your pale skin and gives it a bright and healthy appearance with cocoa extracts. Chocolate, which is the most natural hormone of happiness, is a combination of health and pampering</td>
 </tr>
@@ -470,7 +476,7 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
 </table>
 </div8>
 </div>
-<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 <!-- hamam bakımları anlatım son -->
         </div>
               </div>
@@ -478,17 +484,16 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" style="margin: auto;" width="100" height="100" src="https://www.unicornspawellness.com/images/damlaicon.png"/></span></div>
+              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" style="margin: auto;" width="100" height="100" src="images/damlaicon.png"/></span></div>
               <div class="media-body">
-                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" >MASSAGES</h3>
-                <p>Indulge your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
+                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" >Massages</h3>
+                <p>Renew your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
 				</p>
         <p class="mb-0">
           <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
-          <center><h2><b style="color: black;">MASSAGES</b></h2></center>
-		  Tüm dünyada spa terapilerinin önde gelen bakımları olan masajlarımız ile beş duyunuzu şımartıyoruz. Bedensel ve zihinsel dinlenme için seçeceğiniz bakımlarımız ile size keyfini süreceğiniz bir spa deneyimi yaşatıyoruz.
+          <center><h3><b style="color: black;">MASSAGES</b></h3></center>
 <div>
 <!--mesaj terapileri anlatım başlangıç -->
 
@@ -498,9 +503,9 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://4.bp.blogspot.com/-Dq5HBRWGoAw/XGJ55tzaT3I/AAAAAAAAH8I/G9vWfDtBj8w_-tNkk9HoS4X4MjCmtXv8ACLcBGAs/s200/anti-stress-massage.jpg" /></td>
-    <td valign="center"><div style="text-align: center;">
+    <td valign="center"><div style="text-align: left;">
 <h3>
-<span style="color: #444444;font-size: large;"><b style="color: black;">CLASSIC SWEDISH MASSAGE</b></span></h3>
+<span style="color: #444444;font-size: large;"><b style="color: black;">CLASSICAL SWEDISH MASSAGE</b></span></h3>
 </div>
 Swedish massage, known as whole body massage; general massage techniques to relieve stress, while accelerating the metabolism runs the circulatory system.<br />
 <br />
@@ -513,9 +518,9 @@ Swedish massage, known as whole body massage; general massage techniques to reli
   <tbody>
 <tr>
     <td valign="center"><img border="0" height="131" src="https://1.bp.blogspot.com/-Uh_cQ799uK4/XGJ5ovv_P2I/AAAAAAAAH8A/aZ3hApW-pXkdVtbiypkcehhxzBkNzl3FACLcBGAs/s200/isve%25C3%25A7-masaj%25C4%25B1.jpg" width="200" /></td>
-    <td valign="center"><h3 style="text-align: center;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">ANTI STRESS AROMA MASSAGE</b></span></h3>
-All body massage with massage oils obtained from plant extracts is customized with aroma oil of your choice. It is a relaxing therapy with <b>less pressure.</b>
+    <td valign="left"><h3 style="text-align: left;">
+<span style="color: #444444; font-size: large;"><b style="color: black;">AROMA MASSAGE</b></span></h3>
+All body massage with massage oils obtained from plant extracts is customized with aroma oil of your choice. It is a relaxing therapy with <b>less pressure.</b><br />
 <br />
 <br /></td>
   </tr>
@@ -525,8 +530,8 @@ All body massage with massage oils obtained from plant extracts is customized wi
 <table border="0" cellpadding="3" cellspacing="0">
   <tbody>
 <tr>
-    <td valign="center"><img border="0" src="https://1.bp.blogspot.com/-SOEzg_27QLE/XGJ6V-qcBHI/AAAAAAAAH8U/MT8I_kXfB-IGmObdhGG6-NkuhGasJxRZgCLcBGAs/s200/1f22185f16201cfa9762be3f6a34d313.jpeg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
+    <td valign="center"><img src="images/sicak.jpg" style="width: 200px;" border="0"></td>
+    <td valign="left"><h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">HOT STONE MASSAGE</b></span></h3>
 Hot stone massage with the application of classic Swedish massage with volcanic stones is referred to as deep tissue massage. Relaxation of the muscles and volcanic stones reduce negative energy, allows the body to relax.<br />
 <br />
@@ -539,10 +544,9 @@ Hot stone massage with the application of classic Swedish massage with volcanic 
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://1.bp.blogspot.com/-SOEzg_27QLE/XGJ6V-qcBHI/AAAAAAAAH8U/MT8I_kXfB-IGmObdhGG6-NkuhGasJxRZgCLcBGAs/s200/1f22185f16201cfa9762be3f6a34d313.jpeg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">REGIONAL MASSAGES</b></span></h3>
-Massage treatments; They are recommended as a package and provide regional relief after package care. By determining how many sessions the application will be, the problem area is provides to be relieved.
-<br />
+    <td valign="left"><h3 style="text-align: left;">
+<span style="color: #444444;font-size: large;"><b style="color: black;">REGIONAL MASSAGE</b></span></h3>
+Massage treatments; They are recommended as a package and provide regional relief after package care. By determining how many sessions the application will be, the problem area is provides to be relieved.<br />
 <br />
 <br /></td>
   </tr>
@@ -553,9 +557,11 @@ Massage treatments; They are recommended as a package and provide regional relie
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://3.bp.blogspot.com/-fPc-1H-2V08/XGJ6pnW8W2I/AAAAAAAAH8g/AawV7zoKP30rSJbTA0oQ4MtrRXqybt7ewCLcBGAs/s200/medical.jpg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
+    <td valign="left"><h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">MEDICAL THERAPY</b></span></h3>
-In the therapy that helps to eliminate muscle pain regionally, it is used in the spasm solvent oils to reduce the pressure and muscle fatigue-relieving techniques. The use of muscle relaxant areas such as the sauna steam room prior to maintenance helps to increase the effects of care.<br />
+In the therapy that helps to eliminate muscle pain regionally, it is used in the spasm solvent oils to
+reduce the pressure and muscle fatigue-relieving techniques. The use of muscle relaxant areas
+such as the sauna steam room prior to maintenance helps to increase the effects of care.<br />
 <br /></td>
   </tr>
 </tbody></table>
@@ -565,9 +571,10 @@ In the therapy that helps to eliminate muscle pain regionally, it is used in the
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://1.bp.blogspot.com/-EBSIcI51d3w/XGJ620UJVkI/AAAAAAAAH8k/MJEUxOPrUWUOT2r2hs7674F_yVZxwv8RgCLcBGAs/s200/selulit-masaji.jpg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
+    <td valign="left"><h3 style="text-align: left;">
 <span style="color: #444444;font-size: large;"><b style="color: black;">CELLULITE MASSAGE</b></span></h3>
-It is a care applied to support regional circulation. Helps break down the adipose tissue under the skin. Body peeling before massage is recommended.<br />
+It is a care applied to support regional circulation. Helps break down the adipose tissue under the
+skin. Body peeling before massage is recommended.<br />
 </td>
   </tr>
 </tbody></table>
@@ -577,9 +584,12 @@ It is a care applied to support regional circulation. Helps break down the adipo
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://3.bp.blogspot.com/-EWD5BhzosWY/XGJ7V1eVtkI/AAAAAAAAH8w/MjmtwUhFsIczQBYEc3mHPhGr5MxSp_uKwCLcBGAs/s200/balterapi.jpg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
+    <td valign="left"><h3 style="text-align: left;">
 <span style="font-size: large;color: #444444;"><b style="color: black;">HONEY THERAPY MASSAGE</b></span></h3>
-It is an ancient treatment that has been applied in Asia and Eastern Europe for hundreds of years. Relax, heal and detox with our special Tibetan Honey massage! Thanks to the minerals, vitamins, enzymes and anti-oxidants contained in honey, a complete circulation is achieved, the skin pores are cleared and the healing power of honey acts directly on the body by the skin<br />
+It is an ancient treatment that has been applied in Asia and Eastern Europe for hundreds of years.
+Relax, heal and detox with our special Tibetan Honey massage! Thanks to the minerals, vitamins,
+enzymes and anti-oxidants contained in honey, a complete circulation is achieved, the skin pores
+are cleared and the healing power of honey acts directly on the body by the skin.<br />
 </td>
   </tr>
 </tbody></table>
@@ -589,9 +599,12 @@ It is an ancient treatment that has been applied in Asia and Eastern Europe for 
   <tbody>
 <tr>
     <td valign="center"><img border="0" src="https://2.bp.blogspot.com/-kGODYbsn8d8/XGJ7hCiP-dI/AAAAAAAAH80/6b_QX9gU5vE1LKlfmbwmq35mhp61vYHcgCLcBGAs/s200/Spor-Masaj%25C4%25B1.jpg" /></td>
-    <td valign="center"><h3 style="text-align: center;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">SPORT MASSAGE</b></span></h3>
-Sports massage is a form of massage that involves the manipulation of soft tissue to benefit a person doing regular physical activity. It is designed to help correct the problems and imbalances caused by traumatic physical activity and trauma in the soft tissue. The application of sports massage before and after exercise can improve performance, help recovery and prevent injury.<br />
+    <td valign="left"><h3 style="text-align: left;">
+<span style="color: #444444;font-size: large;"><b style="color: black;">SPORTS MASSAGE</b></span></h3>
+Sports massage is a form of massage that involves the manipulation of soft tissue to benefit a
+person doing regular physical activity. It is designed to help correct the problems and imbalances
+caused by traumatic physical activity and trauma in the soft tissue. The application of sports
+massage before and after exercise can improve performance, help recovery and prevent injury.<br />
 </td>
   </tr>
 </tbody></table>
@@ -606,16 +619,16 @@ Sports massage is a form of massage that involves the manipulation of soft tissu
           </div>
 		  <div class="col-md-4 ftco-animate">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" style="margin: auto;" width="100" height="100" src="https://www.unicornspawellness.com/images/damlaicon.png"/></span></div>
+              <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" style="margin: auto;" width="100" height="100" src="images/damlaicon.png"/></span></div>
               <div class="media-body">
-                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" >Skin and Body Care</h3>
-                <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience while pampering you with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
+                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" >FACE AND BOCY CARE TREATMENTS</h3>
+                <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
 				</p>
         <p class="mb-0">
          <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
-          <center><h2><b style="color: black;">SKIN and BODY CARE</b></h2></center>
+          <center><h3><b style="color: black;">FACE AND BOCY CARE TREATMENTS</b></h3></center>
 		  <!--cilt bakımı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
@@ -626,11 +639,12 @@ td img {padding:8px 0}
 <tbody>
 <tr>
 <td><img src="https://2.bp.blogspot.com/-_In6Lb0DwVo/XGKx1RZ5f2I/AAAAAAAAH9A/zn8Q41nlHrAk8vYphXYK8JK51jvHKDoGACLcBGAs/s200/skin%2Bcare.jpg" border="0"></td>
-<td><div style="text-align: center;">
+<td><div style="text-align: left;">
 <h3>
 <span style="color: #444444; font-size: large;"><b style="color: black;">CLASSIC SKIN CARE</b></span></h3>
 </div>
-With the care of spa cosmetics, the skin is cleaned deeply, the skin with mask and finishing creams appropriate.
+With the care of spa cosmetics, the skin is cleaned deeply, the skin with mask and finishing creams
+appropriate
 </td>
 </tr>
 </tbody>
@@ -641,10 +655,11 @@ With the care of spa cosmetics, the skin is cleaned deeply, the skin with mask a
 <tbody>
 <tr>
 <td>
-<img style="height: 177px;" src="https://www.unicornspawellness.com/images/skincareman.jpg" border="0"></td>
-<td><h3 style="text-align: center;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">MEN'S SPECIAL SKIN CARE</b></span></h3>
-In-depth skin cleansing is applied to men by using special skin care products. treatment ends with the serum..
+<img style="height: 177px;" src="images/skincareman.jpg" border="0"></td>
+<td><h3 style="text-align: left;">
+<span style="color: #444444; font-size: large;"><b style="color: black;">MEN’s SPECIAL SKIN CARE</b></span></h3>
+In-depth skin cleansing is applied to men by using special skin care products. treatment ends with
+the serum.
 </td>
 </tr>
 </tbody>
@@ -656,9 +671,9 @@ In-depth skin cleansing is applied to men by using special skin care products. t
 <tr>
 <td>
 <img src="https://3.bp.blogspot.com/-Asr1LYX5aO0/XGKy2SrAH9I/AAAAAAAAH9M/oUzaomKV6ssFXJOCnqR8eDytynaaFUo7wCLcBGAs/s200/skin%2Bcare%2Bspecial.jpg" border="0"></td>
-    <td valign="center"><h3 style="text-align: center;">
+    <td valign="center"><h3 style="text-align: left;">
 <span style="color: #444444;"><span style="font-size: large;"><b style="color: black;">PERSONAL SKIN CARE</b></span></span></h3>
-Skin care using serum and special masks appropriate to your skin's structure and needs. 
+Skin care using serum and special masks appropriate to your skin's structure and needs.
 </td>
 </tr>
 </tbody></table>
@@ -668,10 +683,10 @@ Skin care using serum and special masks appropriate to your skin's structure and
 <tbody>
 <tr>
 <td>
-<img style="height: 160px;" src="https://www.unicornspawellness.com/images/yogunnem.jpg" border="0"></td>
+<img style="height: 160px;" src="images/yogunnem.jpg" border="0"></td>
 <td>
-<h3 style="text-align: center;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">INTENSIVE HUMIDITY PROGRAM</b></span></h3>
+<h3 style="text-align: left;">
+<span style="color: #444444; font-size: large;"><b style="color: black;">INTENSIVE HUMIDITY PROGAM</b></span></h3>
 <div>
 Skin care is done to intensify the moisture balance that your skin needs.</div>
 </td>
@@ -686,8 +701,11 @@ Skin care is done to intensify the moisture balance that your skin needs.</div>
 <td>
 <img src="https://3.bp.blogspot.com/-oXfpyMSr9F8/XGK0H8TX0UI/AAAAAAAAH9g/ekja9jEkW1cY7dd1vyYJOGznIyKgiLwfACLcBGAs/s200/skin%2Bmassage.jpg" border="0"></td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444;font-size: large;"><b style="color: black;">SKIN MASSAGE</b></span></h3>
-Our facial massage with deep cleansing followed by our special skin oil with firming and rejuvenating properties accelerates the blood circulation and provides oxygenation of the skin. Special care against skin recovery and sagging. Aloe vera gel with intensive moisture is applied at the finishing. It is recommended to take the package program.
+<h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">SKIN MASSAGE</b></span></h3>
+Our facial massage with deep cleansing followed by our special skin oil with firming and
+rejuvenating properties accelerates the blood circulation and provides oxygenation of the skin.
+Special care against skin recovery and sagging. Aloe vera gel with intensive moisture is applied at
+the finishing. It is recommended to take the package program.
 </td>
 </tr>
 </tbody>
@@ -700,8 +718,10 @@ Our facial massage with deep cleansing followed by our special skin oil with fir
 <td>
 <img src="https://4.bp.blogspot.com/-BEotZ8hafYU/XGK0vkkKlvI/AAAAAAAAH9o/ZCynHG4um200he-HiUem48aWWZnZmwUYwCLcBGAs/s200/detoks.jpg" border="0"></td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444; font-size: large;"><b style="color: black;">DETOX BODY PEELING AND MASSAGE</b></span></h3>
-Exfoliating by use the restorative effect of sea salt accelerates your blood circulation and prepares your body for care. Our massage oil which has the effect of purification and toxin release gives you a different experience.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">DETOX BODY PEELING AND MASSAGE</b></span></h3>
+Exfoliating by use the restorative effect of sea salt accelerates your blood circulation and prepares
+your body for care. Our massage oil which has the effect of purification and toxin release gives
+you a different experience.
 </td>
 </tr>
 </tbody>
@@ -714,8 +734,9 @@ Exfoliating by use the restorative effect of sea salt accelerates your blood cir
 <td>
 <img src="https://4.bp.blogspot.com/-oWv4Q3fL_Q4/XGK1CQho79I/AAAAAAAAH9w/CS-kRADBFDIhnykyHVvgS1dHP1G449EBQCLcBGAs/s200/deniz%2Byosunu.png" border="0"></td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444; font-size: large;"><b style="color: black;">SEAWED BODY WRAP</b></span></h3>
-After peeling with sea salt, the moss wrap rests, you while at the same time cleansing your skin deeply. <br>
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">SEAWED BODY WRAP</b></span></h3>
+After peeling with sea salt, the moss wrap rests, you while at the same time cleansing your skin
+deeply.<br>
 </td>
 </tr>
 </tbody>
@@ -726,10 +747,11 @@ After peeling with sea salt, the moss wrap rests, you while at the same time cle
 <tbody>
 <tr>
 <td>
-<img style="height: 200px;" src="https://www.unicornspawellness.com/images/camur1.jpg" border="0"></td>
+<img style="height: 200px;" src="images/camur1.jpg" border="0"></td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444; font-size: large;"><b style="color: black;">REPAIR MUD CARE</b></span></h3>
-Your skin peeling is made with special plant mixtures. The mud wraps the skin under the influence of the minerals it contains.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">REPAIR MUD CARE</b></span></h3>
+Your skin peeling is made with special plant mixtures. The mud wraps the skin under the influence
+of the minerals it contains.
 </td>
 </tr>
 </tbody>
@@ -743,9 +765,11 @@ Your skin peeling is made with special plant mixtures. The mud wraps the skin un
 <img src="https://2.bp.blogspot.com/-1xcXBPDTP5w/XGK19KDxcwI/AAAAAAAAH-E/5BwkGtt2K3IQOMmicdIPGeHqP_nJR-kCwCLcBGAs/s200/leg%2Bcare.jpg" border="0">
 </td>
 <td>
-<h3 style="text-align: center;"><span style="color: #444444; font-size: large;"><b style="color: black;">JET LAG CARE </b></span></h3>
-After long travels or at the end of a busy day, you will relax and take care of your legs, be balanced your blood circulation.
-Starting with peeling, maintenance continues with special massage techniques. It is a care for toxin and edema.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">JET LAG CARE</b></span></h3>
+ After long travels or at the end of a busy day, you will relax and take care of your legs, be balanced
+your blood circulation.
+Starting with peeling, maintenance continues with special massage techniques. It is a care for
+toxin and edema.
 </td>
 </tr>
 </tbody></table>
@@ -755,9 +779,11 @@ Starting with peeling, maintenance continues with special massage techniques. It
 <tbody>
 <tr>
 <td>
-<img style="height: 150px;" src="https://www.unicornspawellness.com/images/ince.jpg" border="0"></td>
-<td valign="center"><h3 style="text-align: center; font-size: large;"><b style="color: black;">SLIMMING AND FIRMING BODY WRAP AND MASSAGE</b></h3>
-Starting with sea salt and coffee blend peeling, our treatment continues with clay mask enriched with special aroma oils. After the mask, the aroma massage which is helps the toxin out, helping to tighten the skin and break down the fat. It is recommended as package.
+<img style="height: 150px;" src="images/ince.jpg" border="0"></td>
+<td valign="center"><h3 style="text-align: left; font-size: large;"><b style="color: black;">SLIMMING AND FIRMING BODY WRAP AND MASSAGE</b></h3>
+Starting with sea salt and coffee blend peeling, our treatment continues with clay mask enriched
+with special aroma oils. After the mask, the aroma massage which is helps the toxin out, helping
+to tighten the skin and break down the fat. It is recommended as package.
 </td>
 </tr>
 </tbody>
@@ -768,12 +794,13 @@ Starting with sea salt and coffee blend peeling, our treatment continues with cl
 <tbody>
 <tr>
 <td>
-<img style="height:166px;" src="https://www.unicornspawellness.com/images/gold.jpg" border="0"></td>
+<img style="height:166px;" src="images/gold.jpg" border="0"></td>
 <td>
-<h3 style="text-align: center;"><span style="font-size: large;"><b style="color: black;">UNICORN PAMPERING BADY CARE</b></span></h3>
+<h3 style="text-align: left;"><span style="font-size: large;"><b style="color: black;">UNICORN PAMPERING BADY CARE</b></span></h3>
 Have you tried the spa trip we prepared for your special days?
- We prepare you for a special evening,our treatment start with a peeling, intensive moisturizing feature continues the massage. At the end of the massage, your skin will provide you with a sparkle.
-</td>
+We prepare you for a special evening,our treatment start with a peeling, intensive moisturizing
+feature continues the massage. At the end of the massage, your skin will provide you with a
+sparkle.</td>
 </tr>
 </tbody>
 </table>
@@ -794,23 +821,22 @@ Have you tried the spa trip we prepared for your special days?
       <div class="container" style="overflow: hidden;">
       	<div class="row justify-content-center mb-5 pb-3" style="overflow: hidden;">
           <div class="col-md-7 heading-section ftco-animate text-center" style="overflow: hidden;">
-            <h2 style="font-weight: bold;" class="mb-4">OUR FAR EAST THERAPIES</h2>
+            <h2 style="font-weight: bold;" class="mb-4">FAR EAST THERAPIES</h2>
             <p>By balancing the healing effect of the far east and the flow of physical energy, we take you on a mystical journey.We offer you new spa & wellness  therapies by remaining true to the miracle of nature, body energies and Far East traditions.</p>
           </div>
-        <div id="resim">
-<img src="https://www.unicornspawellness.com/images/backen.jpg" usemap="#image-map" border="0" width="1920" height="1080" orgWidth="1920" orgHeight="1080">
-<map name="image-map">
-    <area target="_self" alt="THAI MASSAGE" title="THAI MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" coords="696,203,530,0" shape="rect">
-    <area target="_self" alt="CUP THERAPY" title="CUP THERAPY" data-fancybox data-animation-duration="700" data-src="#animatedModal52" href="javascript:;" coords="328,222,525,397" shape="rect">
-    <area target="_self" alt="UNICORN MIX MASSAGE" title="UNICORN MIX MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal53" href="javascript:;" coords="247,422,532,584" shape="rect">
-    <area target="_self" alt="BALI PLANT POUCH MASSAGE" title="BALI PLANT POUCH MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal54" href="javascript:;" coords="225,626,574,817" shape="rect">
-	<area target="_self" alt="BALI 4 HAND MASSAGE" title="BALI 4 HAND MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal55" href="javascript:;" coords="525,819,807,1012" shape="rect">
-    <area target="_self" alt="HINT HEAD MASSAGE" title="HINT HEAD MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal56" href="javascript:;" coords="1059,5,1320,173" shape="rect">
-    <area target="_self" alt="AYURVEDA MASSAGE" title="AYURVEDA MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal57" href="javascript:;" coords="1575,119,1339,287" shape="rect">
-    <area target="_self" alt="BALI AROMA MASSAGE" title="BALI AROMA MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal58" href="javascript:;" coords="1346,303,1634,512" shape="rect">
-    <area target="_self" alt="BALI HOT STONE MASSAGE" title="BALI HOT STONE MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;" coords="1329,526,1672,709" shape="rect">
-    <area target="_self" alt="HOT STONE MASSAGE" title="HOT STONE MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal60" href="javascript:;" coords="1309,724,1595,888" shape="rect">
-    <area target="_self" alt="REFLEXIOLOGY MASSAGE" title="REFLEXIOLOGY MASSAGE" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" coords="1209,912,1540,1073" shape="rect">
+ <div id="resim">
+	<img id="image-maps" src="http://www.image-maps.com/m/private/102975/113362-dogumasajlaren.jpg" border="0" width="1920" height="1139" orgWidth="1920" orgHeight="1139" usemap="#image-maps" alt="" />
+<map name="image-maps" id="image-maps">
+<area  alt="Thai Masajı" title="Thai Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" shape="rect" coords="323,11,654,201" style="outline:none;" target="_self"     />
+<area  alt="Kupa Terapisi" title="Kupa Terapisi" data-fancybox data-animation-duration="700" data-src="#animatedModal52" href="javascript:;" shape="rect" coords="147,225,478,415" style="outline:none;" target="_self"     />
+<area  alt="Unicorn Mix Masaj" title="Unicorn Mix Masaj" data-fancybox data-animation-duration="700" data-src="#animatedModal53" href="javascript:;" shape="rect" coords="109,481,440,671" style="outline:none;" target="_self"     />
+<area  alt="Bali Bitki Kesesi Masajı" title="Bali Bitki Kesesi Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal54" href="javascript:;" shape="rect" coords="138,733,469,923" style="outline:none;" target="_self"     />
+<area  alt="Bali 4 El Masajı" title="Bali 4 El Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal55" href="javascript:;" shape="rect" coords="313,943,644,1133" style="outline:none;" target="_self"     />
+<area  alt="Hint Baş Masajı" title="Hint Baş Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal56" href="javascript:;" shape="rect" coords="1257,10,1588,200" style="outline:none;" target="_self"     />
+<area  alt="Ayurveda Masajı" title="Ayurveda Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal57" href="javascript:;" shape="rect" coords="1427,226,1758,416" style="outline:none;" target="_self"     />
+<area  alt="Bali Aroma Masajı" title="Bali Aroma Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal58" href="javascript:;" shape="rect" coords="1486,478,1817,668" style="outline:none;" target="_self"     />
+<area  alt="Bali Taş Masajı" title="Bali Taş Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;"  shape="rect" coords="1430,733,1761,923" style="outline:none;" target="_self"     />
+<area alt="Refleksoloji Masajı" title="Refleksoloji Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" shape="rect" coords="1250,941,1581,1131" style="outline:none;" target="_self"     />
 </map>
 </div>
 </div>
@@ -820,290 +846,311 @@ Have you tried the spa trip we prepared for your special days?
 </div>
 <!-- anlatımlar51 -->
 <div style="display: none;" id="animatedModal51" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">THAI MASSAGE</a></h3>
+      					<h3><a href="#iletisim">THAI MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/thai.jpg" style="width: 30%;">
-	        				<p>It is a body work inspired by Buddhist teachings applied with sequential movement flow.Body focus on applying pressure using palm, thumbs, elbows and feet to massage running on power lines. The massage that releases the tension in the body is based on opening the joints and facilitating strech.</p>
+						<img src="images/thai.jpg" style="width: 30%;">
+	        				<p>It is a body work inspired by Buddhist teachings applied with sequential movement flow.Body
+focus on applying pressure using palm, thumbs, elbows and feet to massage running on power
+lines. The massage that releases the tension in the body is based on opening the joints and
+facilitating strech.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar51 -->
 				<!-- anlatımlar52 -->
 <div style="display: none;" id="animatedModal52" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">CUUPING THERAPY</a></h3>
+      					<h3><a href="#iletisim">CUUPING THERAPY</a></h3>
       					<span class="position"></span>
-      					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/kupa.jpg" style="width: 30%;">
-	        				<p>Cup pull therapy is one of the therapeutic therapies of the far east. The therapy, which is applied together with the aroma oils, releases the tissues inside the body, relaxes the tight muscles and chronic back, neck pain. It's help to  migraine and muscle spasms that cause fatigue.</p>
+      					<div class="text"> 
+						<img src="images/kupa.jpg" style="width: 30%;">
+	        				<p>Cup pull therapy is one of the therapeutic therapies of the far east. The therapy, which is applied
+together with the aroma oils, releases the tissues inside the body, relaxes the tight muscles and
+chronic back, neck pain. It's help to migraine and muscle spasms that cause fatigue.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar52 -->
 				<!-- anlatımlar53 -->
 <div style="display: none;" id="animatedModal53" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">UNICORN MIX MASSAGE</a></h3>
+      					<h3><a href="#iletisim">UNICORN MIX MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/unimix.jpg" style="width: 30%;">
-	        				<p>With our massage consisting of a combination of Far Eastern therapies, your energy is balanced, blood circulation is regulated and your stress is reduced. Bali aroma massage, Ayurveda, Indian head massage techniques with Thai massage using a stretch of is a top-down care. Have you not tried the our special massage of the pleasant holiday?</p>
+						<img src="images/unimix.jpg" style="width: 30%;">
+	        				<p>With our massage consisting of a combination of Far Eastern therapies, your energy is balanced,
+blood circulation is regulated and your stress is reduced. Bali aroma massage, Ayurveda, Indian
+head massage techniques with Thai massage using a stretch of is a top-down care. Have you not
+tried the our special massage of the pleasant holiday?</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar53 -->
 				<!-- anlatımlar54-->
 <div style="display: none;" id="animatedModal54" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">BALI HERBAL STAMP MASSAGE</a></h3>
+      					<h3><a href="#iletisim">BALI HERBAL STAMP MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/balibitkim.jpg" style="width: 30%;">
-	        				<p>Our aromatherapy oil body massage is complemented by our treatment starting with the healing seeds and plants. With the relaxing effect of plants and aroma oils, it helps to relax 5 senses, reduce stress, and make your skin come alive and glittering..</p>
+						<img src="images/balibitkim.jpg" style="width: 30%;">
+	        				<p>Our aromatherapy oil body massage is complemented by our treatment starting with the healing
+seeds and plants. With the relaxing effect of plants and aroma oils, it helps to relax 5 senses,
+reduce stress, and make your skin come alive and glittering.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar54 -->
 				<!-- anlatımlar55 -->
 <div style="display: none;" id="animatedModal55" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">BALI 4 HANDS MASSAGE</a></h3>
+      					<h3><a href="#iletisim">BALI 4 HANDS MAASAGE</a></h3>
       					<span class="position"></span>
-						<img src="https://www.unicornspawellness.com/images/bali4el.jpg" style="width: 30%;">
+						<img src="images/bali4el.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>With two therapists practicing the Far East, the massage offers you a pampering spa experience while relaxing.</p>
+	        				<p>With two therapists practicing the Far East, the massage offers you a pampering spa experience
+while relaxing.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar55 -->
 				<!-- anlatımlar56 -->
 <div style="display: none;" id="animatedModal56" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">INDIAN SCALP MASSAGE</a></h3>
+      					<h3><a href="#iletisim">INDIAN SCALP MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/hint.jpg" style="width: 30%;">
-	        				<p>You'll experience a different interpretation of resting with massage to the scalp which is a Indian style Our massage, which is help migraine, cumulative headaches and sinuses. Includes head, neck and facial massage.</p>
+						<img src="images/hint.jpg" style="width: 30%;">
+	        				<p>You'll experience a different interpretation of resting with massage to the scalp which is a Indian
+style
+Our massage, which is help migraine, cumulative headaches and sinuses. Includes head, neck and
+facial massage.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar56 -->
 				<!-- anlatımlar57 -->
 <div style="display: none;" id="animatedModal57" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">AYURVEDA MASSAGE</a></h3>
+      					<h3><a href="#iletisim">AYURVEDA MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/ayurveda.jpg" style="width: 30%;">
-	        				<p>It is a relaxing, calming and relaxing massage that affects the central nervous system positively. In this application, the blood circulation is accelerated by working on the energy channels special ayurvedic oils.</p>
+						<img src="images/ayurveda.jpg" style="width: 30%;">
+	        				<p>It is a relaxing, calming and relaxing massage that affects the central nervous system positively. In
+this application, the blood circulation is accelerated by working on the energy channels special
+ayurvedic oils.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar57 -->
 				<!-- anlatımlar58 -->
 <div style="display: none;" id="animatedModal58" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">BALI AROMA MASSAGE</a></h3>
+      					<h3><a href="#iletisim">BALI AROMA MASSAGE</a></h3>
       					<span class="position"></span>
-      					<div class="text"><img src="https://www.unicornspawellness.com/images/baliaroma.jpg" style="width: 30%;">
-	        				<p>The blend of Far Eastern culture in the Balinese massage is Chinese reflexology techniques, Indian medicine aroma oils and massage techniques developed by blending the whole body massage. Massage is applied for the whole body up to the scalp from the toes, allows to relax by regulating the blood circulation, while revitalizing the skin and for reduce the stres</p>
+      					<div class="text"><img src="images/baliaroma.jpg" style="width: 30%;">
+	        				<p>The blend of Far Eastern culture in the Balinese massage is Chinese reflexology techniques, Indian
+medicine aroma oils and massage techniques developed by blending the whole body massage.
+Massage is applied for the whole body up to the scalp from the toes, allows to relax by regulating
+the blood circulation, while revitalizing the skin and for reduce the stres</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar58 -->
 				<!-- anlatımlar59 -->
 <div style="display: none;" id="animatedModal59" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">BALI HOT STONE MASSAGE</a></h3>
-      					<span class="position"></span><img src="https://www.unicornspawellness.com/images/balisicak.jpg" style="width: 30%;">
+      					<h3><a href="#iletisim">BALI HOT STONE MASSAGE</a></h3>
+      					<span class="position"></span><img src="images/sicak.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>It is a whole body stone massage combined with the techniques of Balinese massage and aroma oils. Massaging as a deep tissue massage good for  muscular pain while reducing stress
-</p>
+	        				<p>It is a whole body stone massage combined with the techniques of Balinese massage and aroma
+oils.
+Massaging as a deep tissue massage good for muscular pain while reducing stress.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar59 -->
 				<!-- anlatımlar60 -->
 <div style="display: none;" id="animatedModal60" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       					<div class="info text-center">
-						<h3><a href="#contact">HOT STONE MASSAGE</a></h3>
+						<h3><a href="#iletisim">BALI HOT STONE MASSAGE</a></h3>
       					<span class="position"></span>
       					<div class="text">
-						<img src="https://www.unicornspawellness.com/images/sicak.jpg" style="width: 30%;">
-	        				<p>Klasik İsveç masajının volkanik taşlar ile uygulaması olan sıcak taş masajı derin doku masajı olarak geçmektedir. Kasların gevşemesinin yanında volkanik taşlar vücudun negatif enerjisini alarak rahatlama sağlar.</p>
+						<img src="images/sicak.jpg" style="width: 30%;">
+	        				<p>It is a whole body stone massage combined with the techniques of Balinese massage and aroma
+oils.
+Massaging as a deep tissue massage good for muscular pain while reducing stress.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar60 -->
 				<!-- anlatımlar61 -->
 <div style="display: none;" id="animatedModal61" class="animated-modal">
-    <div class="img mb-4" style="background-image: url(https://www.unicornspawellness.com/images/hint.jpg);"></div>
+    <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#contact">FOOT REFLEX MAASAGE</a></h3>
-      					<span class="position"></span><img src="https://www.unicornspawellness.com/images/refleksoloji.jpg" style="width: 30%;">
+      					<h3><a href="#iletisim">FOOT REFLEX MAASAGE</a></h3>
+      					<span class="position"></span><img src="images/refleksoloji.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>Foot pressure massage, which helps to spread the body energy to the organs in a balanced manner and to relieve stress, helps to regulate blood circulation by opening the energy blockages. It is recommended that maintenance be taken as a package instead of a single session.</p>
+	        				<p>Foot pressure massage, which helps to spread the body energy to the organs in a balanced
+manner and to relieve stress, helps to regulate blood circulation by opening the energy blockages.
+It is recommended that maintenance be taken as a package instead of a single session.</p>
 	        			</div>
       				</div>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
         		</div>
 				<!-- anlatımlar61 -->
 				
     </section>
 	 </section>
-		<section id="our-packages" class="ftco-section" style="background-image: url(https://www.unicornspawellness.com/images/backplan.jpg);background-attachment: fixed; background-position: center; background-repeat: no-repeat;
+		<section id="paketler" class="ftco-section" style="background-image: url(images/backplan.jpg);background-attachment: fixed; background-position: center; background-repeat: no-repeat;
 background-size: cover;">
 			<div class="container" style="padding: 4.3em 0;">
 				<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2 style="font-weight: bold;" class="mb-4">UNICORN SPA PACKAGE PROGRAMS</h2>
-            <p>Ruhunuzu ve Vücudunuzu Dinlendirecek Özel Masaj Programlarımız</p>
+            <h2 style="font-weight: bold;" class="mb-4">UNICORN PACKAGE PROGRAMS</h2>
+            <p>Special Massage Programs That Will Rest Your Soul and Your Body.</p>
           </div>
         </div>
         <div class="row">
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">OUR FAR EAST PACKAGE</h3>
-						<p>Uzakdoğunun kendine has popüler bakımlarının bir araya geldiği paket programımız sizleri şımartırken mistik bir yolculuğa davet ediyor</p>
+	        			<h3 class="mb-4">UNICORN WELLCOME PACKAGE</h3>
+						<p>Start your holiday with our welcome package. With this package you will prepare yourself for a pleasant time, you will
+renew, relax and prepare for a stress-free holiday.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
         	</div>
         	</div>
 			</div>
 <div style="display: none;" id="animatedModal41" class="animated-modal">
-          <center><h2><b style="color: black;">OUR FAR EAST PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">UNICORN WELLCOME PACKAGE</b></h3></center>
 		  <!--uzak doğu ayrıntı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
 </style>
-						<p><div class="price">Süre: 2 Saat 15 Dk.</div> <span class="per"></span></p>
+						<p><div class="price">Time:..Dk.</div> <span class="per"></span></p>
 	        		
         			<ul>
-								<li>Bitki banyosu – 15 Dk.</li>
-								<li>Bali bitki keseleri – 30 Dk.</li>
-								<li>Bali aroma therapy – 60 Dk.</li>
-								<li>Thai ayak refleks masajı – 30 Dk.</li>
+								<li>Peeling & Foam Massage</li>
+								<li>Classical Swedish Massage</li>
+								<li>Mousturizing Mini Facial</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 <!-- cilt bakımı anlatım son -->
 </div>
 
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">UNICORN PACKAGE</h3>
-						<p>Spamıza özel bitkiler ile hazırladığımız banyo ile başlayan yolculuğunuz, canlandırıcı enerji verici kahve peelingi özel aroma yağı masajı ve mini cilt bakımı ile sizi tepeden tırnağa yenileyecektir.</p>
+	        			<h3 class="mb-4">RELAXING PROGRAM</h3>
+						<p>Before tanning, you will get an energetic and relaxing program while preparing your skin for the sun.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
         </p>
         		</div>
         	</div></div>
 			<div style="display: none;" id="animatedModal42" class="animated-modal">
 			
-          <center><h2><b style="color: black;">UNICORN PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">RELAXING PROGRAM</b></h3></center>
 		  <!--paket ayrıntı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
 </style>
-						<p><div class="price">Süre 1 Saat 40 Dk.</div> <span class="per"></span></p>
+						<p><div class="price">Time ...</div> <span class="per"></span></p>
         			<ul>
-								<li>Bitki banyosu – 15Dk.</li>
-								<li>Kahve peeling – 20 Dk.</li>
-								<li>Aroma notaları ile masaj – 50 Dk.</li>
-								<li>Mini yüz bakımı ve el masajı – 15 Dk.</li>
+								<li>Peeling & Foam Massage</li>
+								<li>Antistress Aroma Massage</li>
+								<li>Mousturizing Mini Facial</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 <!-- paket anlatım son -->
 </div>
 <div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">PAMPERING COUPLE PACKAGE</h3>
-						<p>Tatilinizde eşiniz ile yaşayabileceğiniz şımartıcı keyifli yolculuğa hazır mısınız?</p>
+	        			<h3 class="mb-4">LUXURY PROGRAM</h3>
+						<p>Indulge yourself with our luxury program. The fun way to relax and rest is through our luxurious package. The pleasure of
+your holiday will increase by visiting our spa.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
         	</div>
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal47" class="animated-modal">
-          <center><h2><b style="color: black;">PAMPERING COUPLE PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">LUXURY PROGRAM</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 2 Saat</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
 					<ul>
-								<li>Kese – 15 Dk.</li>
-								<li>Köpük masajı – 15 Dk.</li>
-								<li>Tüm vücut deniz ve tatlı maske – 25 Dk.</li>
-								<li>Saç yıkama ve dinlenme – 20 Dk.</li>
-								<li>Aroma rahatlatıcı masaj – 50 Dk.</li>
+								<li>Peeling & Honey / Foam Massage</li>
+								<li>Unıcorn Mix Massage</li>
+								<li>Foot Reflex Massage</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!-- buraya paket ayrıntı anlatım son -->
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">SPECIAL BODY AND SKIN CARE PACKAGE</h3>
-						<p>Kendinizi özel hissedeceğiniz spa yolculuğunuzda tepeden tırnağa bir bakım sizi bekliyor.</p>
+	        			<h3 class="mb-4">SPECIAL PROGRAM for COUPLE</h3>
+						<p>How about a spa journey with your partner? Experience a mystical journey with aroma massage while relaxing with body
+care after our traditional hammam care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
         	</div>
 						<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal48" class="animated-modal">
-          <center><h2><b style="color: black;">SPECIAL BODY AND SKIN CARE PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">SPECIAL PROGRAM for COUPLE</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 2 Saat</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
 					<ul>
-								<li>Buhar veya sauna – 10 Dk.</li>
-								<li>Vücut Peeling – 15 Dk.</li>
-								<li>Vücut maskesi (yenileyici ve canlandırıcı) – 20 Dk.</li>
-								<li>Vücut masajı (toksin atıcı ve gençleştirici) – 45 Dk.</li>
-								<li>Cilt bakımı ( kişiye özel seçilerek yapılacak – gençleştirici – canlandırıcı – nem yoğunluğu ) – 25 Dk.</li>
-								<li>El masajı ( gençleştirici ) – 15 Dk.</li>
+								<li>Peeling & Foam Massage</li>
+								<li>Seawed Mask</li>
+								<li>Antistress Massage</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
 
 			<div class="col-md-3 ftco-animate" style="padding-top: 26px;">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">WINTER PACKAGE</h3>
-						<p>Yoğun bir kış gününün ardından Unicorn Spa & Wellness içinizi ısıtıyor ve sizi sımsıcak bir yolculuğa çıkarıyor. Hamam bakımı sonrası spor masajı ile yorgunluğunuzu artarken yüz ve göz bakımı size nem ve canlılık sunuyor. </p>
+	        			<h3 class="mb-4">FAR EAST PROGRAM</h3>
+						<p>Our program, prepared with the physical and mental effects of the Far East, will give also experience relaxation and
+tranquility.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1111,28 +1158,28 @@ td img {padding:8px 0}
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal45" class="animated-modal">
 			
-          <center><h2><b style="color: black;">WINTER PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">FAR EAST PROGRAM</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 2 Saat</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
         			<ul>
-								<li>Kese – 15 Dk.</li>
-								<li>Köpük yıkama – 15 Dk.</li>
-								<li>Unicorn spor masajı – 75 Dk.</li>
-								<li>Yüz maskesi ve göz bakımı – 15 Dk.</li>
+								<li>Serenity Herbal Bath</li>
+								<li>Bali Aroma Massage with Herbal Stamp</li>
+								<li>Thai Foot Reflex Massage</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">RENEWAL PACKAGE</h3>
-						<p>5 duyunuza hitap eden spa yolculuğunuz kendinizi şımartırken yenilenme ve canlılık vaat ediyor. Deniz tuzunun etkilerini kullanarak yapılan peeling sonrasında çikolata maskesinin şımartan keyfini çıkarın. Canlandırıcı aroma masajı ve yenileyen cilt bakımı yolculuğunuzu tamamlanıyor.</p>
+	        			<h3 class="mb-4">OTTOMAN HAMMAM PROGRAM</h3>
+						<p>We introduce you to a different culture with the Ottoman bath program. During refreshes your skin with roses and gives
+you mental relaxation with its scent. Do not miss care from head to toe with a special rose program.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1140,27 +1187,27 @@ td img {padding:8px 0}
 						<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal46" class="animated-modal">
 			
-          <center><h2><b style="color: black;">RENEWAL PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">OTTOMAN HAMMAM PROGRAM</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 1 Saat 50 Dk.</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
         			<ul>
-								<li>Deniz tuzu peeling – 20 Dk.</li>
-								<li>Çikolata maskesi – 25 Dk.</li>
-								<li>Canlandırıcı aroma masajı – 50 Dk.</li>
-								<li>Yenileyici mini cilt bakımı baş masajı ile – 15 Dk.</li>
+								<li>Rose Bath</li>
+								<li>Peeling & Rose Foam Massage</li>
+								<li>Aroma Massage with Rose Oil</li>
+								<li>Rose Mini Facial</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
 					<div style="padding-top: 26px;"  class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">SPECIALIZED WITH UNICORN SIGNATURE</h3>
-						<p>Unicorn Spa & Wellness imzalı spa yolculuğunuz geleneksel hamam bakımı ile başlıyor. Dinlenme bölümünde sizlere sunacağımız özel çayımız sonrasında özel Unicorn aroma masajı ve kişiye özel cilt bakımı ile tamamlanıyor. Kendinizi şımartırken yenilenme ve arınmanın keyfini çıkarın.</p>
+	        			<h3 class="mb-4">UNICORN SIGNATURE PROGRAM</h3>
+						<p>While we present the wonders of nature with aroma oils, we address your five senses in this special care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
 		</div>
@@ -1169,29 +1216,30 @@ td img {padding:8px 0}
 					<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal43" class="animated-modal">
 			
-          <center><h2><b style="color: black;">SPECIALIZED WITH UNICORN SIGNATURE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">UNICORN SIGNATURE PROGRAM</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 2 Saat 10 Dk.</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
 	        		
         			<ul>
-								<li>Hamam bakımı ( kese ve köpük yıkama ) – 25 Dk.</li>
-								<li>Rahatlama bölümü ( özel Unicorn çayı ile ) – 15 Dk.</li>
-								<li>Aroma masajı ( kişiye özel yağlar ile ) – 50 Dk.</li>
-								<li>Cilt bakımı ( maske ) ve cilt masajı – 40 Dk</li>
+								<li>Mystic Herbal Bath</li>
+								<li>Coffee Peeling for Face & Body</li>
+								<li>Aroma Massage with Unicorn Oil</li>
+								<li>Intense Humidity Face Mask</li>
+								<li>Hand Reflex Point Massage</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">HAMMAM PACKAGE</h3>
-						<p>Türk hamam geleneğinin Unicorn Spa yorumunu bulacağınız hamam yolculuğunuz da derinlemesine temizlenmenin yanı sıra suyun terapi özelliğinin verdiği rahatlığı yaşacaksınız. Balın tedavi edici özelliği ile yenilenirken, köpük masajının şımartıcı dokunuşları size farklı bir yolculuk yaşatacak. Tepeden tırnağa özel bakım ürünleri ile şımartmak için sizi bekliyoruz.</p>
+	        			<h3 class="mb-4">WINTER PROGRAM</h3>
+						<p>On your winter holiday we have prepared you a warm and excellent spa journey.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
         	</div>
@@ -1199,30 +1247,29 @@ td img {padding:8px 0}
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal44" class="animated-modal">
 			
-          <center><h2><b style="color: black;">HAMMAM PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">WINTER PROGRAM</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<p><div class="price">Süre: 1 Saat 20 Dk.</div> <span class="per"></span></p>
+	        			<p><div class="price">Time: ...</div> <span class="per"></span></p>
         			<ul>
-								<li>Sauna veya buhar odası – 10 Dk.</li>
-								<li>Kese – 15 Dk.</li>
-								<li>Bal maskesi ve baş masajı – 20 Dk.</li>
-								<li>Köpük masajı – 20 Dk.</li>
-								<li>Saç yıkama ve özel durulama ( gül ya da özel aroma esanslı su ile ) – 15 Dk.</li>
+								<li>Peeling & Foam Massage</li>
+								<li>Classical Swedish Massage</li>
+								<li>Rescue Eye</li>
+								<li>Intense Humidity Face mask</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
 			
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">SUMMER PACKAGE</h3>
-						<p>Akdenizin denizi ve güneşinde kendinizi farklı hissedeceğiniz bakımlarımız ile gülümseten keyifli tatiller…</p>
+	        			<h3 class="mb-4">SUMMER PROGRAM</h3>
+						<p>Here is a warm holiday with the sun, sea and nature of the Mediterranean Sea. Enjoy more of this holiday with spa treatments.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Included</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        			<p>
 	        		</div>
@@ -1230,30 +1277,29 @@ td img {padding:8px 0}
         	</div>
 				<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal49" class="animated-modal">
-          <center><h2><b style="color: black;">SUMMER PACKAGE</b></h2></center>
+          <center><h3><b style="color: black;font-size: 27px;">SUMMER PROGRAM</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
 	        			
 					<ul>
-					<div class="price">Güneş Öncesi - Süre: 1 Saat 30 Dk.</div> <span class="per"></span></p>
-								<li>Kese – 15 Dk.</li>
-								<li>Kil Maskesi – 30 Dk.</li>
-								<li>Bronz Masajı – 30 Dk.</li>
-								<li>Mini Yüz Bakımı – 45 Dk.</li>
-								<p><div class="price">Güneş Sonrası - Süre: 1 Saat 30 Dk.</div> <span class="per"></span></p>
-								<li>Köpük Masajı – 20 Dk.</li>
-								<li>Kantaron yağı ile rahatlatıcı ve yenileyici masaj – 60 Dk.</li>
-								<li>Dinlendirici ve nem yoğun cilt bakımı – 30 Dk.</li>
-								<li>Ayak reflex masajı – 20 Dk.</li>
+					<div class="price">BEFORE THE SUN BATH</div> <span class="per"></span></p>
+								<li>Peeling & Foam Wash</li>
+								<li>Bronze Massage</li>
+								<li>Mini Facial</li>
+								<p><div class="price">AFTER THE SUN BATH</div> <span class="per"></span></p>
+								<li>Foam Wash & Honey Massage</li>
+								<li>Massage with St. John’s Wort Oil</li>
+								<li>Relaxing Moisture Facial</li>
+								<li>Head Massage</li>
         			</ul>
-					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="https://www.unicornspawellness.com/images/close.png"/></button></center>
+					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Close<img src="images/close.png"/></button></center>
 					</div>
 					<!--paket ayrıntı anlatım son -->
         </div>
 			</div>
 		</section>
-		<section id="Contact" class="ftco-section ftco-appointment">
+		<section id="iletisim" class="ftco-section ftco-appointment">
 			<div class="overlay"></div>
     	<div class="container" style="padding: 4.3em 0;">
     		<div class="row d-md-flex align-items-center">
@@ -1265,11 +1311,11 @@ td img {padding:8px 0}
 		    				<p>	Taşyaka Mah. Baha Şıkman Cad. 37/C Fethiye - Muğla - Türkiye</p>
 	    				</div>
 	    				<div class="mb-4">
-		    				<h3 class="mb-3">Head Office Phone</h3>
+		    				<h3 class="mb-3">Central Office Phone</h3>
 		    				<p class="day"><strong>+90 252 612 91 41</strong></p>
 	    				</div>
 	    				<div>
-		    				<h3 class="mb-3">Working Hours</h3>
+		    				<h3 class="mb-3">Working hours</h3>
 		    				<p class="day"><strong>Monday - Saturday</strong></p>
 		    				<span>09:00 - 19:00</span>
 	    				</div>
@@ -1280,13 +1326,13 @@ td img {padding:8px 0}
 	    			<form id="myform" method="post" class="appointment-form">
 	            <div class="row form-group d-flex">
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="isim" class="form-control" placeholder="Name">
+	            		<input type="text" required='' name="isim" class="form-control" placeholder="Name's">
 	            	</div>
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="soyisim" class="form-control" placeholder="Surname">
+	            		<input type="text" required='' name="soyisim" class="form-control" placeholder="Surname's">
 	            	</div>
 					<div class="col-md-6">
-	            		<input type="text" required='' name='otel' class="form-control" placeholder="Your Otel">
+	            		<input type="text" required='' name='otel' class="form-control" placeholder="Your Hotel's">
 	            	</div>
 			    <div class="col-md-6">
 	            		<input type="email" required='' name='email' class="form-control" placeholder="E-mail">
@@ -1304,19 +1350,27 @@ td img {padding:8px 0}
 	            	</div>
 	            </div>
 	            <div class="form-group">
-	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="Messages..."></textarea>
+	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="Your Messages..."></textarea>
 	            </div>
 	            <div class="form-group">
-	              <mailim class="btn btn-white btn-outline-white py-3 px-4"  style="border-color: black;color: black;position: initial;margin: 10px 0px;" ><input type="submit" value="Sand" style="cursor: pointer;background: none;border: none;"><mailim>
+	              <mailim class="btn btn-white btn-outline-white py-3 px-4"  style="border-color: black;color: black;position: initial;margin: 10px 0px;" ><input type="submit" value="Send" style="border-radius: 20px;cursor: pointer;background: none;border: none;"><mailim>
 	            </div>
 	          </form>
 <a href="https://www.picktime.com/10b827a9-b79a-4916-9790-b23ca12f380a" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}'>
-    <img border="none"  src="https://www.unicornspawellness.com/images/book-button.png" alt="Book an appointment with Unicorn Spa Wellness"/>
+    <img border="none"  src="images/book-button.png" alt="Book an appointment with Unicorn Spa Wellness"/>
   </a>
     		</div>
     	</div>
+		<style>
+		mailim { border-color: black;
+		color: black;
+		position: initial;
+		margin: 10px 0px;
+		border-radius: 20px;
+		}
+		</style>
     </section>
-    <footer class="ftco-footer ftco-section img">
+    footer class="ftco-footer ftco-section img">
 	<div class="overlay"></div>
 <div class="container">
 <div class="row mb-5">
