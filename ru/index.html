@@ -45,14 +45,14 @@ myform.submit(function(event){
   // Change to your service ID, or keep using the default service
   var service_id = "default_service";
   var template_id = "test";
-  myform.find("mailim").text("Gönderiliyor...");
+  myform.find("mailim").text("Отправка...");
   emailjs.sendForm(service_id,template_id,myform[0])
   	.then(function(){ 
-    	alert("Your message has been sent!");
-       myform.find("mailim").text("Send");
+    	alert("Ваше сообщение отправлено!");
+       myform.find("mailim").text("Отправить");
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("mailim").text("Send");
+       myform.find("mailim").text("Отправить");
     });
   return false;
 });
@@ -384,8 +384,8 @@ span { color:black}
 <tbody>
 <tr>
 <td><img border="0" src="https://4.bp.blogspot.com/-66-wEUWgvVM/XGJoUpfRomI/AAAAAAAAH7E/HfO-KLa3d6QfdCslkPeSjEzO_oFJSmV2gCEwYBhgL/s200/peelingfoam.jpg" /></td>
-<td><h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">PEELING AND FOAM MASSAGE</b></span></h3>
-Which is after the peeling with  natural silk gloves, body massage with natural soap bubbles.
+<td><h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">Пилинг и промывка пены</b></span></h3>
+После пилинга натуральными шелковыми перчатками, массаж тела натуральными мыльными пузырями.
 </td>
 </tr>
 </tbody>
@@ -398,8 +398,8 @@ Which is after the peeling with  natural silk gloves, body massage with natural 
 <td>
 <img border="0" src="https://4.bp.blogspot.com/-QGWiBuPqC5k/XGJpn_k2mBI/AAAAAAAAH7M/9PCnYjn-PvkjbWpnajxWvjhzJ0qW2KhaQCLcBGAs/s200/mud-therapy-pic.jpg" /></td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">MUD / CLAY THERAPY</b></span></h3>
-The treatment which  regeneration of  toxins in the body after healing mud / clay body wrapping
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">ГРЯЗЕВАЯ / ГЛИНЯНАЯ ТЕРАПИЯ</b></span></h3>
+Обработка которая регенерация токсинов в теле после излечивать оборачивать тела грязи / глины
 </td>
 </tr>
 </tbody>
@@ -412,8 +412,8 @@ The treatment which  regeneration of  toxins in the body after healing mud / cla
 <td>
 <img border="0" src="https://4.bp.blogspot.com/-XxHGCIKR-K4/XGJpzLKr1XI/AAAAAAAAH7Q/9E_Xa1x9ZigRIcorxTbKjqiQIVWGEpcVACLcBGAs/s200/bal.jpg" /></td>
 <td><h3 style="text-align: left;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">HONEY THERAPY</b></span></h3>
-Our honey care, which is a very rich and natural mineral source in terms of health, is a very effective treatment in insomnia and muscle aches as well as physical and mental fatigue. Honey therapy is a foam washing process after massage with honey in our bath area.
+<span style="color: #444444; font-size: large;"><b style="color: black;">МЕДОВАЯ ТЕРАПИЯ</b></span></h3>
+Наш медовый уход, который является очень богатым и естественным минеральным источником с точки зрения здоровья, является очень эффективным средством лечения бессонницы и мышечных болей, а также физической и умственной усталости. Медовая терапия - это процесс пенообразования после массажа медом в нашей бане.
 </td>
 </tr>
 </tbody>
@@ -427,8 +427,8 @@ Our honey care, which is a very rich and natural mineral source in terms of heal
 <img style="height: 178px;" border="0" src="images/coffee.jpg" /></td>
 <td>
 <h3 style="text-align: left;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">COFFEE PEELING</b></span></h3>
-The skin surface is cleaned deeply by removing the dead cells from the coffee peeling process. Caffeine oils is fat burning, anti-oxidants increase the body resistance and accelerates the metabolism helps regulate blood circulation. Foam washing ends your care.
+<span style="color: #444444; font-size: large;"><b style="color: black;">КОФЕЙНЫЙ ПИЛИНГ</b></span></h3>
+Поверхность кожи очищена глубоки путем извлекать мертвые клетки от процесса шелушения кофе. Кофеиновые масла сжигают жир, антиоксиданты повышают сопротивляемость организма и ускоряют обмен веществ, помогают регулировать кровообращение. Пенка для стирки заканчивает ваш уход.
 </td>
 </tr>
 </tbody>
@@ -442,8 +442,8 @@ The skin surface is cleaned deeply by removing the dead cells from the coffee pe
 <img border="0" src="images/deniz-tuzu-peeling.jpg" /></td>
 <td>
 <h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">SEA SALT PEELING</b></span></h3>
-Natural sea salt peeling is rich in sea minerals and has the ability to revitalize your skin.
+<span style="color: #444444;font-size: large;"><b style="color: black;">ПИЛИНГ С МОРСКОЙ СОЛЬЮ</b></span></h3>
+Натуральный пилинг с морской солью богат морскими минералами и обладает способностью оживлять кожу.
 </td>
 </tr>
 </tbody>
@@ -457,8 +457,8 @@ Natural sea salt peeling is rich in sea minerals and has the ability to revitali
 <img border="0" src="https://4.bp.blogspot.com/-rIjTJHUWw_E/XGJrWDYstzI/AAAAAAAAH7s/LyI305eHO38h1v6ndRf2JulYzBERuyLvQCLcBGAs/s200/yosun_maskes.jpg" /></td>
 <td>
 <h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">SEAWED MASK</b></span></h3>
-Natural seawed treatment in bath therapies; anti age, anti oxidant and dehydrolized feature, after the maintenance feature of moisturizing your skin with the ability to increase the cell renewal. The bath is completed by washing with the foam  after special peeling and seaweed mask. We bring you a relaxing area and experience with special seawed mask in your face.
+<span style="color: #444444;font-size: large;"><b style="color: black;">Морская маска</b></span></h3>
+Естественная обработка seaweed в терапиях ванны; анти-характеристика времени, противоокислительн и dehydrolized, после характеристики обслуживания moisturizing ваша кожа с способностью увеличить возобновление клетки. Ванна завершается умыванием пеной после специального пилинга и маской из морских водорослей. Мы предлагаем вам расслабляющую зону и опыт со специальной маской из морских водорослей на вашем лице.
 </td>
 </tr>
 </tbody>
@@ -472,8 +472,8 @@ Natural seawed treatment in bath therapies; anti age, anti oxidant and dehydroli
 <img style="height: 200px;" border="0" src="images/cikolata.jpg" /></td>
 <td>
 <h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">CHOCOLATE MASK</b></span></h3>
-The anti-oxidant property of chocolate reduces the wrinkles and increases the skin elasticity and protects the sun from harmful rays. With its deep moisturizing feature, it revitalizes your pale skin and gives it a bright and healthy appearance with cocoa extracts. Chocolate, which is the most natural hormone of happiness, is a combination of health and pampering</td>
+<span style="color: #444444;font-size: large;"><b style="color: black;">ШОКОЛАДНАЯ МАСКА</b></span></h3>
+Антиоксидантные свойства шоколада уменьшает морщины и повышает эластичность кожи и защищает от вредных лучей солнца. С глубокой особенность увлажняющий, он оживляет бледную кожу и придает ей яркий и здоровый вид с экстрактами какао. Шоколад, который является самым натуральным гормоном счастья, представляет собой сочетание здоровья и баловства</td>
 </tr>
 </tbody>
 </table>
@@ -489,14 +489,14 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" style="margin: auto;" width="100" height="100" src="images/damlaicon.png"/></span></div>
               <div class="media-body">
-                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" >Massages</h3>
-                <p>Renew your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
+                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" >Массажи</h3>
+                <p>Обновите свои пять чувств с помощью наших незаменимых массажей для спа-процедур. Вы отдохнете физически и морально.</p>
 				</p>
         <p class="mb-0">
           <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
-          <center><h3><b style="color: black;">MASSAGES</b></h3></center>
+          <center><h3><b style="color: black;">Массажи</b></h3></center>
 <div>
 <!--mesaj terapileri anlatım başlangıç -->
 
@@ -508,9 +508,9 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
     <td valign="center"><img border="0" src="https://4.bp.blogspot.com/-Dq5HBRWGoAw/XGJ55tzaT3I/AAAAAAAAH8I/G9vWfDtBj8w_-tNkk9HoS4X4MjCmtXv8ACLcBGAs/s200/anti-stress-massage.jpg" /></td>
     <td valign="center"><div style="text-align: left;">
 <h3>
-<span style="color: #444444;font-size: large;"><b style="color: black;">CLASSICAL SWEDISH MASSAGE</b></span></h3>
+<span style="color: #444444;font-size: large;"><b style="color: black;">КЛАССИЧЕСКИЙ ШВЕДСКИЙ МАССАЖ</b></span></h3>
 </div>
-Swedish massage, known as whole body massage; general massage techniques to relieve stress, while accelerating the metabolism runs the circulatory system.<br />
+Шведский массаж, известный как массаж всего тела; общие методы массажа для снятия стресса, при ускорении обмена веществ работает система кровообращения.<br />
 <br />
 <br /></td>
   </tr>
@@ -522,8 +522,8 @@ Swedish massage, known as whole body massage; general massage techniques to reli
 <tr>
     <td valign="center"><img border="0" height="131" src="https://1.bp.blogspot.com/-Uh_cQ799uK4/XGJ5ovv_P2I/AAAAAAAAH8A/aZ3hApW-pXkdVtbiypkcehhxzBkNzl3FACLcBGAs/s200/isve%25C3%25A7-masaj%25C4%25B1.jpg" width="200" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">AROMA MASSAGE</b></span></h3>
-All body massage with massage oils obtained from plant extracts is customized with aroma oil of your choice. It is a relaxing therapy with <b>less pressure.</b><br />
+<span style="color: #444444; font-size: large;"><b style="color: black;">АРОМАТИЧЕСКИЙ МАССАЖ</b></span></h3>
+Весь массаж тела с массажными маслами, полученными из растительных экстрактов, настраивается с использованием ароматического масла по вашему выбору. Это расслабляющая терапия с <b>меньшим давлением.</b><br />
 <br />
 <br /></td>
   </tr>
@@ -535,8 +535,8 @@ All body massage with massage oils obtained from plant extracts is customized wi
 <tr>
     <td valign="center"><img src="images/sicak.jpg" style="width: 200px;" border="0"></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">HOT STONE MASSAGE</b></span></h3>
-Hot stone massage with the application of classic Swedish massage with volcanic stones is referred to as deep tissue massage. Relaxation of the muscles and volcanic stones reduce negative energy, allows the body to relax.<br />
+<span style="color: #444444;font-size: large;"><b style="color: black;">МАССАЖ ГОРЯЧИМИ КАМНЯМИ</b></span></h3>
+Массаж горячими камнями с применением классического шведского массажа вулканическими камнями называют массаж глубокими тканями. Расслабление мышц и вулканических камней уменьшает отрицательную энергию, позволяет организму расслабиться.<br />
 <br />
 <br /></td>
   </tr>
@@ -548,8 +548,8 @@ Hot stone massage with the application of classic Swedish massage with volcanic 
 <tr>
     <td valign="center"><img border="0" src="https://1.bp.blogspot.com/-SOEzg_27QLE/XGJ6V-qcBHI/AAAAAAAAH8U/MT8I_kXfB-IGmObdhGG6-NkuhGasJxRZgCLcBGAs/s200/1f22185f16201cfa9762be3f6a34d313.jpeg" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">REGIONAL MASSAGE</b></span></h3>
-Massage treatments; They are recommended as a package and provide regional relief after package care. By determining how many sessions the application will be, the problem area is provides to be relieved.<br />
+<span style="color: #444444;font-size: large;"><b style="color: black;">РЕГИОНАЛЬНЫЙ МАССАЖ</b></span></h3>
+Массажные процедуры; они рекомендуются в виде пакета и обеспечивают региональное облегчение после комплексного ухода. Путем определения, сколько сеансов приложение будет, проблемная область обеспечивает, чтобы быть освобождены.<br />
 <br />
 <br /></td>
   </tr>
@@ -561,10 +561,10 @@ Massage treatments; They are recommended as a package and provide regional relie
 <tr>
     <td valign="center"><img border="0" src="https://3.bp.blogspot.com/-fPc-1H-2V08/XGJ6pnW8W2I/AAAAAAAAH8g/AawV7zoKP30rSJbTA0oQ4MtrRXqybt7ewCLcBGAs/s200/medical.jpg" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">MEDICAL THERAPY</b></span></h3>
-In the therapy that helps to eliminate muscle pain regionally, it is used in the spasm solvent oils to
-reduce the pressure and muscle fatigue-relieving techniques. The use of muscle relaxant areas
-such as the sauna steam room prior to maintenance helps to increase the effects of care.<br />
+<span style="color: #444444;font-size: large;"><b style="color: black;">МЕДИКАМЕНТОЗНАЯ ТЕРАПИЯ</b></span></h3>
+В терапии которая помогает исключить боль мышцы регионарно, она использована в маслах спазма растворяющих к
+уменьшите давление и мышечные методы снятия усталости. Польза зон релаксанта мышцы
+например, парилка в сауне до начала технического обслуживания помогает увеличить эффект ухода.<br />
 <br /></td>
   </tr>
 </tbody></table>
@@ -575,9 +575,9 @@ such as the sauna steam room prior to maintenance helps to increase the effects 
 <tr>
     <td valign="center"><img border="0" src="https://1.bp.blogspot.com/-EBSIcI51d3w/XGJ620UJVkI/AAAAAAAAH8k/MJEUxOPrUWUOT2r2hs7674F_yVZxwv8RgCLcBGAs/s200/selulit-masaji.jpg" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">CELLULITE MASSAGE</b></span></h3>
-It is a care applied to support regional circulation. Helps break down the adipose tissue under the
-skin. Body peeling before massage is recommended.<br />
+<span style="color: #444444;font-size: large;"><b style="color: black;">МАССАЖ ЦЕЛЛЮЛИТА</b></span></h3>
+Это забота о поддержке регионального обращения. Способствует расщеплению жировой ткани под
+кожа. Пилинг тела перед массажем рекомендуется.<br />
 </td>
   </tr>
 </tbody></table>
@@ -588,11 +588,11 @@ skin. Body peeling before massage is recommended.<br />
 <tr>
     <td valign="center"><img border="0" src="https://3.bp.blogspot.com/-EWD5BhzosWY/XGJ7V1eVtkI/AAAAAAAAH8w/MjmtwUhFsIczQBYEc3mHPhGr5MxSp_uKwCLcBGAs/s200/balterapi.jpg" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="font-size: large;color: #444444;"><b style="color: black;">HONEY THERAPY MASSAGE</b></span></h3>
-It is an ancient treatment that has been applied in Asia and Eastern Europe for hundreds of years.
-Relax, heal and detox with our special Tibetan Honey massage! Thanks to the minerals, vitamins,
-enzymes and anti-oxidants contained in honey, a complete circulation is achieved, the skin pores
-are cleared and the healing power of honey acts directly on the body by the skin.<br />
+<span style="font-size: large;color: #444444;"><b style="color: black;">МЕДОВАЯ ТЕРАПИЯ МАССАЖ</b></span></h3>
+Это древнее лечение, которое применялось в Азии и Восточной Европе на протяжении сотен лет.
+Расслабьтесь, вылечитесь и детоксикация с нашим специальным тибетским медовым массажем! Благодаря минералам, витаминам,
+ферменты и антиоксиданты, содержащиеся в меде, обеспечивают полное кровообращение, поры кожи
+очищены и целебная сила меда действует непосредственно на организм через кожу.<br />
 </td>
   </tr>
 </tbody></table>
@@ -603,11 +603,11 @@ are cleared and the healing power of honey acts directly on the body by the skin
 <tr>
     <td valign="center"><img border="0" src="https://2.bp.blogspot.com/-kGODYbsn8d8/XGJ7hCiP-dI/AAAAAAAAH80/6b_QX9gU5vE1LKlfmbwmq35mhp61vYHcgCLcBGAs/s200/Spor-Masaj%25C4%25B1.jpg" /></td>
     <td valign="left"><h3 style="text-align: left;">
-<span style="color: #444444;font-size: large;"><b style="color: black;">SPORTS MASSAGE</b></span></h3>
-Sports massage is a form of massage that involves the manipulation of soft tissue to benefit a
-person doing regular physical activity. It is designed to help correct the problems and imbalances
-caused by traumatic physical activity and trauma in the soft tissue. The application of sports
-massage before and after exercise can improve performance, help recovery and prevent injury.<br />
+<span style="color: #444444;font-size: large;"><b style="color: black;">СПОРТИВНЫЙ МАССАЖ</b></span></h3>
+Спортивный массаж - это форма массажа, которая включает в себя манипуляции с мягкими тканями, чтобы принести пользу
+человек, регулярно занимающийся физической активностью. Он предназначен, чтобы помочь исправить проблемы и дисбалансы
+вызвано травматической физической нагрузкой и травмой мягких тканей. Применение спорта
+массаж до и после тренировки может улучшить производительность, помочь восстановлению и предотвратить травмы.<br />
 </td>
   </tr>
 </tbody></table>
@@ -624,14 +624,14 @@ massage before and after exercise can improve performance, help recovery and pre
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex mb-3"><img data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" style="margin: auto;" width="100" height="100" src="images/damlaicon.png"/></span></div>
               <div class="media-body">
-                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" >FACE AND BOCY CARE TREATMENTS</h3>
-                <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
+                <h3 style="cursor: pointer;" class="heading" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" >УХОД ЗА ЛИЦОМ И ТЕЛОМ</h3>
+                <p>Наша косметика и спа-процедуры адаптированы к потребностям вашей кожи и тела. Мы предлагаем вам различные спа - процедуры с регенерацией, отдыхом, омоложением и оживлением.</p>
 				</p>
         <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Подробности</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
-          <center><h3><b style="color: black;">FACE AND BOCY CARE TREATMENTS</b></h3></center>
+          <center><h3><b style="color: black;">УХОД ЗА ЛИЦОМ И ТЕЛОМ</b></h3></center>
 		  <!--cilt bakımı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
@@ -644,10 +644,10 @@ td img {padding:8px 0}
 <td><img src="https://2.bp.blogspot.com/-_In6Lb0DwVo/XGKx1RZ5f2I/AAAAAAAAH9A/zn8Q41nlHrAk8vYphXYK8JK51jvHKDoGACLcBGAs/s200/skin%2Bcare.jpg" border="0"></td>
 <td><div style="text-align: left;">
 <h3>
-<span style="color: #444444; font-size: large;"><b style="color: black;">CLASSIC SKIN CARE</b></span></h3>
+<span style="color: #444444; font-size: large;"><b style="color: black;">КЛАССИЧЕСКИЙ УХОД ЗА КОЖЕЙ</b></span></h3>
 </div>
-With the care of spa cosmetics, the skin is cleaned deeply, the skin with mask and finishing creams
-appropriate
+При уходе за спа косметикой, кожа глубоко очищается, кожа с маской и отделочными кремами
+соответствующий
 </td>
 </tr>
 </tbody>
@@ -660,9 +660,9 @@ appropriate
 <td>
 <img style="height: 177px;" src="images/skincareman.jpg" border="0"></td>
 <td><h3 style="text-align: left;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">MEN’s SPECIAL SKIN CARE</b></span></h3>
-In-depth skin cleansing is applied to men by using special skin care products. treatment ends with
-the serum.
+<span style="color: #444444; font-size: large;"><b style="color: black;">Мужской специальный уход за кожей</b></span></h3>
+Глубокое очищение кожи применяется для мужчин с помощью специальных средств по уходу за кожей. обработка заканчивается
+сыворотка.
 </td>
 </tr>
 </tbody>
@@ -675,8 +675,8 @@ the serum.
 <td>
 <img src="https://3.bp.blogspot.com/-Asr1LYX5aO0/XGKy2SrAH9I/AAAAAAAAH9M/oUzaomKV6ssFXJOCnqR8eDytynaaFUo7wCLcBGAs/s200/skin%2Bcare%2Bspecial.jpg" border="0"></td>
     <td valign="center"><h3 style="text-align: left;">
-<span style="color: #444444;"><span style="font-size: large;"><b style="color: black;">PERSONAL SKIN CARE</b></span></span></h3>
-Skin care using serum and special masks appropriate to your skin's structure and needs.
+<span style="color: #444444;"><span style="font-size: large;"><b style="color: black;">ПЕРСОНАЛЬНЫЙ УХОД ЗА КОЖЕЙ</b></span></span></h3>
+Уход за кожей с использованием сыворотки и специальных масок, соответствующих структуре и потребностям вашей кожи.
 </td>
 </tr>
 </tbody></table>
@@ -689,9 +689,9 @@ Skin care using serum and special masks appropriate to your skin's structure and
 <img style="height: 160px;" src="images/yogunnem.jpg" border="0"></td>
 <td>
 <h3 style="text-align: left;">
-<span style="color: #444444; font-size: large;"><b style="color: black;">INTENSIVE HUMIDITY PROGAM</b></span></h3>
+<span style="color: #444444; font-size: large;"><b style="color: black;">ИНТЕНСИВНАЯ ПРОГРАММА ВЛАЖНОСТИ</b></span></h3>
 <div>
-Skin care is done to intensify the moisture balance that your skin needs.</div>
+Внимательность кожи сделана для того чтобы сделать баланс интенсивней влаги вашей коже.</div>
 </td>
 </tr>
 </tbody>
@@ -704,11 +704,11 @@ Skin care is done to intensify the moisture balance that your skin needs.</div>
 <td>
 <img src="https://3.bp.blogspot.com/-oXfpyMSr9F8/XGK0H8TX0UI/AAAAAAAAH9g/ekja9jEkW1cY7dd1vyYJOGznIyKgiLwfACLcBGAs/s200/skin%2Bmassage.jpg" border="0"></td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">SKIN MASSAGE</b></span></h3>
-Our facial massage with deep cleansing followed by our special skin oil with firming and
-rejuvenating properties accelerates the blood circulation and provides oxygenation of the skin.
-Special care against skin recovery and sagging. Aloe vera gel with intensive moisture is applied at
-the finishing. It is recommended to take the package program.
+<h3 style="text-align: left;"><span style="color: #444444;font-size: large;"><b style="color: black;">МАССАЖ КОЖИ</b></span></h3>
+Наш лицевой массаж с глубоко очищать следовать нашим особенным маслом кожи с укреплять и
+омолаживающие свойства ускоряет кровообращение и обеспечивает насыщение кожи кислородом.
+Специальный уход против восстановления и провисания кожи. Гель алоэ вера с интенсивным увлажнением применяется при
+отделка. Рекомендуется брать пакетную программу.
 </td>
 </tr>
 </tbody>
@@ -721,10 +721,10 @@ the finishing. It is recommended to take the package program.
 <td>
 <img src="https://4.bp.blogspot.com/-BEotZ8hafYU/XGK0vkkKlvI/AAAAAAAAH9o/ZCynHG4um200he-HiUem48aWWZnZmwUYwCLcBGAs/s200/detoks.jpg" border="0"></td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">DETOX BODY PEELING AND MASSAGE</b></span></h3>
-Exfoliating by use the restorative effect of sea salt accelerates your blood circulation and prepares
-your body for care. Our massage oil which has the effect of purification and toxin release gives
-you a different experience.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">ДЕТОКС ПИЛИНГ И МАССАЖ ТЕЛА</b></span></h3>
+Отшелушивание при использовании восстанавливающее действие морской соли ускоряет кровообращение и готовит
+ваше тело для ухода. Наше масло массажа которое имеет влияние отпуска очищения и токсина дает
+у тебя другой опыт.
 </td>
 </tr>
 </tbody>
@@ -737,9 +737,9 @@ you a different experience.
 <td>
 <img src="https://4.bp.blogspot.com/-oWv4Q3fL_Q4/XGK1CQho79I/AAAAAAAAH9w/CS-kRADBFDIhnykyHVvgS1dHP1G449EBQCLcBGAs/s200/deniz%2Byosunu.png" border="0"></td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">SEAWED BODY WRAP</b></span></h3>
-After peeling with sea salt, the moss wrap rests, you while at the same time cleansing your skin
-deeply.<br>
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">ОБЕРТЫВАНИЕ ИЗ МОРСКИХ ВОДОРОСЛЕЙ</b></span></h3>
+После пилинга морской солью, мох обертывание отдыхает, вы в то же время очищая кожу
+глубоко.<br>
 </td>
 </tr>
 </tbody>
@@ -752,9 +752,9 @@ deeply.<br>
 <td>
 <img style="height: 200px;" src="images/camur1.jpg" border="0"></td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">REPAIR MUD CARE</b></span></h3>
-Your skin peeling is made with special plant mixtures. The mud wraps the skin under the influence
-of the minerals it contains.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">РЕМОНТ ГРЯЗИ УХОД</b></span></h3>
+Пилинг кожи производится специальными растительными смесями. Грязь обертывает кожу под воздействием
+минералов, которые он содержит.
 </td>
 </tr>
 </tbody>
@@ -768,11 +768,8 @@ of the minerals it contains.
 <img src="https://2.bp.blogspot.com/-1xcXBPDTP5w/XGK19KDxcwI/AAAAAAAAH-E/5BwkGtt2K3IQOMmicdIPGeHqP_nJR-kCwCLcBGAs/s200/leg%2Bcare.jpg" border="0">
 </td>
 <td>
-<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">JET LAG CARE</b></span></h3>
- After long travels or at the end of a busy day, you will relax and take care of your legs, be balanced
-your blood circulation.
-Starting with peeling, maintenance continues with special massage techniques. It is a care for
-toxin and edema.
+<h3 style="text-align: left;"><span style="color: #444444; font-size: large;"><b style="color: black;">УХОД ЗА РЕАКТИВНОЙ ЗАДЕРЖКОЙ</b></span></h3>
+ После долгих путешествий или в конце насыщенного дня вы расслабитесь и позаботитесь о своих ногах, сбалансируете кровообращение. Начиная с пилинга, уход продолжается специальными массажными техниками. Это уход за токсинами и отеками.
 </td>
 </tr>
 </tbody></table>
@@ -783,10 +780,10 @@ toxin and edema.
 <tr>
 <td>
 <img style="height: 150px;" src="images/ince.jpg" border="0"></td>
-<td valign="center"><h3 style="text-align: left; font-size: large;"><b style="color: black;">SLIMMING AND FIRMING BODY WRAP AND MASSAGE</b></h3>
-Starting with sea salt and coffee blend peeling, our treatment continues with clay mask enriched
-with special aroma oils. After the mask, the aroma massage which is helps the toxin out, helping
-to tighten the skin and break down the fat. It is recommended as package.
+<td valign="center"><h3 style="text-align: left; font-size: large;"><b style="color: black;">ОБЕРТЫВАНИЕ И МАССАЖ ДЛЯ ПОХУДЕНИЯ И УКРЕПЛЕНИЯ ТЕЛА</b></h3>
+Начиная с пилинга морской солью и кофейной смесью, наше лечение продолжается глиняной маской, обогащенной
+со специальными ароматическими маслами. После маски, массаж ароматности который помогает токсину вне, помогая
+затянуть кожу и сломать вниз с сала. Порекомендовано как пакет.
 </td>
 </tr>
 </tbody>
@@ -799,11 +796,11 @@ to tighten the skin and break down the fat. It is recommended as package.
 <td>
 <img style="height:166px;" src="images/gold.jpg" border="0"></td>
 <td>
-<h3 style="text-align: left;"><span style="font-size: large;"><b style="color: black;">UNICORN PAMPERING BADY CARE</b></span></h3>
-Have you tried the spa trip we prepared for your special days?
-We prepare you for a special evening,our treatment start with a peeling, intensive moisturizing
-feature continues the massage. At the end of the massage, your skin will provide you with a
-sparkle.</td>
+<h3 style="text-align: left;"><span style="font-size: large;"><b style="color: black;">UNICORN УХОД ЗА ТЕЛОМ</b></span></h3>
+Вы пробовали спа-поездку, которую мы подготовили для ваших особых дней?
+Мы подготовим вас к особенному вечеру,наше лечение начнем с пилинга, интенсивного увлажнения
+особенность продолжает массаж. В конце массажа ваша кожа будет предоставить вам
+блеск.</td>
 </tr>
 </tbody>
 </table>
@@ -824,8 +821,8 @@ sparkle.</td>
       <div class="container" style="overflow: hidden;">
       	<div class="row justify-content-center mb-5 pb-3" style="overflow: hidden;">
           <div class="col-md-7 heading-section ftco-animate text-center" style="overflow: hidden;">
-            <h2 style="font-weight: bold;" class="mb-4">FAR EAST THERAPIES</h2>
-            <p>By balancing the healing effect of the far east and the flow of physical energy, we take you on a mystical journey.We offer you new spa & wellness  therapies by remaining true to the miracle of nature, body energies and Far East traditions.</p>
+            <h2 style="font-weight: bold;" class="mb-4">ДАЛЬНЕВОСТОЧНЫЕ ТЕРАПИИ</h2>
+            <p>Уравновешивая целебный эффект Дальнего Востока и поток физической энергии, мы отправим вас в мистическое путешествие.Мы предлагаем вам новые спа и оздоровительные процедуры, оставаясь верными чуду природы, энергии тела и традициям Дальнего Востока.</p>
           </div>
  <div id="resim">
 	<img id="image-maps" src="images/dogumasajlaren.jpg" border="0" width="1920" height="1139" orgWidth="1920" orgHeight="1139" usemap="#image-maps" alt="" />
@@ -851,14 +848,14 @@ sparkle.</td>
 <div style="display: none;" id="animatedModal51" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">THAI MASSAGE</a></h3>
+      					<h3><a href="#iletisim">ТАЙСКИЙ МАССАЖ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/thai.jpg" style="width: 30%;">
-	        				<p>It is a body work inspired by Buddhist teachings applied with sequential movement flow.Body
-focus on applying pressure using palm, thumbs, elbows and feet to massage running on power
-lines. The massage that releases the tension in the body is based on opening the joints and
-facilitating strech.</p>
+	        				<p>Это-работа тела, вдохновленная буддийскими учениями, применяемыми с последовательным потоком движения.Тело
+сосредоточьтесь на применении давления с помощью ладони, больших пальцев, локтей и ног, чтобы массаж работает на власть
+русло. Массаж который выпускает напряжение в теле основан на раскрывать соединения и
+облегчение растяжки.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -868,13 +865,13 @@ facilitating strech.</p>
 <div style="display: none;" id="animatedModal52" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">CUUPING THERAPY</a></h3>
+      					<h3><a href="#iletisim">БАНОЧНЫЙ МАССАЖ</a></h3>
       					<span class="position"></span>
       					<div class="text"> 
 						<img src="images/kupa.jpg" style="width: 30%;">
-	        				<p>Cup pull therapy is one of the therapeutic therapies of the far east. The therapy, which is applied
-together with the aroma oils, releases the tissues inside the body, relaxes the tight muscles and
-chronic back, neck pain. It's help to migraine and muscle spasms that cause fatigue.</p>
+	        				<p>Кубковая тянущая терапия - одна из терапевтических терапий Дальнего Востока. Терапия, которая применяется
+вместе с ароматическими маслами, освобождает ткани внутри тела, расслабляет напряженные мышцы и
+хронические боли в спине, шее. Это помогает мигрени и мышечные спазмы, которые вызывают усталость.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -884,14 +881,14 @@ chronic back, neck pain. It's help to migraine and muscle spasms that cause fati
 <div style="display: none;" id="animatedModal53" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">UNICORN MIX MASSAGE</a></h3>
+      					<h3><a href="#iletisim">UNICORN МАССАЖ СМЕШИВАНИЯ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/unimix.jpg" style="width: 30%;">
-	        				<p>With our massage consisting of a combination of Far Eastern therapies, your energy is balanced,
-blood circulation is regulated and your stress is reduced. Bali aroma massage, Ayurveda, Indian
-head massage techniques with Thai massage using a stretch of is a top-down care. Have you not
-tried the our special massage of the pleasant holiday?</p>
+	        				<p>С нашим массажем, состоящим из комбинации дальневосточных терапий, ваша энергия сбалансирована,
+циркуляция крови регулируется, и ваш стресс снижается. Балийский ароматический массаж, Аюрведа, Индийский
+массаж головы с тайским массажем с использованием растяжки - это уход сверху вниз. Вы не
+попробовали наш специальный массаж приятного отдыха?</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -901,13 +898,13 @@ tried the our special massage of the pleasant holiday?</p>
 <div style="display: none;" id="animatedModal54" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">BALI HERBAL STAMP MASSAGE</a></h3>
+      					<h3><a href="#iletisim">БАЛИЙСКИЙ ТРАВЯНОЙ МАССАЖ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/balibitkim.jpg" style="width: 30%;">
-	        				<p>Our aromatherapy oil body massage is complemented by our treatment starting with the healing
-seeds and plants. With the relaxing effect of plants and aroma oils, it helps to relax 5 senses,
-reduce stress, and make your skin come alive and glittering.</p>
+	        				<p>Наш массаж тела масла aromatherapy укомплектован нашей обработкой начиная с healing
+семена и растения. С расслабляющим эффектом растений и ароматических масел, он помогает расслабиться 5 чувств,
+уменьшите стресс, и сделайте вашу кожу прийти живой и блестящий.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -917,12 +914,12 @@ reduce stress, and make your skin come alive and glittering.</p>
 <div style="display: none;" id="animatedModal55" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">BALI 4 HANDS MAASAGE</a></h3>
+      					<h3><a href="#iletisim">БАЛИ 4 МАССАЖ РУК</a></h3>
       					<span class="position"></span>
 						<img src="images/bali4el.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>With two therapists practicing the Far East, the massage offers you a pampering spa experience
-while relaxing.</p>
+	        				<p>С двумя терапевтами, практикующими Дальний Восток, массаж предлагает вам расслабляющий спа-опыт
+во время отдыха.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -932,14 +929,12 @@ while relaxing.</p>
 <div style="display: none;" id="animatedModal56" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">INDIAN SCALP MASSAGE</a></h3>
+      					<h3><a href="#iletisim">ИНДИЙСКИЙ МАССАЖ КОЖИ ГОЛОВЫ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/hint.jpg" style="width: 30%;">
-	        				<p>You'll experience a different interpretation of resting with massage to the scalp which is a Indian
-style
-Our massage, which is help migraine, cumulative headaches and sinuses. Includes head, neck and
-facial massage.</p>
+	        				<p>Вы испытаете различное толкование отдыхать с массажем к скальпу который Индийский тип наш массаж, который мигрень помощи, кумулятивные головные боли и sinuses. Включает голову, шею и
+массаж лица.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -949,13 +944,13 @@ facial massage.</p>
 <div style="display: none;" id="animatedModal57" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">AYURVEDA MASSAGE</a></h3>
+      					<h3><a href="#iletisim">АЮРВЕДИЧЕСКИЙ МАССАЖ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/ayurveda.jpg" style="width: 30%;">
-	        				<p>It is a relaxing, calming and relaxing massage that affects the central nervous system positively. In
-this application, the blood circulation is accelerated by working on the energy channels special
-ayurvedic oils.</p>
+	        				<p>Это расслабляющий, успокаивающий и расслабляющий массаж, который положительно влияет на центральную нервную систему. В
+это приложение, кровообращение ускоряется, работая на специальных энергетических каналов
+Аюрведические масла.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -965,13 +960,13 @@ ayurvedic oils.</p>
 <div style="display: none;" id="animatedModal58" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">BALI AROMA MASSAGE</a></h3>
+      					<h3><a href="#iletisim">БАЛИЙСКИЙ АРОМАТИЧЕСКИЙ МАССАЖ</a></h3>
       					<span class="position"></span>
       					<div class="text"><img src="images/baliaroma.jpg" style="width: 30%;">
-	        				<p>The blend of Far Eastern culture in the Balinese massage is Chinese reflexology techniques, Indian
-medicine aroma oils and massage techniques developed by blending the whole body massage.
-Massage is applied for the whole body up to the scalp from the toes, allows to relax by regulating
-the blood circulation, while revitalizing the skin and for reduce the stres</p>
+	        				<p>Смесь дальневосточной культуры в балийском массаже - китайские техники рефлексологии, индийские
+медицина аромамасла и техники массажа разработаны путем смешивания всего тела массажем.
+Массаж наносится на все тело до волосистой части головы от пальцев ног, позволяет расслабиться, регулируя
+кровообращение, восстанавливает кожу и уменьшить стресс</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -981,12 +976,12 @@ the blood circulation, while revitalizing the skin and for reduce the stres</p>
 <div style="display: none;" id="animatedModal59" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">BALI HOT STONE MASSAGE</a></h3>
+      					<h3><a href="#iletisim">МАССАЖ ГОРЯЧИМИ КАМНЯМИ БАЛИ</a></h3>
       					<span class="position"></span><img src="images/sicak.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>It is a whole body stone massage combined with the techniques of Balinese massage and aroma
-oils.
-Massaging as a deep tissue massage good for muscular pain while reducing stress.</p>
+	        				<p>Это массаж всего тела камнем в сочетании с техниками балийского массажа и аромата
+нефти.
+Массажировать как глубокий массаж ткани хороший для мышечной боли пока уменьшающ усилие.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -996,13 +991,13 @@ Massaging as a deep tissue massage good for muscular pain while reducing stress.
 <div style="display: none;" id="animatedModal60" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       					<div class="info text-center">
-						<h3><a href="#iletisim">BALI HOT STONE MASSAGE</a></h3>
+						<h3><a href="#iletisim">МАССАЖ ГОРЯЧИМИ КАМНЯМИ БАЛИ</a></h3>
       					<span class="position"></span>
       					<div class="text">
 						<img src="images/sicak.jpg" style="width: 30%;">
-	        				<p>It is a whole body stone massage combined with the techniques of Balinese massage and aroma
-oils.
-Massaging as a deep tissue massage good for muscular pain while reducing stress.</p>
+	        				<p>Это массаж всего тела камнем в сочетании с техниками балийского массажа и аромата
+нефти.
+Массажировать как глубокий массаж ткани хороший для мышечной боли пока уменьшающ усилие.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1012,12 +1007,12 @@ Massaging as a deep tissue massage good for muscular pain while reducing stress.
 <div style="display: none;" id="animatedModal61" class="animated-modal">
     <div class="img mb-4" style="background-image: url(images/hint.jpg);"></div>
       				<div class="info text-center">
-      					<h3><a href="#iletisim">FOOT REFLEX MAASAGE</a></h3>
+      					<h3><a href="#iletisim">РЕФЛЕКТОРНЫЙ МАССАЖ НОГ</a></h3>
       					<span class="position"></span><img src="images/refleksoloji.jpg" style="width: 30%;">
       					<div class="text">
-	        				<p>Foot pressure massage, which helps to spread the body energy to the organs in a balanced
-manner and to relieve stress, helps to regulate blood circulation by opening the energy blockages.
-It is recommended that maintenance be taken as a package instead of a single session.</p>
+	        				<p>Массаж ног, который помогает распространить энергию тела к органам в сбалансированном
+образ и сбросить усилие, помощь для того чтобы отрегулировать циркуляцию крови путем раскрывать засорения энергии.
+Рекомендуется, чтобы обслуживание принималось как пакет вместо одного сеанса.</p>
 	        			</div>
       				</div>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1031,41 +1026,41 @@ background-size: cover;">
 			<div class="container" style="padding: 4.3em 0;">
 				<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2 style="font-weight: bold;" class="mb-4">UNICORN PACKAGE PROGRAMS</h2>
-            <p>Special Massage Programs That Will Rest Your Soul and Your Body.</p>
+            <h2 style="font-weight: bold;" class="mb-4">UNICORN ПАКЕТНЫЕ ПРОГРАММЫ</h2>
+            <p>Специальные массажные программы, которые позволят отдохнуть душе и телу.</p>
           </div>
         </div>
         <div class="row">
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">UNICORN WELLCOME PACKAGE</h3>
-						<p>Start your holiday with our welcome package. With this package you will prepare yourself for a pleasant time, you will
-renew, relax and prepare for a stress-free holiday.</p>
+	        			<h3 class="mb-4">UNICORN ПРИВЕТСТВЕННЫЙ ПАКЕТ</h3>
+						<p>Начните свой отпуск с нашего приветственного пакета. С помощью этого пакета вы подготовите себя к приятному времени, вы будете
+обновите, расслабьтесь и подготовьтесь к беззаботному отдыху.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
         	</div>
         	</div>
 			</div>
 <div style="display: none;" id="animatedModal41" class="animated-modal">
-          <center><h3><b style="color: black;font-size: 27px;">UNICORN WELLCOME PACKAGE</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">UNICORN ПРИВЕТСТВЕННЫЙ ПАКЕТ</b></h3></center>
 		  <!--uzak doğu ayrıntı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
 </style>
-						<center><p><div class="price">Time:..Dk.</div> <span class="per"></span></p>
+						<center><p><div class="price">время:....</div> <span class="per"></span></p>
 	        		
         			<ul><table>
     <th>
 								<tr>
-    <th><li>Peeling & Foam Massage</li></th>
+    <th><li>Пилинг И Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Classical Swedish Massage</li></th>
+    <th><li>Классический Шведский Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Mousturizing Mini Facial</li></th>
+    <th><li>Увлажняющий Мини Для Лица</li></th>
   </tr>
   </table>
         			</ul></center>
@@ -1076,31 +1071,31 @@ td img {padding:8px 0}
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">RELAXING PROGRAM</h3>
-						<p>Before tanning, you will get an energetic and relaxing program while preparing your skin for the sun.</p>
+	        			<h3 class="mb-4">РАССЛАБЛЯЮЩАЯ ПРОГРАММА</h3>
+						<p>Перед загаром вы получите энергичную и расслабляющую программу, готовя кожу к Солнцу.</p>
 						<p class="mb-0">
-         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
+         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Детали Пакета</a></center>
         </p>
         		</div>
         	</div></div>
 			<div style="display: none;" id="animatedModal42" class="animated-modal">
 			
-          <center><h3><b style="color: black;font-size: 27px;">RELAXING PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">РАССЛАБЛЯЮЩАЯ ПРОГРАММА</b></h3></center>
 		  <!--paket ayrıntı anlatım başlangıç -->
 <style>
 td img {padding:8px 0}
 </style>
-						<center><p><div class="price">Time ...</div> <span class="per"></span></p>
+						<center><p><div class="price">Время ...</div> <span class="per"></span></p>
         			<ul><table>
   <tr>
     <th>
-								<li>Peeling & Foam Massage</li></th>
+								<li>Пилинг И Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Antistress Aroma Massage</li></th>
+    <th><li>Антистрессовый ароматический массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Mousturizing Mini Facial</li>
+    <th><li>Увлажняющий Мини Для Лица</li>
 	</th>
   </tr>
   </table>
@@ -1111,31 +1106,31 @@ td img {padding:8px 0}
 <div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">LUXURY PROGRAM</h3>
-						<p>Indulge yourself with our luxury program. The fun way to relax and rest is through our luxurious package. The pleasure of
-your holiday will increase by visiting our spa.</p>
+	        			<h3 class="mb-4">РОСКОШНАЯ ПРОГРАММА</h3>
+						<p>Побалуйте себя нашей роскошной программой. Интересный способ расслабиться и отдохнуть - через наш роскошный пакет. Удовольствие от
+ваш отдых увеличится, посетив наш спа-салон.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
         	</div>
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal47" class="animated-modal">
-          <center><h3><b style="color: black;font-size: 27px;">LUXURY PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">РОСКОШНАЯ ПРОГРАММА</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
 					<ul>
 								<table><tr>
-    <th><li>Peeling & Honey / Foam Massage</li></th>
+    <th><li>Пилинг И Медовый / Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Unıcorn Mix Massage</li></th>
+    <th><li>Unicorn Массаж Смешивания</li></th>
   </tr>
 								<tr>
-    <th><li>Foot Reflex Massage</li></th>
+    <th><li>Рефлекторный Массаж Ног</li></th>
   </tr></table>
         			</ul></center>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1144,31 +1139,31 @@ td img {padding:8px 0}
         	<div class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">SPECIAL PROGRAM for COUPLE</h3>
-						<p>How about a spa journey with your partner? Experience a mystical journey with aroma massage while relaxing with body
-care after our traditional hammam care.</p>
+	        			<h3 class="mb-4">Специальная программа для пары</h3>
+						<p>Как насчет спа-путешествия с вашим партнером? Испытайте мистическое путешествие с ароматическим массажем во время отдыха с телом
+уход за нашим традиционным хаммамом.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
         	</div>
 						<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal48" class="animated-modal">
-          <center><h3><b style="color: black;font-size: 27px;">SPECIAL PROGRAM for COUPLE</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">Специальная программа для пары</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
 					<ul>
 								<table><tr>
-    <th><li>Peeling & Foam Massage</li></th>
+    <th><li>Пилинг И Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Seawed Mask</li></th>
+    <th><li>Маска Из Морских Водорослей</li></th>
   </tr>
 								<tr>
-    <th><li>Antistress Massage</li></th>
+    <th><li>Антистрессовый массаж</li></th>
   </tr></table>
         			</ul></center>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1178,11 +1173,11 @@ td img {padding:8px 0}
 			<div class="col-md-3 ftco-animate" style="padding-top: 26px;">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">FAR EAST PROGRAM</h3>
-						<p>Our program, prepared with the physical and mental effects of the Far East, will give also experience relaxation and
-tranquility.</p>
+	        			<h3 class="mb-4">ДАЛЬНЕВОСТОЧНАЯ ПРОГРАММА</h3>
+						<p>Наша программа, подготовленная с учетом физического и психического воздействия Дальнего Востока, даст также опыт релаксации и
+спокойствие.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1190,21 +1185,21 @@ tranquility.</p>
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal45" class="animated-modal">
 			
-          <center><h3><b style="color: black;font-size: 27px;">FAR EAST PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">ДАЛЬНЕВОСТОЧНАЯ ПРОГРАММА</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
         			<ul>
 								<table><tr>
-    <th><li>Serenity Herbal Bath</li></th>
+    <th><li>Травяная Ванна Serenity</li></th>
   </tr>
 								<tr>
-    <th><li>Bali Aroma Massage with Herbal Stamp</li></th>
+    <th><li>Балийский ароматический массаж с травяной печатью</li></th>
   </tr>
 								<tr>
-    <th><li>Thai Foot Reflex Massage</li></th>
+    <th><li>Тайский Рефлекторный Массаж Ног</li></th>
   </tr></table>
         			</ul></center>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1213,11 +1208,11 @@ td img {padding:8px 0}
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">OTTOMAN HAMMAM PROGRAM</h3>
-						<p>We introduce you to a different culture with the Ottoman bath program. During refreshes your skin with roses and gives
-you mental relaxation with its scent. Do not miss care from head to toe with a special rose program.</p>
+	        			<h3 class="mb-4">ОСМАНСКАЯ ПРОГРАММА ХАМАМ</h3>
+						<p>Мы вводим вас к различной культуре с программой ванны тахты. Во время освежает кожу розами и дарит
+вы ментальное расслабление с его запахом. Не пропустите уход с головы до ног с помощью специальной программы rose.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1225,23 +1220,23 @@ you mental relaxation with its scent. Do not miss care from head to toe with a s
 						<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal46" class="animated-modal">
 			
-          <center><h3><b style="color: black;font-size: 27px;">OTTOMAN HAMMAM PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">ОСМАНСКАЯ ПРОГРАММА ХАМАМ</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
         			<ul>
 								<table><tr>
-    <th><li>Rose Bath</li></th>
+    <th><li>Розовая Ванна</li></th>
   </tr>
 								<tr>
-    <th><li>Peeling & Rose Foam Massage</li></th>
+    <th><li>Пилинг И Розовый Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Aroma Massage with Rose Oil</li></th>
+    <th><li>Ароматический массаж с розовым маслом</li></th>
   </tr>
 								<tr>
-    <th><li>Rose Mini Facial</li></th>
+    <th><li>Роза Мини-Лица</li></th>
   </tr></table>
         			</ul></center>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1250,10 +1245,10 @@ td img {padding:8px 0}
 					<div style="padding-top: 26px;"  class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">UNICORN SIGNATURE PROGRAM</h3>
-						<p>While we present the wonders of nature with aroma oils, we address your five senses in this special care.</p>
+	        			<h3 class="mb-4">UNICORN ПРОГРАММА ПОДПИСИ</h3>
+						<p>Пока мы представляем чудеса природы с маслами ароматности, мы адресуем ваши 5 чувств в этой специальной внимательности.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 		</div>
 		</div>
@@ -1262,28 +1257,28 @@ td img {padding:8px 0}
 					<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal43" class="animated-modal">
 			
-          <center><h3><b style="color: black;font-size: 27px;">UNICORN SIGNATURE PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">UNICORN ПРОГРАММА ПОДПИСИ</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
 	        		
         			<ul>
 								<table><tr>
-    <th><li>Mystic Herbal Bath</li></th>
+    <th><li>Мистическая Травяная Ванна</li></th>
   </tr>
 								<tr>
-    <th><li>Coffee Peeling for Face & Body</li></th>
+    <th><li>Кофейный пилинг для лица и тела</li></th>
   </tr>
 								<tr>
-    <th><li>Aroma Massage with Unicorn Oil</li></th>
+    <th><li>Ароматический массаж с маслом единорога</li></th>
   </tr>
 								<tr>
-    <th><li>Intense Humidity Face Mask</li></th>
+    <th><li>Интенсивная Влажность Маска Для Лица</li></th>
   </tr>
 								<tr>
-    <th><li>Hand Reflex Point Massage</li></th>
+    <th><li>Рефлекторный Точечный Массаж Рук</li></th>
   </tr></table>
         			</ul></center>
 					<center><button type="button" data-fancybox-close="" title="Close" style="border: solid 1px #ba4a69;width: 200px;font-size: 20px;border-radius: 20px;">Закрывать<img src="images/close.png"/></button></center>
@@ -1292,10 +1287,10 @@ td img {padding:8px 0}
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">WINTER PROGRAM</h3>
-						<p>On your winter holiday we have prepared you a warm and excellent spa journey.</p>
+	        			<h3 class="mb-4">ЗИМНЯЯ ПРОГРАММА</h3>
+						<p>На ваш зимний отдых мы подготовили вам теплое и отличное спа путешествие.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 		</div>
         	</div>
@@ -1303,24 +1298,24 @@ td img {padding:8px 0}
 			<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal44" class="animated-modal">
 			
-          <center><h3><b style="color: black;font-size: 27px;">WINTER PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">ЗИМНЯЯ ПРОГРАММА</b></h3></center>
 		  
 <style>
 td img {padding:8px 0}
 </style>
-	        			<center><p><div class="price">Time: ...</div> <span class="per"></span></p>
+	        			<center><p><div class="price">время: ...</div> <span class="per"></span></p>
         			<ul><table>
 								<tr>
-    <th><li>Peeling & Foam Massage</li></th>
+    <th><li>Пилинг И Пенный Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Classical Swedish Massage</li></th>
+    <th><li>Классический Шведский Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Rescue Eye</li></th>
+    <th><li>Спасательный Глаз</li></th>
   </tr>
 								<tr>
-    <th><li>Intense Humidity Face mask</li></th>
+    <th><li>Интенсивная влажность маска для лица</li></th>
   </tr>
   </table>
         			</ul></center>
@@ -1331,10 +1326,10 @@ td img {padding:8px 0}
 			<div style="padding-top: 26px;" class="col-md-3 ftco-animate">
         		<div class="pricing-entry pb-5 text-center">
         			<div>
-	        			<h3 class="mb-4">SUMMER PROGRAM</h3>
-						<p>Here is a warm holiday with the sun, sea and nature of the Mediterranean Sea. Enjoy more of this holiday with spa treatments.</p>
+	        			<h3 class="mb-4">ЛЕТНЯЯ ПРОГРАММА</h3>
+						<p>Здесь теплый отдых с солнцем, морем и природой Средиземного моря. Наслаждайтесь больше этого праздника со спа-процедурами.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        			<p>
 	        		</div>
@@ -1342,7 +1337,7 @@ td img {padding:8px 0}
         	</div>
 				<!--paket ayrıntı anlatım başlangıç -->
 			<div style="display: none;" id="animatedModal49" class="animated-modal">
-          <center><h3><b style="color: black;font-size: 27px;">SUMMER PROGRAM</b></h3></center>
+          <center><h3><b style="color: black;font-size: 27px;">ЛЕТНЯЯ ПРОГРАММА</b></h3></center>
 <style>
 td img {padding:8px 0}
 </style>
@@ -1350,31 +1345,31 @@ td img {padding:8px 0}
 					<ul><table>
   <tr>
     <th>
-					<div class="price">BEFORE THE SUN BATH</div> <span class="per"></span></p></th>
+					<div class="price">ПЕРЕД СОЛНЕЧНЫМИ ВАННАМИ</div> <span class="per"></span></p></th>
   </tr>
 								<tr>
-    <th><li>Peeling & Foam Wash</li></th>
+    <th><li>Пилинг И Пенка Для Умывания </li></th>
   </tr>
 								<tr>
-    <th><li>Bronze Massage</li></th>
+    <th><li>Бронзовый Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Mini Facial</li></th>
+    <th><li>Мини-Лица</li></th>
   </tr>
 								<tr>
-    <th><p><div class="price">AFTER THE SUN BATH</div> <span class="per"></span></p></th>
+    <th><p><div class="price">ПОСЛЕ ПРИНЯТИЯ СОЛНЕЧНЫХ ВАНН</div> <span class="per"></span></p></th>
   </tr>
 								<tr>
-    <th><li>Foam Wash & Honey Massage</li></th>
+    <th><li>Пена Для Мытья И Медовый Массаж</li></th>
   </tr>
 								<tr>
-    <th><li>Massage with St. John’s Wort Oil</li></th>
+    <th><li>Массаж с маслом зверобоя</li></th>
   </tr>
 								<tr>
-    <th><li>Relaxing Moisture Facial</li></th>
+    <th><li>Расслабляющая Влага Для Лица</li></th>
   </tr>
 								<tr>
-    <th><li>Head Massage</li></th>
+    <th><li>массаж головы</li></th>
   </tr>
   </table>
         			</ul></center>
@@ -1392,53 +1387,53 @@ td img {padding:8px 0}
 	    		<div class="col-md-4 d-flex align-self-stretch ftco-animate">
 	    			<div class="appointment-info text-center p-5">
 	    				<div class="mb-4">
-	    					<h3 class="mb-3">Central Management Office</h3>
+	    					<h3 class="mb-3">Центральный Офис Управления</h3>
 		    				<p>	Taşyaka Mah. Baha Şıkman Cad. 37/C Fethiye - Muğla - Türkiye</p>
 	    				</div>
 	    				<div class="mb-4">
-		    				<h3 class="mb-3">Central Office Phone</h3>
+		    				<h3 class="mb-3">Телефон Центрального Офиса</h3>
 		    				<p class="day"><strong>+90 252 612 91 41</strong></p>
 	    				</div>
 	    				<div>
-		    				<h3 class="mb-3">Working hours</h3>
-		    				<p class="day"><strong>Monday - Saturday</strong></p>
+		    				<h3 class="mb-3">Рабочее время</h3>
+		    				<p class="day"><strong>Понедельник - Суббота</strong></p>
 		    				<span>09:00 - 19:00</span>
 	    				</div>
 	    			</div>
 	    		</div>
 	    		<div class="col-md-6 appointment pl-md-5 ftco-animate">
-	    			<h3 class="mb-3">Contact Form</h3>
+	    			<h3 class="mb-3">контактная форма</h3>
 	    			<form id="myform" method="post" class="appointment-form">
 	            <div class="row form-group d-flex">
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="isim" class="form-control" placeholder="Name's">
+	            		<input type="text" required='' name="isim" class="form-control" placeholder="Имени">
 	            	</div>
 	            	<div class="col-md-6">
-	            		<input type="text" required='' name="soyisim" class="form-control" placeholder="Surname's">
+	            		<input type="text" required='' name="soyisim" class="form-control" placeholder="Фамилии">
 	            	</div>
 					<div class="col-md-6">
-	            		<input type="text" required='' name='otel' class="form-control" placeholder="Your Hotel">
+	            		<input type="text" required='' name='otel' class="form-control" placeholder="ваш отель">
 	            	</div>
 			    <div class="col-md-6">
-	            		<input type="email" required='' name='email' class="form-control" placeholder="E-mail">
+	            		<input type="email" required='' name='email' class="form-control" placeholder="Электронная почта">
 	            	</div>
 	            </div>
 	            <div class="row form-group d-flex">
 	            	<div class="col-md-6">
 	            		<div class="input-wrap">
 		            		<div class="icon"><span class="ion-md-calendar"></span></div>
-		            		<input type="text" name='tarih' required='' id="appointment_date" class="form-control" placeholder="Date">
+		            		<input type="text" name='tarih' required='' id="appointment_date" class="form-control" placeholder="Дата">
 	            		</div>
 	            	</div>
 	            	<div class="col-md-6">
-	            		<input type="phone" required='' name='telefon' class="form-control" placeholder="Phone">
+	            		<input type="phone" required='' name='telefon' class="form-control" placeholder="Телефон">
 	            	</div>
 	            </div>
 	            <div class="form-group">
-	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="Your Messages.."></textarea>
+	              <textarea name="mesaj" required='' id="" cols="30" rows="3" class="form-control" placeholder="ваше сообщение.."></textarea>
 	            </div>
 	            <div class="form-group">
-	              <mailim class="btn btn-white btn-outline-white py-3 px-4"  style="border-color: black;color: black;position: initial;margin: 10px 0px;" ><input type="submit" value="Send" style="border-radius: 20px;cursor: pointer;background: none;border: none;"><mailim>
+	              <mailim class="btn btn-white btn-outline-white py-3 px-4"  style="border-color: black;color: black;position: initial;margin: 10px 0px;" ><input type="submit" value="Отправить" style="border-radius: 20px;cursor: pointer;background: none;border: none;"><mailim>
 	            </div>
 	          </form>
 <a href="https://www.picktime.com/10b827a9-b79a-4916-9790-b23ca12f380a" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}'>
@@ -1461,8 +1456,8 @@ td img {padding:8px 0}
 <div class="row mb-5">
 <div class="col-md-3">
 <div class="ftco-footer-widget mb-4">
-<h2 class="ftco-heading-2">PRIVACY</h2>
-<p><a href="https://www.unicorncompany.com.tr" target="_blank">Unicorn Spa Wellness</a> is a subsidiary of <a href="https://www.unicorncompany.com.tr" target="_blank">Unicorn company©</a></p>
+<h2 class="ftco-heading-2">информация</h2>
+<p><a href="https://www.unicorncompany.com.tr" target="_blank">Unicorn Spa Wellness</a> является дочерней компанией<a href="https://www.unicorncompany.com.tr" target="_blank">Unicorn company©</a></p>
 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 <li class="ftco-animate"><a  href="https://twitter.com/UnicornSpaTR" target="_blank"><span class="icon-twitter"></span></a></li>
 <li class="ftco-animate"><a href="https://www.facebook.com/UnicornSpaWellness" target="_blank"><span class="icon-facebook"></span></a></li>
@@ -1472,15 +1467,15 @@ td img {padding:8px 0}
 </div>
 <div class="col-md-4">
 <div class="ftco-footer-widget mb-4">
-<h2 class="ftco-heading-2">PRIVACY</h2>
+<h2 class="ftco-heading-2">КОНФИДЕНЦИАЛЬНОСТЬ</h2>
 <div class="block-21 mb-4 d-flex">
 <ul class="list-unstyled">
-<li><a href="/terms.html" class="py-2 d-block">Cookies and Terms of Use</a></li>
-<li><a href="/mesafeli-satis-sozlesmesi.html" class="py-2 d-block">Distance Sales Agreement</a></li>
+<li><a href="/terms.html" class="py-2 d-block">Файлы cookie и Условия использования (на английском языке)</a></li>
+<li><a href="/mesafeli-satis-sozlesmesi.html" class="py-2 d-block">Договор дистанционной продажи (на английском языке)</a></li>
 </ul>
 </div>
 </div>
-<div style="color:white">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <br><a href="https://www.unicornspawellness.com" target="_blank">Unicorn Spa Wellness</a></br>
+<div style="color:white">Авторское право &copy;<script>document.write(new Date().getFullYear());</script> Все права защищены <br><a href="https://www.unicornspawellness.com" target="_blank">Unicorn Spa Wellness</a></br>
 </div>
 </div>
 </div>
