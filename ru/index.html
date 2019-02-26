@@ -279,16 +279,6 @@ span { color:black}
 	  </style>
 		  </head>
   <body style="overflow-x:hidden" id="top">
-<div style="position:absolute;z-index: 99;">
-  <div class="dropdown">
-  <button class="mainmenubtn">русский  - <img src="images/ru.png" /></button>
-  <div class="dropdown-child">
-    <a href="/tr/index.html">Türkçe - <img src="images/tr24.png" /></a>
-    <a href="/en/index.html">English  - <img src="images/english.png" /></a>
-    <a href="/de/index.html">Deutsch - <img src="images/de.png" /></a>
-  </div>
-</div>
-</div>
 	  <div class="hero-wrap js-fullheight" style="  background-image: url(images/back1.jpg);background-attachment: fixed;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -315,10 +305,58 @@ span { color:black}
 	          <li class="nav-item"><a href="#ourservices" class="nav-link">Свои Услуги</a></li>
 	          <li class="nav-item"><a href="#paketler" class="nav-link">Наш пакет</a></li>
 			  <li class="nav-item"><a href="#iletisim" class="nav-link">Связь</a></li>
+	       <li class="dropdown" style="margin: auto;">
+    <a href="#" onclick="return false;" class="dropbtn"><img src="images/ru.png" /></a>
+    <div class="dropdown-content">
+  <a href="/en/index.html"><img src="images/english.png"> English</a>
+      <a href="/tr/index.html"><img src="images/tr24.png"> Türkçe</a>
+      <a href="/de/index.html"><img src="images/de.png"> Deutsch
+    </a></div>
+  </li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+	  <style>
+ .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ .dropdown:hover .dropbtn {
+  background-color: #4d4b4c;
+  color:#fff;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content a:hover {
+background:#4d4b4c;
+color:#fff;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
     <!-- END nav -->
 		<section id="hakkimizda" class="ftco-section ftco-discount img" style="background-image: url(images/bg_2.jpg);background-attachment: fixed; padding: 11em 0;">
 			<div class="overlay"></div>
