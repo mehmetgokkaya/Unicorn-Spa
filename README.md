@@ -1,2 +1,2 @@
-# spatest
-spa.mehmetgokkaya.com
+# Unicorn Spa Wellness için Oluşturulmuş test klasörleridir
+www.unicornspawellness.com
