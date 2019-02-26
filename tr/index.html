@@ -309,7 +309,7 @@ span { color:black}
 	          <li class="nav-item"><a href="#ourservices" class="nav-link">Hizmetlerimiz</a></li>
 	          <li class="nav-item"><a href="#paketler" class="nav-link">Paketlerimiz</a></li>
 			  <li class="nav-item"><a href="#iletisim" class="nav-link">İletişim</a></li>
-			  <li class="dropdown" style="margin: auto;">
+			  <li class="dropdown">
     <a onclick="void(0)" class="dropbtn"><img src="images/tr24.png" /></a>
     <div class="dropdown-content">
   <a href="/en/index.html"><img src="images/english.png"> English</a>
@@ -322,6 +322,14 @@ span { color:black}
 	    </div>
 	  </nav>
 	  <style>
+	 .dropdown {
+	 margin:auto;}
+	 
+	@media screen and (max-width: 992px) {
+ .dropdown{
+    margin: -16px;
+}
+	} 
   .dropbtn {
   display: inline-block;
   color: white;
