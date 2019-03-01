@@ -68,7 +68,7 @@ $('area').each(function(){
 			var selectedCity = $(this).attr('alt');
 			if($(this).attr('href') != '#' ){
 				$(this).css('cursor','pointer');
-				$('.cityPopup').html('<b>'Нажмите, чтобы получить информацию о +selectedCity+'</b>');
+				$('.cityPopup').html('<i>Нажмите, чтобы получить информацию о </i><br /><b>'+selectedCity+'</b>');
 				$('.cityPopup').show();
 			}		
 		});
