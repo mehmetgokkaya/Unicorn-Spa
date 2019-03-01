@@ -1666,6 +1666,7 @@ $(document).ready(function(e) {
    })();
 </script>
 <script type="text/javascript">
+
 $(function(){
 $('resim area').each(function(){	
 		$(this).mousemove(function(e){
@@ -1684,8 +1685,7 @@ $('resim area').each(function(){
 					var x = mouseX - offset.left;
 					var y = mouseY - offset.top;
 			
-
-        $('.cityPopup').css({left:x + 15, top:y + 15});
+				$('.cityPopup').css({left:x + 15, top:y + 15});
 				return false;
 			}
 			else{
@@ -1698,8 +1698,8 @@ $('resim area').each(function(){
 });
 $(document).on('mousemove', function(e){
     $('.cityPopup').css({
-       left:  e.pageX + 17,
-       top:   e.pageY + 17
+       left:  e.pageX + 15,
+       top:   e.pageY + 15
     });
 });
 </script>
