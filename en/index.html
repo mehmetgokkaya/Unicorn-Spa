@@ -68,7 +68,7 @@ $('area').each(function(){
 			var selectedCity = $(this).attr('alt');
 			if($(this).attr('href') != '#' ){
 				$(this).css('cursor','pointer');
-				$('.cityPopup').html('<i>Click here for more information about</i><b>'+selectedCity+'</b>');
+				$('.cityPopup').html('<i>Click here for more information about</i><br /><b>'+selectedCity+'</b>');
 				$('.cityPopup').show();
 			}		
 		});
