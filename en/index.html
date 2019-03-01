@@ -79,6 +79,23 @@ myform.submit(function(event){
 .tooltip1:hover .tooltiptext {
   visibility: visible;
 }
+.tooltip1 .tooltiptext2 {
+  visibility: hidden;
+  width: 225px;
+  background: #d58ca0;
+  color: #fff;
+  border: #ba4a69 3px solid;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+	left: 20%;
+	top: 60%;
+}
+.tooltip1:hover .tooltiptext2 {
+  visibility: visible;
+}
 </style>
 <script type="text/javascript">
 $(function(){
@@ -733,7 +750,7 @@ massage before and after exercise can improve performance, help recovery and pre
 				</p>
         <p class="mb-0">
 		<div class="tooltip1">
-  <span class="tooltiptext">Click for detailed information about our massages</span>
+  <span class="tooltiptext2">Click for detailed information about Body Care Treatments</span>
          <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a></div>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
