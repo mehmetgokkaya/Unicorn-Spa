@@ -63,7 +63,7 @@ myform.submit(function(event){
 </script>
 <script type="text/javascript">
 $(function(){
-$('resim area').each(function(){	
+$('area').each(function(){	
 		$(this).mousemove(function(e){
 			var selectedCity = $(this).attr('alt');
 			if($(this).attr('href') != '#' ){
@@ -83,8 +83,8 @@ $(document).on('mousemove', function(e){
 });
 </script>
 </style>
-	  <style type='text/css'>
-.cityPopup {
+<style id="compiled-css" type="text/css">
+      .cityPopup {
 	z-index: 9999;
   position: absolute;
   padding-bottom: 5px;
@@ -99,6 +99,8 @@ $(document).on('mousemove', function(e){
   top: 0px;
   left: 0px;
 }
+  </style>
+	  <style type='text/css'>
 td img {
     border-radius: 30px;
 }
@@ -1684,27 +1686,6 @@ $(document).ready(function(e) {
    (function(){
       emailjs.init("user_iiaLpjOt3AVeUja8wnA3U");
    })();
-</script>
-<script type="text/javascript">
-$(function(){
-$('resim area').each(function(){	
-		$(this).mousemove(function(e){
-			var selectedCity = $(this).attr('alt');
-			if($(this).attr('href') != '#' ){
-				$(this).css('cursor','pointer');
-				$('.cityPopup').html('<b>'+selectedCity+' hakkında bilgi almak için tıklaynız.</b>');
-				$('.cityPopup').show();
-			}		
-		});
-		$(this).mouseout(function(){$('.cityPopup').hide();});		
-	});
-});
-$(document).on('mousemove', function(e){
-    $('.cityPopup').css({
-       left:  e.pageX + 15,
-       top:   e.pageY + 15
-    });
-});
 </script>
   </body>
 </html>
