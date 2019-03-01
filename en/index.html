@@ -61,6 +61,25 @@ myform.submit(function(event){
     }
 
 </script>
+<style>
+.tooltip1 .tooltiptext {
+  visibility: hidden;
+  width: 225px;
+  background: #d58ca0;
+  color: #fff;
+  border: #ba4a69 3px solid;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+	left: 20%;
+	top: 72%;
+}
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 <script type="text/javascript">
 $(function(){
 $('area').each(function(){	
@@ -439,7 +458,9 @@ color:#fff;
                 <p>You will spend a pleasant time with our modernized and practical treatments of Turkish bath. You can find the health and energy provided by the water in our baths with our natural products.</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Click for detailed information about our massages</span>
+          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a></div>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">HAMMAM THERAPIES</b></h3></center>
@@ -574,7 +595,9 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
                 <p>Renew your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Click for detailed information about our massages</span>
+          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a></div>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">MASSAGES</b></h3></center>
@@ -709,7 +732,9 @@ massage before and after exercise can improve performance, help recovery and pre
                 <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
 				</p>
         <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Click for detailed information about our massages</span>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a></div>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">FACE AND BODY CARE TREATMENTS</b></h3></center>
