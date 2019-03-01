@@ -1685,11 +1685,8 @@ $('resim area').each(function(){
 					var y = mouseY - offset.top;
 			
 
-        $("area").on('mousemove', function(e) {
-  $(".cityPopup").css({top: e.pageY, left: e.pageX });
-  $('[data-toggle="tooltip"]').tooltip('show')
-})
-        
+        $('.cityPopup').css({left:x + 15, top:y + 15});
+				return false;
 			}
 			else{
 				$(this).css('cursor','default');
