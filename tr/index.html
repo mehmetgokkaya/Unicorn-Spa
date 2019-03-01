@@ -1667,6 +1667,7 @@ $(document).ready(function(e) {
 </script>
 <script type="text/javascript">
 
+
 $(function(){
 $('resim area').each(function(){	
 		$(this).mousemove(function(e){
@@ -1675,23 +1676,7 @@ $('resim area').each(function(){
 				$(this).css('cursor','pointer');
 				$('.cityPopup').html('<b>'+selectedCity+' hakkında bilgi almak için tıklaynız.</b>');
 				$('.cityPopup').show();
-				
-				// Get Relative Mouse Position
-					var X = $('body').offset().left;
-					var Y = $('body').offset().top;
-					var mouseX = e.pageX - X;
-					var mouseY = e.pageY - Y;
-					var offset = $('.detailContent').offset();
-					var x = mouseX - offset.left;
-					var y = mouseY - offset.top;
-			
-				$('.cityPopup').css({left:x + 15, top:y + 15});
-				return false;
-			}
-			else{
-				$(this).css('cursor','default');
-				$(this).click(function(){return false;});				
-			}			
+			}		
 		});
 		$(this).mouseout(function(){$('.cityPopup').hide();});		
 	});
