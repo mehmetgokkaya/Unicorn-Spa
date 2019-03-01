@@ -68,7 +68,7 @@ $('area').each(function(){
 			var selectedCity = $(this).attr('alt');
 			if($(this).attr('href') != '#' ){
 				$(this).css('cursor','pointer');
-				$('.cityPopup').html('<b>Klicken Sie hier für Informationen über '+selectedCity+'</b>');
+				$('.cityPopup').html('<i>Klicken Sie hier für weitere Informationen zur</i><b>'+selectedCity+'</b>');
 				$('.cityPopup').show();
 			}		
 		});
@@ -82,7 +82,6 @@ $(document).on('mousemove', function(e){
     });
 });
 </script>
-</style>
 <style id="compiled-css" type="text/css">
       .cityPopup {
 	z-index: 9999;
