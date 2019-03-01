@@ -61,6 +61,45 @@ myform.submit(function(event){
     }
 
 </script>
+<script type="text/javascript">
+$(function(){
+$('area').each(function(){	
+		$(this).mousemove(function(e){
+			var selectedCity = $(this).attr('alt');
+			if($(this).attr('href') != '#' ){
+				$(this).css('cursor','pointer');
+				$('.cityPopup').html('<b>'Click here for information about +selectedCity+'</b>');
+				$('.cityPopup').show();
+			}		
+		});
+		$(this).mouseout(function(){$('.cityPopup').hide();});		
+	});
+});
+$(document).on('mousemove', function(e){
+    $('.cityPopup').css({
+       left:  e.pageX + 15,
+       top:   e.pageY + 15
+    });
+});
+</script>
+</style>
+<style id="compiled-css" type="text/css">
+      .cityPopup {
+	z-index: 9999;
+  position: absolute;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 150px;
+  padding-right: 5px;
+  display: none;
+  background: #79bee5;
+  color: #fff;
+  border: #1691bd 3px solid;
+  padding-top: 5px;
+  top: 0px;
+  left: 0px;
+}
+  </style>
 </style>
 	  <style type='text/css'>
 td img {
@@ -865,6 +904,9 @@ sparkle.</td>
         </div>
     	</div>
     </section>
+	<div id="infoPopup">
+<div class="cityPopup">&nbsp;</div>
+</div>
 	 <section class="ftco-section bg-light" style="overflow: hidden;">
 		<section class="ftco-section ftco-counter img" id="section-counter">
 	    <div class="row"> 
@@ -874,7 +916,7 @@ sparkle.</td>
             <h2 style="font-weight: bold;" class="mb-4">FAR EAST THERAPIES</h2>
             <p>By balancing the healing effect of the far east and the flow of physical energy, we take you on a mystical journey.We offer you new spa & wellness  therapies by remaining true to the miracle of nature, body energies and Far East traditions.</p>
           </div>
- <div id="resim">
+ <resim id="resim">
 	<img id="image-maps" src="images/dogumasajlaren.jpg" border="0" width="1920" height="1139" orgWidth="1920" orgHeight="1139" usemap="#image-maps" alt="" />
 <map name="image-maps" id="image-maps">
 <area  alt="Thai Masajı" title="Thai Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" shape="rect" coords="323,11,654,201" style="outline:none;" target="_self"     />
@@ -888,7 +930,7 @@ sparkle.</td>
 <area  alt="Bali Taş Masajı" title="Bali Taş Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;"  shape="rect" coords="1430,733,1761,923" style="outline:none;" target="_self"     />
 <area alt="Refleksoloji Masajı" title="Refleksoloji Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" shape="rect" coords="1250,941,1581,1131" style="outline:none;" target="_self"     />
 </map>
-</div>
+</resim>
 </div>
 </div>
 </div>
