@@ -63,6 +63,18 @@ myform.submit(function(event){
 </script>
 </style>
 	  <style type='text/css'>
+	  .cityPopup {
+	z-index: 9999;
+  position: absolute;
+  padding: 5px;
+  width: 150px;
+  display: none;
+  background: #79bee5;
+  color: #fff;
+  border: #1691bd 3px solid;
+  top: 0;
+  left: 0;
+}
 td img {
     border-radius: 30px;
 }
@@ -854,7 +866,11 @@ Paket olarak önerilen bakımımızda, kendi özel uyguladığınız vücut şek
             <p>Uzak doğunun iyileştirici etkisi ve bedensel enerji akışını dengeleyerek sizleri mistik bir yolculuğa çıkarıyoruz. Doğanın mucizeleri, beden enerjileri ve uzak doğu geleneklerine sadık kalarak yeni spa ve sağlıklı yaşam terapilerini sizlere sunuyoruz.
 </p>
           </div>
- <div id="resim">
+ <resim id="resim">
+ <div id="infoPopup">
+<div class="cityPopup">&nbsp;</div>
+</div>
+
 	<img id="image-maps" src="images/dogumasajlartr.jpg" border="0" width="1920" height="1139" orgWidth="1920" orgHeight="1139" usemap="#image-maps" alt="" />
 <map name="image-maps" id="image-maps">
 <area  alt="Thai Masajı" title="Bilgi için tıklayınız" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" shape="rect" coords="323,11,654,201" style="outline:none;" target="_self"     />
@@ -868,9 +884,7 @@ Paket olarak önerilen bakımımızda, kendi özel uyguladığınız vücut şek
 <area  alt="Bali Taş Masajı" title="Bilgi için tıklayınız" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;"  shape="rect" coords="1430,733,1761,923" style="outline:none;" target="_self"     />
 <area alt="Refleksoloji Masajı" title="Bilgi için tıklayınız" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" shape="rect" coords="1250,941,1581,1131" style="outline:none;" target="_self"     />
 </map>
-</div>
-</div>
-</div>
+</resim>
 </div>
 </div>
 </div>
@@ -1647,6 +1661,41 @@ $(document).ready(function(e) {
    (function(){
       emailjs.init("user_iiaLpjOt3AVeUja8wnA3U");
    })();
+</script>
+<script type="text/javascript">
+$(function(){
+$('resim area').each(function(){	
+		$(this).mousemove(function(e){
+			var selectedCity = $(this).attr('alt');
+			if($(this).attr('href') != '#' ){
+				$(this).css('cursor','pointer');
+				$('.cityPopup').html('<b>'+selectedCity+' hakkında bilgi almak için tıklaynız.</b>');
+				$('.cityPopup').show();
+				
+				// Get Relative Mouse Position
+					var X = $('body').offset().left;
+					var Y = $('body').offset().top;
+					var mouseX = e.pageX - X;
+					var mouseY = e.pageY - Y;
+					var offset = $('.detailContent').offset();
+					var x = mouseX - offset.left;
+					var y = mouseY - offset.top;
+			
+
+        $("area").on('mousemove', function(e) {
+  $(".cityPopup").css({top: e.pageY, left: e.pageX });
+  $('[data-toggle="tooltip"]').tooltip('show')
+})
+        
+			}
+			else{
+				$(this).css('cursor','default');
+				$(this).click(function(){return false;});				
+			}			
+		});
+		$(this).mouseout(function(){$('.cityPopup').hide();});		
+	});
+});
 </script>
   </body>
 </html>
