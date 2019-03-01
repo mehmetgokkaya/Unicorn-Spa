@@ -104,6 +104,24 @@ $(document).on('mousemove', function(e){
     }
 </style>
 <![endif]-->
+<style>
+.tooltip1 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 99;
+  left: 34%;
+	top: 57%;
+}
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 	  <style type='text/css'>
 td img {
     border-radius: 30px;
@@ -449,7 +467,9 @@ color:#fff;
                 <p>Türk hamamı keyfinin modernleştirilmiş ve uygulaması uzmanlar tarafından yapılan bakımlarımız ile keyfili vakit geçireceksiniz. Suyun verdiği sağlık ve enerjiyi, doğal ürünlerimiz ile birlikte hamam bakımlarımızda bulabilirsiniz.</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Detaylar</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Masajlarımız hakkında detaylı bilgi almak için tıklayınız</span>
+          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">HAMAM BAKIMLARIMIZ</b></h3></center>
@@ -585,7 +605,9 @@ Hamam terapilerinde uygulanan doğal yosun bakımı; anti age, anti oksidan ve d
                 <p>Spa terapilerinin vazgeçilmezi masajlarımız ile beş duyunuzu tazelerken, bedensel ve zihinsel olarak dinleneceksiniz</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Detaylar</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Masajlarımız hakkında detaylı bilgi almak için tıklayınız</span>
+          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">MASAJ TERAPİLERİMİZ</b></h3></center>
@@ -712,7 +734,9 @@ Spor masajı düzenli fiziksel egzersiz yapan bir kişiye fayda sağlamak için 
                 <p>Cildinizin ve vücudunuzun ihtiyaçlarına göre spa kozmetik ürünleri ile yapılan bakımlarımızdır. Yenilenme, dinlenme, gençleştirme ve canlandırma özelliklerine sahip bakımlarımız ile sizlere farklı bir spa deneyimi sunuyoruz.</p>
 				</p>
         <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Detaylar</a>
+		<div class="tooltip1">
+  <span class="tooltiptext">Masajlarımız hakkında detaylı bilgi almak için tıklayınız</span>
+         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">CİLT VE VÜCUT BAKIMLARI</b></h3></center>
