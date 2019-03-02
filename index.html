@@ -114,6 +114,166 @@ myform.submit(function(event){
     }
 
 </script>
+<style>
+#bilgi
+{
+    text-align: center;
+    color: #fff;
+    background: #d58ca0;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #bilgi:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #d58ca0;
+		color: #fff;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #bilgi.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #ba4a69;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #bilgi.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #bilgi.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
+</style>
+<script>
+$( function()
+{
+    var targets = $( '[rel~=tooltip]' ),
+        target  = false,
+        tooltip = false,
+        title   = false;
+ 
+    targets.bind( 'mouseenter', function()
+    {
+        target  = $( this );
+        tip     = target.attr( 'title' );
+        tooltip = $( '<div id="bilgi"></div>' );
+ 
+        if( !tip || tip == '' )
+            return false;
+ 
+        target.removeAttr( 'title' );
+        tooltip.css( 'opacity', 0 )
+               .html( tip )
+               .appendTo( 'body' );
+ 
+        var init_tooltip = function()
+        {
+            if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                tooltip.css( 'max-width', $( window ).width() / 2 );
+            else
+                tooltip.css( 'max-width', 340 );
+ 
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+ 
+            if( pos_left < 0 )
+            {
+                pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                tooltip.addClass( 'left' );
+            }
+            else
+                tooltip.removeClass( 'left' );
+ 
+            if( pos_left + tooltip.outerWidth() > $( window ).width() )
+            {
+                pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                tooltip.addClass( 'right' );
+            }
+            else
+                tooltip.removeClass( 'right' );
+ 
+            if( pos_top < 0 )
+            {
+                var pos_top  = target.offset().top + target.outerHeight();
+                tooltip.addClass( 'top' );
+            }
+            else
+                tooltip.removeClass( 'top' );
+ 
+            tooltip.css( { left: pos_left, top: pos_top } )
+                   .animate( { top: '+=10', opacity: 1 }, 50 );
+        };
+ 
+        init_tooltip();
+        $( window ).resize( init_tooltip );
+ 
+        var remove_tooltip = function()
+        {
+            tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+            {
+                $( this ).remove();
+            });
+ 
+            target.attr( 'title', tip );
+        };
+ 
+        target.bind( 'mouseleave', remove_tooltip );
+        tooltip.bind( 'click', remove_tooltip );
+    });
+});
+</script>
+<script type="text/javascript">
+$(function(){
+$('area').each(function(){	
+		$(this).mousemove(function(e){
+			var selectedCity = $(this).attr('alt');
+			if($(this).attr('href') != '#' ){
+				$(this).css('cursor','pointer');
+				$('.cityPopup').html('<i>Click here for more information about</i><br /><b>'+selectedCity+'</b>');
+				$('.cityPopup').show();
+			}		
+		});
+		$(this).mouseout(function(){$('.cityPopup').hide();});		
+	});
+});
+$(document).on('mousemove', function(e){
+    $('.cityPopup').css({
+       left:  e.pageX + 15,
+       top:   e.pageY + 15
+    });
+});
+</script>
+<style id="compiled-css" type="text/css">
+.cityPopup {
+	z-index: 9999;
+	position: absolute;
+	padding: 5px;
+	width: 170px;
+	display: none;
+	background: #d58ca0;
+	color: #fff;
+	border: #ba4a69 3px solid;
+	top: 0px;
+	left: 0px;
+}
+  </style>
 </style>
 	  <style type='text/css'>
 td img {
@@ -188,8 +348,7 @@ width: 300px;
 img[usemap] {
 		border: none;
 		height: auto;
-		max-width: 100%;
-		width: auto;
+		width: 100%;
 	}
 	.pricing-entry {
     background-color: white;
@@ -458,7 +617,7 @@ color:#fff;
                 <p>You will spend a pleasant time with our modernized and practical treatments of Turkish bath. You can find the health and energy provided by the water in our baths with our natural products.</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a>
+          <a title="Click for detailed information about our massages" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">HAMMAM THERAPIES</b></h3></center>
@@ -593,7 +752,7 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
                 <p>Renew your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
 				</p>
         <p class="mb-0">
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
+          <a title="Click for detailed information about our massages" rel="tooltip" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">MASSAGES</b></h3></center>
@@ -728,7 +887,7 @@ massage before and after exercise can improve performance, help recovery and pre
                 <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
 				</p>
         <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
+         <a title="Click for detailed information about Body Care Treatments" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">FACE AND BODY CARE TREATMENTS</b></h3></center>
@@ -918,6 +1077,9 @@ sparkle.</td>
         </div>
     	</div>
     </section>
+	<div id="infoPopup">
+<div class="cityPopup">&nbsp;</div>
+</div>
 	 <section class="ftco-section bg-light" style="overflow: hidden;">
 		<section class="ftco-section ftco-counter img" id="section-counter">
 	    <div class="row"> 
@@ -927,21 +1089,21 @@ sparkle.</td>
             <h2 style="font-weight: bold;" class="mb-4">FAR EAST THERAPIES</h2>
             <p>By balancing the healing effect of the far east and the flow of physical energy, we take you on a mystical journey.We offer you new spa & wellness  therapies by remaining true to the miracle of nature, body energies and Far East traditions.</p>
           </div>
- <div id="resim">
+  <resim id="resim">
 	<img id="image-maps" src="images/dogumasajlaren.jpg" border="0" width="1920" height="1139" orgWidth="1920" orgHeight="1139" usemap="#image-maps" alt="" />
 <map name="image-maps" id="image-maps">
-<area  alt="Thai Masajı" title="Thai Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" shape="rect" coords="323,11,654,201" style="outline:none;" target="_self"     />
-<area  alt="Kupa Terapisi" title="Kupa Terapisi" data-fancybox data-animation-duration="700" data-src="#animatedModal52" href="javascript:;" shape="rect" coords="147,225,478,415" style="outline:none;" target="_self"     />
-<area  alt="Unicorn Mix Masaj" title="Unicorn Mix Masaj" data-fancybox data-animation-duration="700" data-src="#animatedModal53" href="javascript:;" shape="rect" coords="109,481,440,671" style="outline:none;" target="_self"     />
-<area  alt="Bali Bitki Kesesi Masajı" title="Bali Bitki Kesesi Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal54" href="javascript:;" shape="rect" coords="138,733,469,923" style="outline:none;" target="_self"     />
-<area  alt="Bali 4 El Masajı" title="Bali 4 El Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal55" href="javascript:;" shape="rect" coords="313,943,644,1133" style="outline:none;" target="_self"     />
-<area  alt="Hint Baş Masajı" title="Hint Baş Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal56" href="javascript:;" shape="rect" coords="1257,10,1588,200" style="outline:none;" target="_self"     />
-<area  alt="Ayurveda Masajı" title="Ayurveda Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal57" href="javascript:;" shape="rect" coords="1427,226,1758,416" style="outline:none;" target="_self"     />
-<area  alt="Bali Aroma Masajı" title="Bali Aroma Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal58" href="javascript:;" shape="rect" coords="1486,478,1817,668" style="outline:none;" target="_self"     />
-<area  alt="Bali Taş Masajı" title="Bali Taş Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;"  shape="rect" coords="1430,733,1761,923" style="outline:none;" target="_self"     />
-<area alt="Refleksoloji Masajı" title="Refleksoloji Masajı" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" shape="rect" coords="1250,941,1581,1131" style="outline:none;" target="_self"     />
+<area  alt="Thai Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal51" href="javascript:;" shape="rect" coords="323,11,654,201" style="outline:none;" target="_self"     />
+<area  alt="Cupping Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal52" href="javascript:;" shape="rect" coords="147,225,478,415" style="outline:none;" target="_self"     />
+<area  alt="Unicorn Mix Massage"  data-fancybox data-animation-duration="700" data-src="#animatedModal53" href="javascript:;" shape="rect" coords="109,481,440,671" style="outline:none;" target="_self"     />
+<area  alt="Bali Herbal Stamp Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal54" href="javascript:;" shape="rect" coords="138,733,469,923" style="outline:none;" target="_self"     />
+<area  alt="Bali 4-Hands Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal55" href="javascript:;" shape="rect" coords="313,943,644,1133" style="outline:none;" target="_self"     />
+<area  alt="Indian Scalp Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal56" href="javascript:;" shape="rect" coords="1257,10,1588,200" style="outline:none;" target="_self"     />
+<area  alt="Ayurveda Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal57" href="javascript:;" shape="rect" coords="1427,226,1758,416" style="outline:none;" target="_self"     />
+<area  alt="Bali Aroma Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal58" href="javascript:;" shape="rect" coords="1486,478,1817,668" style="outline:none;" target="_self"     />
+<area  alt="Bali Hot Stone Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal59" href="javascript:;"  shape="rect" coords="1430,733,1761,923" style="outline:none;" target="_self"     />
+<area alt="Foot Reflex Massage" data-fancybox data-animation-duration="700" data-src="#animatedModal61" href="javascript:;" shape="rect" coords="1250,941,1581,1131" style="outline:none;" target="_self"     />
 </map>
-</div>
+</resim>
 </div>
 </div>
 </div>
@@ -1126,7 +1288,7 @@ It is recommended that maintenance be taken as a package instead of a single ses
 				
     </section>
 	 </section>
-		<section id="paketler" class="hero-wrap js-fullheight"  data-stellar-background-ratio="0.3" style="background-image: url(images/backplan.jpg);background-attachment: fixed; background-position: center; background-repeat: no-repeat;
+		<section id="paketler" class="ftco-section"  data-stellar-background-ratio="0.3" style="background-image: url(images/backplan.jpg);background-attachment: fixed; background-position: center; background-repeat: no-repeat;
 background-size: cover;">
 			<div class="container" style="padding: 4.3em 0;">
 				<div class="row justify-content-center mb-5 pb-3">
@@ -1143,7 +1305,7 @@ background-size: cover;">
 						<p>Start your holiday with our welcome package. With this package you will prepare yourself for a pleasant time, you will
 renew, relax and prepare for a stress-free holiday.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
         	</div>
         	</div>
@@ -1179,7 +1341,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">RELAXING PROGRAM</h3>
 						<p>Before tanning, you will get an energetic and relaxing program while preparing your skin for the sun.</p>
 						<p class="mb-0">
-         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
+         <center><a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
         </p>
         		</div>
         	</div></div>
@@ -1215,7 +1377,7 @@ td img {padding:8px 0}
 						<p>Indulge yourself with our luxury program. The fun way to relax and rest is through our luxurious package. The pleasure of
 your holiday will increase by visiting our spa.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1248,7 +1410,7 @@ td img {padding:8px 0}
 						<p>How about a spa journey with your partner? Experience a mystical journey with aroma massage while relaxing with body
 care after our traditional hammam care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1282,7 +1444,7 @@ td img {padding:8px 0}
 						<p>Our program, prepared with the physical and mental effects of the Far East, will give also experience relaxation and
 tranquility.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1317,7 +1479,7 @@ td img {padding:8px 0}
 						<p>We introduce you to a different culture with the Ottoman bath program. During refreshes your skin with roses and gives
 you mental relaxation with its scent. Do not miss care from head to toe with a special rose program.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1353,7 +1515,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">UNICORN SIGNATURE PROGRAM</h3>
 						<p>While we present the wonders of nature with aroma oils, we address your five senses in this special care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
 		</div>
@@ -1395,7 +1557,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">WINTER PROGRAM</h3>
 						<p>On your winter holiday we have prepared you a warm and excellent spa journey.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
         	</div>
@@ -1434,7 +1596,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">SUMMER PROGRAM</h3>
 						<p>Here is a warm holiday with the sun, sea and nature of the Mediterranean Sea. Enjoy more of this holiday with spa treatments.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        			<p>
 	        		</div>

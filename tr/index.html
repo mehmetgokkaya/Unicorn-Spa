@@ -115,41 +115,130 @@ $(document).on('mousemove', function(e){
 </style>
 <![endif]-->
 <style>
-.tooltip1 .tooltiptext {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 20%;
-	top: 72%;
+#bilgi
+{
+    text-align: center;
+    color: #fff;
+    background: #d58ca0;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
 }
-.tooltip1:hover .tooltiptext {
-  visibility: visible;
-}
-.tooltip1 .tooltiptext2 {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 20%;
-	top: 63%;
-}
-.tooltip1:hover .tooltiptext2 {
-  visibility: visible;
-}
+ 
+    #bilgi:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #d58ca0;
+		color: #fff;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #bilgi.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #ba4a69;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #bilgi.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #bilgi.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
 </style>
+<script>
+$( function()
+{
+    var targets = $( '[rel~=tooltip]' ),
+        target  = false,
+        tooltip = false,
+        title   = false;
+ 
+    targets.bind( 'mouseenter', function()
+    {
+        target  = $( this );
+        tip     = target.attr( 'title' );
+        tooltip = $( '<div id="bilgi"></div>' );
+ 
+        if( !tip || tip == '' )
+            return false;
+ 
+        target.removeAttr( 'title' );
+        tooltip.css( 'opacity', 0 )
+               .html( tip )
+               .appendTo( 'body' );
+ 
+        var init_tooltip = function()
+        {
+            if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                tooltip.css( 'max-width', $( window ).width() / 2 );
+            else
+                tooltip.css( 'max-width', 340 );
+ 
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+ 
+            if( pos_left < 0 )
+            {
+                pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                tooltip.addClass( 'left' );
+            }
+            else
+                tooltip.removeClass( 'left' );
+ 
+            if( pos_left + tooltip.outerWidth() > $( window ).width() )
+            {
+                pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                tooltip.addClass( 'right' );
+            }
+            else
+                tooltip.removeClass( 'right' );
+ 
+            if( pos_top < 0 )
+            {
+                var pos_top  = target.offset().top + target.outerHeight();
+                tooltip.addClass( 'top' );
+            }
+            else
+                tooltip.removeClass( 'top' );
+ 
+            tooltip.css( { left: pos_left, top: pos_top } )
+                   .animate( { top: '+=10', opacity: 1 }, 50 );
+        };
+ 
+        init_tooltip();
+        $( window ).resize( init_tooltip );
+ 
+        var remove_tooltip = function()
+        {
+            tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+            {
+                $( this ).remove();
+            });
+ 
+            target.attr( 'title', tip );
+        };
+ 
+        target.bind( 'mouseleave', remove_tooltip );
+        tooltip.bind( 'click', remove_tooltip );
+    });
+});
+</script>
 	  <style type='text/css'>
 td img {
     border-radius: 30px;
@@ -495,9 +584,7 @@ color:#fff;
                 <p>Türk hamamı keyfinin modernleştirilmiş ve uygulaması uzmanlar tarafından yapılan bakımlarımız ile keyfili vakit geçireceksiniz. Suyun verdiği sağlık ve enerjiyi, doğal ürünlerimiz ile birlikte hamam bakımlarımızda bulabilirsiniz.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Masajlarımız hakkında detaylı bilgi almak için tıklayınız</span>
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
+          <a title="Masajlarımız hakkında daha fazla bilgi almak için tıklayınız." rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Detaylar</a>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">HAMAM BAKIMLARIMIZ</b></h3></center>
@@ -633,9 +720,7 @@ Hamam terapilerinde uygulanan doğal yosun bakımı; anti age, anti oksidan ve d
                 <p>Spa terapilerinin vazgeçilmezi masajlarımız ile beş duyunuzu tazelerken, bedensel ve zihinsel olarak dinleneceksiniz</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Masajlarımız hakkında detaylı bilgi almak için tıklayınız</span>
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
+          <a title="Masajlarımız hakkında daha fazla bilgi almak için tıklayınız." rel="tooltip" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Detaylar</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">MASAJ TERAPİLERİMİZ</b></h3></center>
@@ -762,9 +847,7 @@ Spor masajı düzenli fiziksel egzersiz yapan bir kişiye fayda sağlamak için 
                 <p>Cildinizin ve vücudunuzun ihtiyaçlarına göre spa kozmetik ürünleri ile yapılan bakımlarımızdır. Yenilenme, dinlenme, gençleştirme ve canlandırma özelliklerine sahip bakımlarımız ile sizlere farklı bir spa deneyimi sunuyoruz.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext2">Cilt Bakımlarımız hakkında detaylı bilgi almak için tıklayınız</span>
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Detaylar</a></div>
+         <a title="Cilt Bakımlarımız hakkında daha fazla bilgi almak için tıklayınız." rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Detaylar</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">CİLT VE VÜCUT BAKIMLARI</b></h3></center>
@@ -1137,7 +1220,7 @@ Paket olarak önerilen bakımımızda, kendi özel uyguladığınız vücut şek
 	        			<h3 class="mb-4">UNICORN HOŞGELDİN PROGRAMI</h3>
 						<p>Tatilinize Hoş geldin programımız ile başlayın. Kendinizi keyifli bir zamana hazırlarken, yenilenecek, rahatlayacak ve stressiz bir tatile hazırlayacaksınız.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
         	</div>
         	</div>
@@ -1172,7 +1255,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">RELAKS PROGRAM</h3>
 						<p>Bronzlaşma öncesi alacağınız bu paket programı ile cildinizi güneşe hazırlayın. Dinlenmiş ve rahatlamış olarak şimdi güneşe hazırsınız.</p>
 						<p class="mb-0">
-         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Paket İçeriği</a></center>
+         <center><a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Paket İçeriği</a></center>
         </p>
         		</div>
         	</div></div>
@@ -1207,7 +1290,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">LÜKS  PROGRAM</h3>
 						<p>Lüks programımızla kendinizi şımartın. Rahatlamanın ve dinlenmenin eğlenceli yolu lüks paketimizden geçer. Tatilinizin keyfi spa merkezimizi ziyaret ederek artacaktır.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 	        		</div>
         		</div>
@@ -1241,7 +1324,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">ÇİFTLERE ÖZEL PROGRAM</h3>
 						<p>Partneriniz ile birlikte bir spa yolculuğuna ne dersiniz? Geleneksel Hamam bakımımız sonrasında vücut bakımı ile rahatlarken, aroma masajı ile mistik bir yolculuğu beraber yaşayın.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 	        		</div>
         		</div>
@@ -1276,7 +1359,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">UZAK DOĞU PROGRAMI</h3>
 						<p>Uzak Doğunun fiziksel ve zihinsel etkileri ile hazırlanmış programımız da dinlenme, rahatlama ve dinginliği yaşayacaksınız. </p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 	        		</div>
         		</div>
@@ -1314,7 +1397,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">OSMANLI HAMAM PROGRAMI </h3>
 						<p>Osmanlı hamam programı ile sizleri farklı bir kültür ile tanıştırıyoruz. Gül ile cildiniz tazelenirken, kokusu ile zihinsel rahatlamayı yaşıyor. Özel gül programı ile tepeden tırnağa bakımı kaçırmayın. </p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 	        		</div>
         		</div>
@@ -1351,7 +1434,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">UNICORN KİŞİYE ÖZEL PROGRAM</h3>
 						<p>Doğanın mucizelerini aroma yağları ile size sunarken, bu özel bakımımızda beş duyunuza hitap ediyoruz.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 		</div>
 		</div>
@@ -1394,7 +1477,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">KIŞ PROGRAMI</h3>
 						<p>Kış tatiliniz de size sımsıcak ve mükemmel bir spa yolculuğu hazırladık. </p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 		</div>
         	</div>
@@ -1433,7 +1516,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">YAZ PROGRAMI</h3>
 						<p>İşte Akdeniz’in güneşi, denizi ve doğası ile sımsıcak bir tatil. Spa bakımları ile bu tatilinizin keyfini daha fazla çıkarın.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
+         <a title="Programımız içinde yer alan masajları ve bakımları görmek için tıklayınız" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Paket İçeriği</a>
         </p>
 	        			<p>
 	        		</div>

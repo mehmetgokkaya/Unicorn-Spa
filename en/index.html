@@ -72,41 +72,130 @@ myform.submit(function(event){
 
 </script>
 <style>
-.tooltip1 .tooltiptext {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 20%;
-	top: 72%;
+#bilgi
+{
+    text-align: center;
+    color: #fff;
+    background: #d58ca0;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
 }
-.tooltip1:hover .tooltiptext {
-  visibility: visible;
-}
-.tooltip1 .tooltiptext2 {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 20%;
-	top: 72%;
-}
-.tooltip1:hover .tooltiptext2 {
-  visibility: visible;
-}
+ 
+    #bilgi:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #d58ca0;
+		color: #fff;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #bilgi.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #ba4a69;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #bilgi.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #bilgi.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
 </style>
+<script>
+$( function()
+{
+    var targets = $( '[rel~=tooltip]' ),
+        target  = false,
+        tooltip = false,
+        title   = false;
+ 
+    targets.bind( 'mouseenter', function()
+    {
+        target  = $( this );
+        tip     = target.attr( 'title' );
+        tooltip = $( '<div id="bilgi"></div>' );
+ 
+        if( !tip || tip == '' )
+            return false;
+ 
+        target.removeAttr( 'title' );
+        tooltip.css( 'opacity', 0 )
+               .html( tip )
+               .appendTo( 'body' );
+ 
+        var init_tooltip = function()
+        {
+            if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                tooltip.css( 'max-width', $( window ).width() / 2 );
+            else
+                tooltip.css( 'max-width', 340 );
+ 
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+ 
+            if( pos_left < 0 )
+            {
+                pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                tooltip.addClass( 'left' );
+            }
+            else
+                tooltip.removeClass( 'left' );
+ 
+            if( pos_left + tooltip.outerWidth() > $( window ).width() )
+            {
+                pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                tooltip.addClass( 'right' );
+            }
+            else
+                tooltip.removeClass( 'right' );
+ 
+            if( pos_top < 0 )
+            {
+                var pos_top  = target.offset().top + target.outerHeight();
+                tooltip.addClass( 'top' );
+            }
+            else
+                tooltip.removeClass( 'top' );
+ 
+            tooltip.css( { left: pos_left, top: pos_top } )
+                   .animate( { top: '+=10', opacity: 1 }, 50 );
+        };
+ 
+        init_tooltip();
+        $( window ).resize( init_tooltip );
+ 
+        var remove_tooltip = function()
+        {
+            tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+            {
+                $( this ).remove();
+            });
+ 
+            target.attr( 'title', tip );
+        };
+ 
+        target.bind( 'mouseleave', remove_tooltip );
+        tooltip.bind( 'click', remove_tooltip );
+    });
+});
+</script>
 <script type="text/javascript">
 $(function(){
 $('area').each(function(){	
@@ -485,9 +574,7 @@ color:#fff;
                 <p>You will spend a pleasant time with our modernized and practical treatments of Turkish bath. You can find the health and energy provided by the water in our baths with our natural products.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Click for detailed information about our massages</span>
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a></div>
+          <a title="Click for detailed information about our massages" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">HAMMAM THERAPIES</b></h3></center>
@@ -622,9 +709,7 @@ The anti-oxidant property of chocolate reduces the wrinkles and increases the sk
                 <p>Renew your five senses with our indispensable massages for spa treatments. You will rest physically and mentally.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Click for detailed information about our massages</span>
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a></div>
+          <a title="Click for detailed information about our massages" rel="tooltip" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">MASSAGES</b></h3></center>
@@ -759,9 +844,7 @@ massage before and after exercise can improve performance, help recovery and pre
                 <p>Our cosmetics and spa treatments are tailored to the needs of your skin and body. We offer you a different spa experience with our treatments with regeneration, resting, rejuvenating and revitalizing features.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext2">Click for detailed information about Body Care Treatments</span>
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a></div>
+         <a title="Click for detailed information about Body Care Treatments" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Details</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">FACE AND BODY CARE TREATMENTS</b></h3></center>
@@ -1179,7 +1262,7 @@ background-size: cover;">
 						<p>Start your holiday with our welcome package. With this package you will prepare yourself for a pleasant time, you will
 renew, relax and prepare for a stress-free holiday.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
         	</div>
         	</div>
@@ -1215,7 +1298,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">RELAXING PROGRAM</h3>
 						<p>Before tanning, you will get an energetic and relaxing program while preparing your skin for the sun.</p>
 						<p class="mb-0">
-         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
+         <center><a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Package Details</a></center>
         </p>
         		</div>
         	</div></div>
@@ -1251,7 +1334,7 @@ td img {padding:8px 0}
 						<p>Indulge yourself with our luxury program. The fun way to relax and rest is through our luxurious package. The pleasure of
 your holiday will increase by visiting our spa.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1284,7 +1367,7 @@ td img {padding:8px 0}
 						<p>How about a spa journey with your partner? Experience a mystical journey with aroma massage while relaxing with body
 care after our traditional hammam care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1318,7 +1401,7 @@ td img {padding:8px 0}
 						<p>Our program, prepared with the physical and mental effects of the Far East, will give also experience relaxation and
 tranquility.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1353,7 +1436,7 @@ td img {padding:8px 0}
 						<p>We introduce you to a different culture with the Ottoman bath program. During refreshes your skin with roses and gives
 you mental relaxation with its scent. Do not miss care from head to toe with a special rose program.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        		</div>
         		</div>
@@ -1389,7 +1472,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">UNICORN SIGNATURE PROGRAM</h3>
 						<p>While we present the wonders of nature with aroma oils, we address your five senses in this special care.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
 		</div>
@@ -1431,7 +1514,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">WINTER PROGRAM</h3>
 						<p>On your winter holiday we have prepared you a warm and excellent spa journey.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 		</div>
         	</div>
@@ -1470,7 +1553,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">SUMMER PROGRAM</h3>
 						<p>Here is a warm holiday with the sun, sea and nature of the Mediterranean Sea. Enjoy more of this holiday with spa treatments.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
+         <a title="Click here to see the massages and treatments in our program" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Package Details</a>
         </p>
 	        			<p>
 	        		</div>

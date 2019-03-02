@@ -72,44 +72,130 @@ myform.submit(function(event){
 
 </script>
 <style>
-.tooltip1 .tooltiptext {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 25%;
-	top: 63%;
+#bilgi
+{
+    text-align: center;
+    color: #fff;
+    background: #d58ca0;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
 }
-.tooltip1:hover .tooltiptext {
-  visibility: visible;
-}
-.tooltip1:hover .tooltiptext {
-  visibility: visible;
-}
-.tooltip1 .tooltiptext2 {
-  visibility: hidden;
-  width: 225px;
-  background: #d58ca0;
-  color: #fff;
-  border: #ba4a69 3px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 99;
-	left: 25%;
-	top: 56%;
-}
-.tooltip1:hover .tooltiptext2 {
-  visibility: visible;
-}
+ 
+    #bilgi:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #d58ca0;
+		color: #fff;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #bilgi.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #ba4a69;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #bilgi.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #bilgi.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
 </style>
+<script>
+$( function()
+{
+    var targets = $( '[rel~=tooltip]' ),
+        target  = false,
+        tooltip = false,
+        title   = false;
+ 
+    targets.bind( 'mouseenter', function()
+    {
+        target  = $( this );
+        tip     = target.attr( 'title' );
+        tooltip = $( '<div id="bilgi"></div>' );
+ 
+        if( !tip || tip == '' )
+            return false;
+ 
+        target.removeAttr( 'title' );
+        tooltip.css( 'opacity', 0 )
+               .html( tip )
+               .appendTo( 'body' );
+ 
+        var init_tooltip = function()
+        {
+            if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                tooltip.css( 'max-width', $( window ).width() / 2 );
+            else
+                tooltip.css( 'max-width', 340 );
+ 
+            var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+ 
+            if( pos_left < 0 )
+            {
+                pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                tooltip.addClass( 'left' );
+            }
+            else
+                tooltip.removeClass( 'left' );
+ 
+            if( pos_left + tooltip.outerWidth() > $( window ).width() )
+            {
+                pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                tooltip.addClass( 'right' );
+            }
+            else
+                tooltip.removeClass( 'right' );
+ 
+            if( pos_top < 0 )
+            {
+                var pos_top  = target.offset().top + target.outerHeight();
+                tooltip.addClass( 'top' );
+            }
+            else
+                tooltip.removeClass( 'top' );
+ 
+            tooltip.css( { left: pos_left, top: pos_top } )
+                   .animate( { top: '+=10', opacity: 1 }, 50 );
+        };
+ 
+        init_tooltip();
+        $( window ).resize( init_tooltip );
+ 
+        var remove_tooltip = function()
+        {
+            tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+            {
+                $( this ).remove();
+            });
+ 
+            target.attr( 'title', tip );
+        };
+ 
+        target.bind( 'mouseleave', remove_tooltip );
+        tooltip.bind( 'click', remove_tooltip );
+    });
+});
+</script>
 <script type="text/javascript">
 $(function(){
 $('area').each(function(){	
@@ -489,9 +575,7 @@ color:#fff;
                 <p>Вы приятно проведете время с нашими модернизированными и практичными процедурами турецкой бани. Вы можете найти здоровье и энергия подается вода в наших ваннах с нашими натуральными продуктами.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Нажмите для подробной информации о наших массажах</span>
-          <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Подробности</a></div>
+          <a title="Нажмите для подробной информации о наших массажах" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" class="btn btn-primary">Подробности</a>
         </p>
         <div style="display: none;" id="animatedModal" class="animated-modal">
           <center><h3><b style="color: black;">ХАММАМ-ТЕРАПИЯ</b></h3></center>
@@ -626,9 +710,7 @@ color:#fff;
                 <p>Обновите свои пять чувств с помощью наших незаменимых массажей для спа-процедур. Вы отдохнете физически и морально.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext">Нажмите для подробной информации о наших массажах</span>
-          <a data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Подробности</a></div>
+          <a title="Нажмите для подробной информации о наших массажах" data-fancybox data-animation-duration="700"  data-src="#animatedModal2" href="javascript:;" class="btn btn-primary">Подробности</a>
         </p>
         <div style="display: none;" id="animatedModal2" class="animated-modal">
           <center><h3><b style="color: black;">Массажи</b></h3></center>
@@ -763,9 +845,8 @@ color:#fff;
                 <p>Наша косметика и спа-процедуры адаптированы к потребностям вашей кожи и тела. Мы предлагаем вам различные спа - процедуры с регенерацией, отдыхом, омоложением и оживлением.</p>
 				</p>
         <p class="mb-0">
-		<div class="tooltip1">
-  <span class="tooltiptext2">Нажмите для получения дополнительной информации об уходе за лицом и телом.</span>
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Подробности</a></div>
+
+         <a title="Нажмите для получения дополнительной информации об уходе за лицом и телом." data-fancybox data-animation-duration="700" data-src="#animatedModal3" href="javascript:;" class="btn btn-primary">Подробности</a>
         </p>
         <div style="display: none;" id="animatedModal3" class="animated-modal">
           <center><h3><b style="color: black;">УХОД ЗА ЛИЦОМ И ТЕЛОМ</b></h3></center>
@@ -1178,7 +1259,7 @@ background-size: cover;">
 						<p>Начните свой отпуск с нашего приветственного пакета. С помощью этого пакета вы подготовите себя к приятному времени, вы будете
 обновите, расслабьтесь и подготовьтесь к беззаботному отдыху.</p>
 	        			 <p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal41" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
         	</div>
         	</div>
@@ -1214,7 +1295,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">РАССЛАБЛЯЮЩАЯ ПРОГРАММА</h3>
 						<p>Перед загаром вы получите энергичную и расслабляющую программу, готовя кожу к Солнцу.</p>
 						<p class="mb-0">
-         <center><a data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Детали Пакета</a></center>
+         <center><a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal42" href="javascript:;" class="btn btn-primary">Детали Пакета</a></center>
         </p>
         		</div>
         	</div></div>
@@ -1250,7 +1331,7 @@ td img {padding:8px 0}
 						<p>Побалуйте себя нашей роскошной программой. Интересный способ расслабиться и отдохнуть - через наш роскошный пакет. Удовольствие от
 ваш отдых увеличится, посетив наш спа-салон.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal47" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1283,7 +1364,7 @@ td img {padding:8px 0}
 						<p>Как насчет спа-путешествия с вашим партнером? Испытайте мистическое путешествие с ароматическим массажем во время отдыха с телом
 уход за нашим традиционным хаммамом.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal48" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1317,7 +1398,7 @@ td img {padding:8px 0}
 						<p>Наша программа, подготовленная с учетом физического и психического воздействия Дальнего Востока, даст также опыт релаксации и
 спокойствие.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal45" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1352,7 +1433,7 @@ td img {padding:8px 0}
 						<p>Мы вводим вас к различной культуре с программой ванны тахты. Во время освежает кожу розами и дарит
 вы ментальное расслабление с его запахом. Не пропустите уход с головы до ног с помощью специальной программы rose.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal46" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        		</div>
         		</div>
@@ -1388,7 +1469,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">UNICORN ПРОГРАММА ПОДПИСИ</h3>
 						<p>Пока мы представляем чудеса природы с маслами ароматности, мы адресуем ваши 5 чувств в этой специальной внимательности.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal43" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 		</div>
 		</div>
@@ -1430,7 +1511,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">ЗИМНЯЯ ПРОГРАММА</h3>
 						<p>На ваш зимний отдых мы подготовили вам теплое и отличное спа путешествие.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal44" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 		</div>
         	</div>
@@ -1469,7 +1550,7 @@ td img {padding:8px 0}
 	        			<h3 class="mb-4">ЛЕТНЯЯ ПРОГРАММА</h3>
 						<p>Здесь теплый отдых с солнцем, морем и природой Средиземного моря. Наслаждайтесь больше этого праздника со спа-процедурами.</p>
 						<p class="mb-0">
-         <a data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
+         <a title="Нажмите здесь, чтобы увидеть массажи и процедуры в нашей программе" rel="tooltip" data-fancybox data-animation-duration="700" data-src="#animatedModal49" href="javascript:;" class="btn btn-primary">Детали Пакета</a>
         </p>
 	        			<p>
 	        		</div>
