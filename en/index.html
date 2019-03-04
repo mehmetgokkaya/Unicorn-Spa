@@ -71,6 +71,24 @@ myform.submit(function(event){
     }
 
 </script>
+<script>
+$('document').ready(function () {
+    $('.navbar li').click(function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        var $div = $('#' + $(this).data('href'));
+        $('.demo').not($div).hide();
+        $div.slideToggle();
+    });
+});
+</script>
+<style>
+		.active {
+		background-color: #9d6169;
+		border-radius: 20px;
+		color: black;
+}
+</style>
 <style>
 #bilgi
 {
