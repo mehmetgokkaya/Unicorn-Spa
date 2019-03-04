@@ -71,6 +71,18 @@ myform.submit(function(event){
     }
 
 </script>
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("ftco-nav");
+var btns = header.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
 <style>
 #bilgi
 {
@@ -117,6 +129,11 @@ myform.submit(function(event){
             left: auto;
             margin: 0;
         }
+		.active, .nav-item:hover {
+		background-color: #9d6169;
+		border-radius: 20px;
+		color: black;
+}
 </style>
 <script>
 $( function()
@@ -470,7 +487,7 @@ span { color:black}
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span>Меню</button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="#top" class="nav-link">Дома</a></li>
+	          <li class="nav-item active"><a href="#top" class="nav-link">Дома</a></li>
 	          <li class="nav-item"><a href="#hakkimizda" class="nav-link">О нас</a></li>
 	          <li class="nav-item"><a href="#ourservices" class="nav-link">Свои Услуги</a></li>
 	          <li class="nav-item"><a href="#paketler" class="nav-link">Наш пакет</a></li>
