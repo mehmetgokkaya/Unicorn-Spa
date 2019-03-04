@@ -73,7 +73,7 @@ myform.submit(function(event){
 </script>
 <script>
 // Add active class to the current button (highlight it)
-var header = document.getElementById("ftco-nav");
+var header = document.getElementById("mydiv");
 var btns = header.getElementsByClassName("nav-item");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
@@ -486,7 +486,7 @@ span { color:black}
 	      <a class="navbar-brand" href="index.html">UNICORN SPA & WELLNESS</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span>Меню</button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+	        <ul id="mydiv" class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="#top" class="nav-link">Дома</a></li>
 	          <li class="nav-item"><a href="#hakkimizda" class="nav-link">О нас</a></li>
 	          <li class="nav-item"><a href="#ourservices" class="nav-link">Свои Услуги</a></li>
