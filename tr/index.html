@@ -47,6 +47,22 @@
 
   gtag('config', 'UA-126835121-3');
 </script>
+  <script type="text/javascript">
+$(document).ready(function () {
+    $(".popup").hide();
+    $(".openpop").click(function (e) {
+        e.preventDefault();
+        $("iframe").attr("src", $(this).attr('href'));
+        $(".links").fadeOut('slow');
+        $(".popup").fadeIn('slow');
+    });
+
+    $(".close").click(function () {
+        $(this).parent().fadeOut("slow");
+        $(".links").fadeIn("slow");
+    });
+});
+</script>
 <script>
 jQuery(document).ready(function(jQuery) {            
             var topMenu = jQuery(".navbar"),
@@ -1774,17 +1790,24 @@ td img {padding:8px 0}
   <script src="/js/scrollax.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/css_browser_selector.js"></script>
-<script type="text/javascript">
-var LHCChatOptions = {};
-LHCChatOptions.opt = {widget_height:540,widget_width:300,popup_height:720,popup_width:600,domain:'unicornspawellness.com'};
-(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://')+1)) : '';
-var location  = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
-po.src = '//yardim.unicornspawellness.com/index.php/tur/chat/getstatus/(click)/internal/(position)/bottom_right/(ma)/br/(top)/350/(units)/pixels/(leaveamessage)/true/(theme)/1?r='+referrer+'&l='+location;
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
+<div  class="links">
+<a style="position:absolute;bottom:10px;right:20px;" class="openpop"><img src="http://yardim.unicornspawellness.com/icon.png"/> </a>
+</div>
+<div class="wrapper">
+    <div class="popup">
+        <iframe style="height: 700px;" src="http://yardim2.unicornspawellness.com/index.php?p=link&sp=1&ssp=tr">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+<a style="position:absolute;bottom:10px;right:30%;border:solid 2px #d58ca0;width: 100px;margin: auto;background: #d58ca0;color: wheat;border-radius: 15px;text-align: center;text-decoration: none;" href="#" class="close">Kapat</a>
+    </div>
+</div>
+<style>
+.popup {
+  position:absolute;
+  right:20px;
+  bottom:10px;
+}
+</style>
 <script src='js/popmotion.global.min.js'></script>
 <script >var _window$popmotion = window.popmotion,css = _window$popmotion.css,pointer = _window$popmotion.pointer,value = _window$popmotion.value,physics = _window$popmotion.physics,transform = _window$popmotion.transform;var
 flow = transform.flow,interpolate = transform.interpolate,conditional = transform.conditional,nonlinearSpring = transform.nonlinearSpring,add = transform.add,subtract = transform.subtract;
