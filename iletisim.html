@@ -6,10 +6,13 @@
 	</head>
 <body style="background:none transparent;">
 <script type="text/javascript">
-var LHCChatboxOptions = {hashchatbox:'empty',identifier:'default',status_text:'Müşteri Temsilcisi'};
+var LHCChatOptions = {};
+LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:620,popup_width:500,domain:'unicornspawellness.com'};
 (function() {
 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = '//yardim.unicornspawellness.com/index.php/tur/chatbox/getstatus/(position)/bottom_right/(top)/300/(units)/pixels/(width)/300/(theme)/1/(height)/300/(chat_height)/220';
+var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://')+1)) : '';
+var location  = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
+po.src = '//yardim.unicornspawellness.com/index.php/tur/chat/getstatus/(click)/internal/(position)/bottom_right/(ma)/br/(top)/350/(units)/pixels/(leaveamessage)/true/(theme)/1?r='+referrer+'&l='+location;
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 })();
 </script>
