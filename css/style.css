@@ -7606,7 +7606,7 @@ h1, h2, h3, h4, h5,
     display: inline-block; }
 
 .bg-light {
-  background: #fafafa !important; }
+  background: #fff !important; }
 
 .bg-primary {
   background: #fa5bdd; }
@@ -7767,7 +7767,7 @@ h1, h2, h3, h4, h5,
       list-style: none;
       padding: 10px 20px; }
       .pricing-entry ul li:nth-child(odd) {
-        background: #fafafa; }
+        background: #fff; }
   .pricing-entry .button {
     position: absolute;
     bottom: -26px;
