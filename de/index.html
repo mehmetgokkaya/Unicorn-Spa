@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="/css/flaticon.css">
     <link rel="stylesheet" href="/css/icomoon.css">
     <link rel="stylesheet" href="/css/style.css">
-	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="b52dbd48-d5f9-44f2-82c2-359b6ce49c29" type="text/javascript" async></script>
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="b52dbd48-d5f9-44f2-82c2-359b6ce49c29" type="text/javascript" async></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126835121-3"></script>
 <script>
@@ -97,29 +97,6 @@ jQuery(document).ready(function(jQuery) {
             })
         })
 </script>
-	<script type="text/javascript">
-    window.onload=function(){
-var myform = $("form#myform");
-myform.submit(function(event){
-	event.preventDefault();
-  // Change to your service ID, or keep using the default service
-  var service_id = "default_service";
-  var template_id = "test";
-  myform.find("mailim").text("Senden...");
-  emailjs.sendForm(service_id,template_id,myform[0])
-  	.then(function(){ 
-    	alert("Ihre Nachricht wurde gesendet!");
-       myform.find("mailim").text("Send");
-    }, function(err) {
-       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("mailim").text("Send");
-    });
-  return false;
-});
-
-    }
-
-</script>
 <script>
 $('document').ready(function () {
     $('.navbar li').click(function () {
@@ -131,6 +108,72 @@ $('document').ready(function () {
     });
 });
 </script>
+	<script type="text/javascript">
+    window.onload=function(){
+var myform = $("form#myform");
+myform.submit(function(event){
+	event.preventDefault();
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "test";
+  myform.find("mailim").text("Gönderiliyor...");
+  emailjs.sendForm(service_id,template_id,myform[0])
+  	.then(function(){ 
+    	alert("Mesajınız Gönderildi!");
+       myform.find("mailim").text("Gönder");
+    }, function(err) {
+       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+       myform.find("mailim").text("Gönder");
+    });
+  return false;
+});
+
+    }
+
+</script>
+<script type="text/javascript">
+$(function(){
+$('area').each(function(){	
+		$(this).mousemove(function(e){
+			var selectedCity = $(this).attr('alt');
+			if($(this).attr('href') != '#' ){
+				$(this).css('cursor','pointer');
+				$('.cityPopup').html('<b>'+selectedCity+' hakkında bilgi almak için tıklaynız.</b>');
+				$('.cityPopup').show();
+			}		
+		});
+		$(this).mouseout(function(){$('.cityPopup').hide();});		
+	});
+});
+$(document).on('mousemove', function(e){
+    $('.cityPopup').css({
+       left:  e.pageX + 15,
+       top:   e.pageY + 15
+    });
+});
+</script>
+<style id="compiled-css" type="text/css">
+      .cityPopup {
+	z-index: 9999;
+	position: absolute;
+	padding: 5px;
+	width: 170px;
+	display: none;
+	background: #d58ca0;
+	color: #fff;
+	border: #ba4a69 3px solid;
+	top: 0px;
+	left: 0px;
+}
+  </style>
+  <!--[if IE]>
+<style>
+    #ourservices .btn {
+         position:inherit;
+		 margin:0;
+    }
+</style>
+<![endif]-->
 <style>
 #bilgi
 {
@@ -256,42 +299,6 @@ $( function()
     });
 });
 </script>
-<script type="text/javascript">
-$(function(){
-$('area').each(function(){	
-		$(this).mousemove(function(e){
-			var selectedCity = $(this).attr('alt');
-			if($(this).attr('href') != '#' ){
-				$(this).css('cursor','pointer');
-				$('.cityPopup').html('<i>Klicken Sie hier für weitere Informationen zur</i><br /><b>'+selectedCity+'</b>');
-				$('.cityPopup').show();
-			}		
-		});
-		$(this).mouseout(function(){$('.cityPopup').hide();});		
-	});
-});
-$(document).on('mousemove', function(e){
-    $('.cityPopup').css({
-       left:  e.pageX + 15,
-       top:   e.pageY + 15
-    });
-});
-</script>
-<style id="compiled-css" type="text/css">
-.cityPopup {
-	z-index: 9999;
-	position: absolute;
-	padding: 5px;
-	width: 170px;
-	display: none;
-	background: #d58ca0;
-	color: #fff;
-	border: #ba4a69 3px solid;
-	top: 0px;
-	left: 0px;
-}
-  </style>
-
 	  <style type='text/css'>
 td img {
     border-radius: 30px;
@@ -379,7 +386,6 @@ img[usemap] {
   .fancybox-content  {
     max-width: 100%;
   }
-
 }
 
 /* Tablet Styles */
@@ -387,14 +393,6 @@ img[usemap] {
   .fancybox-content {
     max-width: 90%;
   }
-    .tooltip1 .tooltiptext1 {
-	left: 5%;
-	op: 79%;
-	}
-	.tooltip1 .tooltiptext2 {
-	left: 6%;
-	top: 74%;
-	}
 }
 
 /* Desktop Styles */
@@ -417,7 +415,6 @@ img[usemap] {
   width: 24px;
   display: block;
   z-index: 10;
-  opacity: 0.7;
 }
 .mouse-icon .wheel {
   -webkit-animation-name: drop;
@@ -514,6 +511,12 @@ margin-left: 20px;
   border: 2px solid #7b151c;
 }
 span { color:black}
+#rez {
+    position: absolute;
+    bottom: 4%;
+    margin: auto;
+    padding-left: 10%;
+}
 	  </style>
 	  <!-- Hotjar Tracking Code for http://www.unicornspawellness.com -->
 <script>
@@ -537,8 +540,9 @@ span { color:black}
           		<a href="index.html" class="logo"><img src="logo.png" style="width: 75%;"/></a>
           	</div>
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><resim class="resim"><img src="images/logoalt.png" style="height: 100px;"></resim></h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a title="Klicken Sie hier, um eine Reservierung vorzunehmen" rel="tooltip" href="https://www.fresha.com/providers/unicorn-spa-wellness-zg8qtamj" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}' style="color: #965a61;" class="btn btn-white btn-outline-white px-4 py-3">Reservieren</a></p>
-	<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a title="Klicken Sie hier, um das Menü anzuzeigen." rel="tooltip" href="/menu.html" style="color: #965a61;" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}' class="btn btn-white btn-outline-white px-4 py-3">Online Menü</a></p>
+           <div id="rez">
+		  <a title="Klicken Sie hier, um eine Reservierung vorzunehmen" rel="tooltip" href="https://www.fresha.com/providers/unicorn-spa-wellness-zg8qtamj" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}' style="color: #965a61;" class="btn btn-white btn-outline-white px-4 py-3">Reservieren</a>
+<a title="Klicken Sie hier, um das Menü anzuzeigen." rel="tooltip" href="/menu.html" style="color: #965a61;" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "100%"}}}' class="btn btn-white btn-outline-white px-4 py-3">Online Menü</a></div>
 					<center><div class="mouse-icon"><div class="wheel"></div></div></center>
           </div>
         </div>
