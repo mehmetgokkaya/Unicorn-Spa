@@ -1,10 +1,15 @@
-<html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<style>
-body {
+<html class="" lang="en"><head>
+<meta charset="UTF-8">
+<title>TUI SENSATORI RESORT BARUT FETHİYE</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style type="text/css" class="INLINE_PEN_STYLESHEET_ID">
+	body {
   font-family: 'lato', sans-serif;
 }
+
 .container {
   max-width: 1000px;
   margin-left: auto;
@@ -17,840 +22,709 @@ h2 {
   font-size: 26px;
   margin: 20px 0;
   text-align: center;
-  small {
-    font-size: 0.5em;
-  }
+}
+h2 small {
+  font-size: 0.5em;
 }
 
-.responsive-table {
-  li {
-    border-radius: 3px;
-    padding: 25px 30px;
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.responsive-table .table-header {
+  background-color: #95A5A6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+  background-color: #00acc86b;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+  flex-basis: 80%;
+}
+.responsive-table .col-2 {
+  flex-basis: 10%;
+}
+.responsive-table .col-3 {
+  flex-basis: 10%;
+}
+@media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+  .responsive-table li {
+    display: block;
+  }
+  .responsive-table .col {
+    flex-basis: 100%;
+  }
+  .responsive-table .col {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    padding: 10px 0;
   }
-  .table-header {
-    background-color: #95A5A6;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-  .table-row {
-    background-color: #00acc86b;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-  }
-  .col-1 {
-    flex-basis: 80%;
-  }
-  .col-2 {
-    flex-basis: 10%;
-  }
-  .col-3 {
-    flex-basis: 10%;
-  }
-  
-  @media all and (max-width: 767px) {
-    .table-header {
-      display: none;
-    }
-    .table-row{
-      
-    }
-    li {
-      display: block;
-    }
-    .col {
-      
-      flex-basis: 100%;
-      
-    }
-    .col {
-      display: flex;
-      padding: 10px 0;
-      &:before {
-        color: #6C7A89;
-        padding-right: 10px;
-        content: attr(data-label);
-        flex-basis: 50%;
-        text-align: right;
-      }
-    }
+  .responsive-table .col:before {
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
   }
 }
-</style>
-
-</head>
+</style></head>
 <body>
 <div class="container">
-  <h2>TUI SENSATORI RESORT BARUT FETHİYE <small>   Menu & Price List</small></h2>
-   <p style="margin: 0 0;font-size: 30px;font-weight: 300;text-align: center;background: bisque;"><a href="http://www.unicornspawellness.com">Book Now</a></p>
+<h2>TUI SENSATORI RESORT BARUT FETHİYE <small> Menu &amp; Price List</small></h2>
 <ul class="responsive-table">
-    <li class="table-header">
-      <div class="col col-1">Massage Name</div>
-      <div class="col col-2">Time</div>
-      <div class="col col-3">Price</div>
-    </li>
-    <li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Absolute Eye Mask</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">47,00 €</div>
-    </li>
-    <li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Aromatherapy Massage</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-    </li>
-    <li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Asian Escape</div>
-      <div class="col col-2" data-label="Time">130 Min.</div>
-      <div class="col col-3" data-label="Price">118,00 €</div>
-    </li>
-    <li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Balancine Lavender</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-    </li>
-	    <li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Balancing Lime Blossom Cleasnser</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Hot Stone Massage</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Mandara(Four Handed)</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">130,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">59,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Massage</div>
-      <div class="col col-2" data-label="Time">80 Min.</div>
-      <div class="col col-3" data-label="Price">85,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Shiatsu</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Cellular Recovery Skin Bliss Cap.</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">93,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Daily Redness Relief 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">79,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Deep Tissue Massage</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">59,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Deep Tissue Massage</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">De-Stress</div>
-      <div class="col col-2" data-label="Time">85 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Anti-Blemish Mattify</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">50,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Anti-Blemish Mattify</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Body Nectar Nourishing</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Cocnut Rub</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Collagen Age Defy</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">60,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Collagen Age Defy</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Definition Lift And Contour</div>
-      <div class="col col-2" data-label="Time">75 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.High Performance Skin</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">55,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.High Performance Skin</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Hot Mineral Body</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Sensitive Skin Soother</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">55,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Sensitive Skin Soother</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Superfood Pro-Radiance</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">50,00 €</div>
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Superfood Pro-Radiance</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Elem.Thousand Flower Detox</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Exotic Cream Moisturising Mask 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">60,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Express Treatment</div>
-      <div class="col col-2" data-label="Time">70 Min.</div>
-      <div class="col col-3" data-label="Price">79,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Fruit Active Rejuvenating M.75 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">47,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Gentle Rose Exfoliator 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">47,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Get Sun Kissed</div>
-      <div class="col col-2" data-label="Time">90 Min.</div>
-      <div class="col col-3" data-label="Price">89,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hammam with coffe peeling</div>
-      <div class="col col-2" data-label="Time">40 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Harem</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">12,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Herbal Lavender Repair Mask</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">35,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hot Aroma Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">55,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hot Aroma Massage</div>
-      <div class="col col-2" data-label="Time">80 Min.</div>
-      <div class="col col-3" data-label="Price">85,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hydra Boost Sensitive Day Crem</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">57,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hydra-Balance Day Cream Normal - Combination 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">56,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hydra-Boost Day Cream Normal - Dry 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">56,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Intensive Massage</div>
-      <div class="col col-2" data-label="Time">70 Min.</div>
-      <div class="col col-3" data-label="Price">68,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Japanese Camellia Oil 100 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">54,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Keep The Golden Glow</div>
-      <div class="col col-2" data-label="Time">80 Min.</div>
-      <div class="col col-3" data-label="Price">85,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Lux Hammam Therapy</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">59,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Lymph Drainage Massage</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Monoi De Tahiti</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">30,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Monoide Tahiti Massage</div>
-      <div class="col col-2" data-label="Time">70 Min.</div>
-      <div class="col col-3" data-label="Price">85,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Papaya Enzyme Peel 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">48,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro Collagen Quartz Lift Serum 30 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">110,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro Collagen Super Elixir</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Collagen Advanced Eye Treatment 15 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">62,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Collagen Cleansing Balm</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">59,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Collagen Hydra-Gel Eye Mask</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Collagen Marine Cream 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">115,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Collagen Oxygenating Night Cream  50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">106,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Pro-Radiance Illuminating Flash Balm  50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">56,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Rehydrating Ginseng Toner 200 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Rehydrating Rosepetal Cleanser 200 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">S.O.S. Emergency Cream 50 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">77,00 €</div>
-
-    </li>
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Sensitive Cleansing Wash 200 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Soothing Apricot Toner 200 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Soothing Chamomile Cleanser 200 ml</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">36,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Spa Children</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">55,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Spa Home Frangipani Monoi Body Oil</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">52,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Spa Home Instand Ref.Gel</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">38,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Organic Body</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">98,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Sports Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Sun Soother</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Swedish Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Targeted Toning Abdomen</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Targeted Toning Arms</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Targeted Toning Hips And Thighs</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Thai Foot Reflexoloji</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">89,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Thai Foot Reflexoloji</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">55,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Thai Massage</div>
-      <div class="col col-2" data-label="Time">70 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Traditional Turkish Hammam</div>
-      <div class="col col-2" data-label="Time">40 Min.</div>
-      <div class="col col-3" data-label="Price">42,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Viola Signature Massage</div>
-      <div class="col col-2" data-label="Time">80 Min.</div>
-      <div class="col col-3" data-label="Price">89,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Vip Couple's Escape</div>
-      <div class="col col-2" data-label="Time">-</div>
-      <div class="col col-3" data-label="Price">280,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Turkish Hamam With Coffe Peeling</div>
-      <div class="col col-2" data-label="Time">40 Min.</div>
-      <div class="col col-3" data-label="Price">49,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Foam Massage</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">50,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Classical Turkish Hammam</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">40,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hammam Treatment</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Ottoman Hammam Treatment</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Scheherazade Hammam Treatment</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Detox Hammam Treatment</div>
-      <div class="col col-2" data-label="Time">50 min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Seaweed Therapy</div>
-      <div class="col col-2" data-label="Time">50 Min</div>
-      <div class="col col-3" data-label="Price">60,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Naturel Mineral Peeling</div>
-      <div class="col col-2" data-label="Time">40 Min.</div>
-      <div class="col col-3" data-label="Price">35,00 €</div>
-
-    </li> 
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Manual Therapy</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Manual Therapy</div>
-      <div class="col col-2" data-label="Time">45 Min.</div>
-      <div class="col col-3" data-label="Price">110,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Manual Therapy</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">140,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Medical Therapy</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Lenf Drainage Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Anti Cellulite Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">50,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Antistress Aroma Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Classical Swedish Massage</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">45,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Honey Therapy</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Local Massage</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">45,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Mix Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali Aroma Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">85,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Ayurveda Massage</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">100,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Hot stone Therapy</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Asian Mix Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">110,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Reflexology Massage</div>
-      <div class="col col-2" data-label="Time">45 Min.</div>
-      <div class="col col-3" data-label="Price">75,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Indian Head Massage</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">65,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Bali 4-Hand Massage</div>
-      <div class="col col-2" data-label="Time">50 Min.</div>
-      <div class="col col-3" data-label="Price">140,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Classical Face Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Whitening & Hydrating Face Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Anti Age Special Mask Face Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Collagen Face Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Exclusive Men Face Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Luxury Exclusive Face Care</div>
-      <div class="col col-2" data-label="Time">75 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Signature Face & Eye Care</div>
-      <div class="col col-2" data-label="Time">90 Min.</div>
-      <div class="col col-3" data-label="Price">110,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Face Lifting Massage</div>
-      <div class="col col-2" data-label="Time">30 Min./div>
-      <div class="col col-3" data-label="Price">40,00 €</div>
-
-    </li>  
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Luxury Eye Care</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">40,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Body Peeling</div>
-      <div class="col col-2" data-label="Time">20 Min.</div>
-      <div class="col col-3" data-label="Price">30,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Body Mask</div>
-      <div class="col col-2" data-label="Time">30 Min.</div>
-      <div class="col col-3" data-label="Price">45,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Full Body Care</div>
-      <div class="col col-2" data-label="Time">45 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Natural Body Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Marine Full Body Care</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Marine Natural Legs Care</div>
-      <div class="col col-2" data-label="Time">45 Min.</div>
-      <div class="col col-3" data-label="Price">70,00 €</div>
-
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Welcome Package (Package Program)</div>
-      <div class="col col-2" data-label="Time">60 Min.</div>
-      <div class="col col-3" data-label="Price">80,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Before Sun (Bronze) (Package Program)</div>
-      <div class="col col-2" data-label="Time">110 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">After Sun (Rejenerative) (Package Program)</div>
-      <div class="col col-2" data-label="Time">110 Min.</div>
-      <div class="col col-3" data-label="Price">90,00 €</div>
-
-    </li>    
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Signature Package (Package Program)</div>
-      <div class="col col-2" data-label="Time">120 Min.</div>
-      <div class="col col-3" data-label="Price">130,00 €</div>
-    </li>   
-	<li class="table-row">
-      <div class="col col-1" data-label="Massage Name">Special Spa Day For Couple (Package Program)</div>
-      <div class="col col-2" data-label="Time">120 Min.</div>
-      <div class="col col-3" data-label="Price">230,00 €</div>
-    </li>
-  </ul>
+<li class="table-header">
+<div class="col col-1">Massage Name</div>
+<div class="col col-2">Time</div>
+<div class="col col-3">Price</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Absolute Eye Mask</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">47,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Aromatherapy Massage</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Asian Escape</div>
+<div class="col col-2" data-label="Time">130 Min.</div>
+<div class="col col-3" data-label="Price">118,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Balancine Lavender</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Balancing Lime Blossom Cleasnser</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Hot Stone Massage</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Mandara(Four Handed)</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">130,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">59,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Massage</div>
+<div class="col col-2" data-label="Time">80 Min.</div>
+<div class="col col-3" data-label="Price">85,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Shiatsu</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Cellular Recovery Skin Bliss Cap.</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">93,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Daily Redness Relief 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">79,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Deep Tissue Massage</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">59,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Deep Tissue Massage</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">De-Stress</div>
+<div class="col col-2" data-label="Time">85 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Anti-Blemish Mattify</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">50,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Anti-Blemish Mattify</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Body Nectar Nourishing</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Cocnut Rub</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Collagen Age Defy</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">60,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Collagen Age Defy</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Definition Lift And Contour</div>
+<div class="col col-2" data-label="Time">75 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.High Performance Skin</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">55,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.High Performance Skin</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Hot Mineral Body</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Sensitive Skin Soother</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">55,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Sensitive Skin Soother</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Superfood Pro-Radiance</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">50,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Superfood Pro-Radiance</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Elem.Thousand Flower Detox</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Exotic Cream Moisturising Mask 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">60,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Express Treatment</div>
+<div class="col col-2" data-label="Time">70 Min.</div>
+<div class="col col-3" data-label="Price">79,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Fruit Active Rejuvenating M.75 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">47,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Gentle Rose Exfoliator 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">47,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Get Sun Kissed</div>
+<div class="col col-2" data-label="Time">90 Min.</div>
+<div class="col col-3" data-label="Price">89,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hammam with coffe peeling</div>
+<div class="col col-2" data-label="Time">40 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Harem</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">12,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Herbal Lavender Repair Mask</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">35,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hot Aroma Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">55,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hot Aroma Massage</div>
+<div class="col col-2" data-label="Time">80 Min.</div>
+<div class="col col-3" data-label="Price">85,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hydra Boost Sensitive Day Crem</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">57,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hydra-Balance Day Cream Normal - Combination 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">56,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hydra-Boost Day Cream Normal - Dry 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">56,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Intensive Massage</div>
+<div class="col col-2" data-label="Time">70 Min.</div>
+<div class="col col-3" data-label="Price">68,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Japanese Camellia Oil 100 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">54,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Keep The Golden Glow</div>
+<div class="col col-2" data-label="Time">80 Min.</div>
+<div class="col col-3" data-label="Price">85,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Lux Hammam Therapy</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">59,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Lymph Drainage Massage</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Monoi De Tahiti</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">30,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Monoide Tahiti Massage</div>
+<div class="col col-2" data-label="Time">70 Min.</div>
+<div class="col col-3" data-label="Price">85,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Papaya Enzyme Peel 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">48,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro Collagen Quartz Lift Serum 30 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">110,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro Collagen Super Elixir</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Collagen Advanced Eye Treatment 15 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">62,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Collagen Cleansing Balm</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">59,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Collagen Hydra-Gel Eye Mask</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Collagen Marine Cream 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">115,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Collagen Oxygenating Night Cream 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">106,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Pro-Radiance Illuminating Flash Balm 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">56,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Rehydrating Ginseng Toner 200 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Rehydrating Rosepetal Cleanser 200 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">S.O.S. Emergency Cream 50 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">77,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Sensitive Cleansing Wash 200 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Soothing Apricot Toner 200 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Soothing Chamomile Cleanser 200 ml</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">36,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Spa Children</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">55,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Spa Home Frangipani Monoi Body Oil</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">52,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Spa Home Instand Ref.Gel</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">38,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Organic Body</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">98,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Sports Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Sun Soother</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Swedish Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Targeted Toning Abdomen</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Targeted Toning Arms</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Targeted Toning Hips And Thighs</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Thai Foot Reflexoloji</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">89,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Thai Foot Reflexoloji</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">55,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Thai Massage</div>
+<div class="col col-2" data-label="Time">70 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Traditional Turkish Hammam</div>
+<div class="col col-2" data-label="Time">40 Min.</div>
+<div class="col col-3" data-label="Price">42,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Viola Signature Massage</div>
+<div class="col col-2" data-label="Time">80 Min.</div>
+<div class="col col-3" data-label="Price">89,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Vip Couple's Escape</div>
+<div class="col col-2" data-label="Time">-</div>
+<div class="col col-3" data-label="Price">280,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Turkish Hamam With Coffe Peeling</div>
+<div class="col col-2" data-label="Time">40 Min.</div>
+<div class="col col-3" data-label="Price">49,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Foam Massage</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">50,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Classical Turkish Hammam</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">40,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hammam Treatment</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Ottoman Hammam Treatment</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Scheherazade Hammam Treatment</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Detox Hammam Treatment</div>
+<div class="col col-2" data-label="Time">50 min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Seaweed Therapy</div>
+<div class="col col-2" data-label="Time">50 Min</div>
+<div class="col col-3" data-label="Price">60,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Naturel Mineral Peeling</div>
+<div class="col col-2" data-label="Time">40 Min.</div>
+<div class="col col-3" data-label="Price">35,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Manual Therapy</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Manual Therapy</div>
+<div class="col col-2" data-label="Time">45 Min.</div>
+<div class="col col-3" data-label="Price">110,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Manual Therapy</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">140,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Medical Therapy</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Lenf Drainage Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Anti Cellulite Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">50,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Antistress Aroma Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Classical Swedish Massage</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">45,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Honey Therapy</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Local Massage</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">45,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Mix Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali Aroma Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">85,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Ayurveda Massage</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">100,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Hot stone Therapy</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Asian Mix Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">110,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Reflexology Massage</div>
+<div class="col col-2" data-label="Time">45 Min.</div>
+<div class="col col-3" data-label="Price">75,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Indian Head Massage</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">65,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Bali 4-Hand Massage</div>
+<div class="col col-2" data-label="Time">50 Min.</div>
+<div class="col col-3" data-label="Price">140,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Classical Face Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Whitening &amp; Hydrating Face Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Anti Age Special Mask Face Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Collagen Face Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Exclusive Men Face Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Luxury Exclusive Face Care</div>
+<div class="col col-2" data-label="Time">75 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Signature Face &amp; Eye Care</div>
+<div class="col col-2" data-label="Time">90 Min.</div>
+<div class="col col-3" data-label="Price">110,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Face Lifting Massage</div>
+<div class="col col-2" data-label="Time">30 Min./div&gt;
+<div class="col col-3" data-label="Price">40,00 €</div>
+</div></li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Luxury Eye Care</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">40,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Body Peeling</div>
+<div class="col col-2" data-label="Time">20 Min.</div>
+<div class="col col-3" data-label="Price">30,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Body Mask</div>
+<div class="col col-2" data-label="Time">30 Min.</div>
+<div class="col col-3" data-label="Price">45,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Full Body Care</div>
+<div class="col col-2" data-label="Time">45 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Natural Body Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Marine Full Body Care</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Marine Natural Legs Care</div>
+<div class="col col-2" data-label="Time">45 Min.</div>
+<div class="col col-3" data-label="Price">70,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Welcome Package (Package Program)</div>
+<div class="col col-2" data-label="Time">60 Min.</div>
+<div class="col col-3" data-label="Price">80,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Before Sun (Bronze) (Package Program)</div>
+<div class="col col-2" data-label="Time">110 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">After Sun (Rejenerative) (Package Program)</div>
+<div class="col col-2" data-label="Time">110 Min.</div>
+<div class="col col-3" data-label="Price">90,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Signature Package (Package Program)</div>
+<div class="col col-2" data-label="Time">120 Min.</div>
+<div class="col col-3" data-label="Price">130,00 €</div>
+</li>
+<li class="table-row">
+<div class="col col-1" data-label="Massage Name">Special Spa Day For Couple (Package Program)</div>
+<div class="col col-2" data-label="Time">120 Min.</div>
+<div class="col col-3" data-label="Price">230,00 €</div>
+</li>
+</ul>
 </div>
-</body>
-</html>
+</body></html>
