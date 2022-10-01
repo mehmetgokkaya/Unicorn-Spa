@@ -7647,11 +7647,11 @@ h1, h2, h3, h4, h5,
       border-color: #fff;
       background: none;
       border-width: 1px;
-      color: #fff; }
+      color: #fff !important; }
       .btn.btn-white.btn-outline-white:hover, .btn.btn-white.btn-outline-white:focus, .btn.btn-white.btn-outline-white:active {
-        background: #fff;
-        border-color: #000;
-        color: #000; }
+        background: #8a585c;
+        border-color: #fff;
+        color: #fff; }
   .btn.btn-outline-black {
     border-color: black;
     background: none;
