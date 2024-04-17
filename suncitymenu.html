@@ -1,0 +1,1293 @@
+<style>
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif !important;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+b {
+    font-weight: bold;
+}
+@font-face {
+  font-family: 'Brisa';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(resimler/Brisa.woff) format('woff');
+}
+@font-face {
+  font-family: 'Brisa';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(resimler/Brisa.woff2) format('woff2');
+}
+#loading {background-image: linear-gradient(#0000009c, black), url("/resimler/menuarkaplan.jpg");height:100%;background-color:lightblue;position: fixed;z-index: 999;width: 100%; background-size: cover;}
+.btn {
+cursor: pointer;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+font-size: 13px; }
+.btn:hover, .btn:active, .btn:focus {
+outline: none; }
+.btn.btn-primary {
+background: #efa6ba;
+border: 1px solid #efa6ba;
+color: #fff;
+border-radius: 20px;}
+.btn.btn-primary:hover {
+border: 1px solid #efa6ba;
+background: transparent !important;
+color: #efa6ba; }
+.btn.btn-primary.btn-outline-primary {
+border: 1px solid #efa6ba;
+background: transparent;
+color: #efa6ba; }
+.btn.btn-primary.btn-outline-primary:hover {
+border: 1px solid transparent;
+background: #efa6ba;
+color: #fff; }
+.btn.btn-white {
+background: #fff;
+border: 1px solid #fff;
+color: #000; }
+.btn.btn-white:hover {
+border: 1px solid #000;
+background: #000;
+color: #fff; }
+.btn.btn-white.btn-outline-white {
+border-color: #fff;
+background: none;
+border-width: 1px;
+color: #fff !important; }
+.btn.btn-white.btn-outline-white:hover, .btn.btn-white.btn-outline-white:focus, .btn.btn-white.btn-outline-white:active {
+      /*  border-color: orange; */
+color: #fff; }
+.btn.btn-outline-black {
+border-color: black;
+background: none;
+border-width: 1px;
+color: #000; }
+.btn.btn-outline-black:hover, .btn.btn-outline-black:focus, .btn.btn-outline-black:active {
+background: #000;
+border-color: #000;
+color: #000; }
+#rez {
+position: absolute;
+bottom: 13%;
+margin: auto;
+padding-left: 0;
+}
+.pl-4,
+.px-4 {padding: 1rem !important; }
+.loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+}
+.overlay {
+  position: fixed;
+  top: -1%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  max-width: 2000px;
+  transition: 0.5s cubic-bezier(.08,.82,.17,1);
+
+}
+.overlay:target {
+position: fixed;
+width: auto;
+  visibility: visible;
+  opacity: 1;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  transform: rotate(0);
+    top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-attachment:fixed;
+
+}
+.popup {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: linear-gradient(#000000d1, #000000ed), url("resimler/menuarkaplan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.content b {
+    font-weight: bold;
+}
+.popup .close {
+  position: absolute;
+  top: 18px;
+  left: 82px;
+  height: 67px;
+width: 67px;
+  transition: all 200ms;
+  font-size: 55px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white !important;
+  z-index: 999 !important;
+  -webkit-filter: drop-shadow(1px 1px 5px #fff);
+  filter: drop-shadow(1px 1px 5px #fff);
+  border: solid 1px white;
+  text-align: center;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+.popup .close a {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  overflow: auto;
+  width: 100%;
+  padding-top: 85px !important;
+max-width: 1000px;
+  margin: auto;
+  color: white;
+  line-height: 1.3;
+}
+.slider {
+ overflow: hidden;
+ width: 100vw;
+ height: 100%;
+ position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.slider .slide {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ animation: slider 25s infinite;
+}
+.slider .slide:nth-child(1) {
+   background-image: url('resimler/a.jpg');
+   animation-delay: 0s;
+}
+.slider .slide:nth-child(2) {
+   background-image: url('resimler/b.jpg');
+   animation-delay: -5s;
+}
+.slider .slide:nth-child(3) {
+   background-image: url('resimler/c.jpg');
+   animation-delay: -10s;
+}
+.slider .slide:nth-child(4) {
+   background-image: url('resimler/d.jpg');
+   animation-delay: -15s;
+}
+.slider .slide:nth-child(5) {
+   background-image: url('resimler/f.jpg');
+   animation-delay: -20s;
+}
+@keyframes slider {
+  0%, 16%, 100% {
+    opacity: 1;
+    animation-timing-function: ease;
+    z-index: 0;
+  }
+  20% {
+    opacity: 0;
+    animation-timing-function: step-end;
+    z-index: 0;
+  }
+  96% {
+    opacity: 1;
+    animation-timing-function: step-end;
+    z-index: -1;
+  }
+}
+#arkaplan { width: 100%;  height: 100%;  top: 0;  left: 0;  background: linear-gradient(black,orange,lightblue);  padding: 0;  margin: 0 auto;  z-index: -1;  position: absolute;    }
+#border {  left: 0;  position: relative;  margin: 0 auto !important;  width: 90%;    }
+#onlinemenu {
+width: 100%;
+transition: 0.6s ease-in-out;
+max-width: 2000px;
+    }
+.navigation-is-open1 #onlinemenu{
+width: auto;
+visibility: visible;
+opacity: 1;
+z-index: 999;
+right: 0;
+height: 100vh;
+}
+.tg  {border-collapse:collapse;border-spacing:0;color: white; text-align: left;vertical-align: top;max-width: 900px;}
+.tg td{border-bottom-width:1px;border-color:white;border-style:solid;border-top-width:1px;font-size:19px;overflow:hidden;padding:10px 5px;word-break: break-word;text-align: left;color: white;}
+.tg th{border-bottom-width:1px;border-color:white;border-style:solid;border-top-width:1px;font-size:19px;overflow:hidden;padding:10px 5px;word-break: break-word;text-align: left;color: white;}
+.content td {color: white;}
+.content th {color: white;}
+.content tg {color: white;}
+
+.sira {
+    position: inherit !important;
+    text-indent: 0 !important;
+    visibility: visible !important;
+}
+.tg-menu{color:#ffffff !important;font-size:calc(3rem + .90vw) !important;text-align:center !important;vertical-align:top !important;border-color:white !important;}
+
+.tg1  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;text-align:left;}
+.tg1 td{border-style:solid;border-width:0px;font-size:14px;overflow:hidden;padding:10px 5px;word-break: break-word;}
+.tg1 th{border-style:solid;border-width:0px;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break: break-word;}
+iframe {border: black solid 5px;}
+.diller .bilgi {display: none;background-color: rgb(191, 191, 191);color: #fff;text-align: center;border-radius: 6px;z-index: 1;left: 26px;opacity: 0; transition: opacity 0.3s;width: 70px; padding: 5px;position: absolute; color: black;transition: opacity 0.3s;}
+.diller:hover .bilgi {display: block;opacity: 1;}
+.select {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.select .select-placeholder {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transition: -webkit-transform 200ms, padding 200ms;
+  -moz-transition: -moz-transform 200ms, padding 200ms;
+  transition: transform 200ms, padding 200ms;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 0;
+  position: absolute;
+  will-change: transform, padding;
+  z-index: 10;
+}
+.select .select-placeholder:hover {
+  cursor: pointer;
+}
+.select .select-placeholder svg {
+  display: none;
+}
+.select .select-placeholder[data-language=none] svg {
+  display: block;
+}
+.select .select-placeholder[data-language=german] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-german.svg");
+}
+.select .select-placeholder[data-language=russian] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-russian.svg");
+}
+.select .select-placeholder[data-language=french] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-french.svg");
+}
+.select .select-placeholder[data-language=english-us] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-english-us.svg");
+}
+.select .select-placeholder[data-language=english-uk] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-english-uk.svg");
+}
+.select .select-placeholder[data-language=spanish-mexico] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-spanish-mexico.svg");
+}
+.select .select-placeholder[data-language=japanese] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-japanese.svg");
+}
+.select .select-placeholder[data-language=mandarin] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-mandarin.svg");
+}
+.select .select-placeholder[data-language=turkce] {
+  background-image: url("/resimler/tr.svg");
+}
+
+.select .select-option {
+  -webkit-transform: translate3d(-50%, -37%, 0);
+  -moz-transform: translate3d(-50%, -37%, 0);
+  -ms-transform: translate3d(-50%, -37%, 0);
+  -o-transform: translate3d(-50%, -537%, 0);
+  transform: translate3d(-50%, -37%, 0);
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  -moz-transition: -moz-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 100%;
+  color: #fff;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  text-indent: 9999px;
+  top: 50%;
+  white-space: nowrap;
+  width: 50px;
+  will-change: transform;
+}
+.select .select-option:hover {
+  cursor: pointer;
+}
+.select .select-option[data-language=german] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-german.svg");
+}
+.select .select-option[data-language=russian] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-russian.svg");
+}
+.select .select-option[data-language=french] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-french.svg");
+}
+.select .select-option[data-language=english-us] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-english-us.svg");
+}
+.select .select-option[data-language=english-uk] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-english-uk.svg");
+}
+.select .select-option[data-language=spanish-mexico] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-spanish-mexico.svg");
+}
+.select .select-option[data-language=japanese] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-japanese.svg");
+}
+.select .select-option[data-language=mandarin] {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/flag-mandarin.svg");
+}
+.select .select-option[data-language=turkce] {
+  background-image: url("/resimler/tr.svg");
+}
+.select.is-open .select-option:nth-child(2) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 35ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 35ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 35ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 2;
+  -webkit-transform: translate3d(-180%, -50%, 0) scale(1);
+  -moz-transform: translate3d(-180%, -50%, 0) scale(1);
+  -ms-transform: translate3d(-180%, -50%, 0) scale(1);
+  -o-transform: translate3d(-180%, -50%, 0) scale(1);
+  transform: translate3d(-180%, -50%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(2):hover {
+  width: 90px;
+  height: 90px;
+  margin-left: 53px;
+}
+.select.is-open .select-option:nth-child(3) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 70ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 70ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 70ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 3;
+  -webkit-transform: translate3d(-150%, -150%, 0) scale(1);
+  -moz-transform: translate3d(-150%, -150%, 0) scale(1);
+  -ms-transform: translate3d(-150%, -150%, 0) scale(1);
+  -o-transform: translate3d(-150%, -150%, 0) scale(1);
+  transform: translate3d(-150%, -150%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(3):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.select.is-open .select-option:nth-child(4) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 105ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 105ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 105ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 4;
+  -webkit-transform: translate3d(-30%, -200%, 0) scale(1);
+  -moz-transform: translate3d(-30%, -200%, 0) scale(1);
+  -ms-transform: translate3d(-30%, -200%, 0) scale(1);
+  -o-transform: translate3d(-30%, -200%, 0) scale(1);
+  transform: translate3d(-30%, -200%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(4):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: 30px;
+}
+.select.is-open .select-option:nth-child(5) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 140ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 140ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 140ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 5;
+  -webkit-transform: translate3d(50%, -150%, 0) scale(1);
+  -moz-transform: translate3d(50%, -150%, 0) scale(1);
+  -ms-transform: translate3d(50%, -150%, 0) scale(1);
+  -o-transform: translate3d(50%, -150%, 0) scale(1);
+  transform: translate3d(50%, -150%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(5):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+.select.is-open .select-option:nth-child(6) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 175ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 175ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 175ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 6;
+  -webkit-transform: translate3d(80%, -50%, 0) scale(1);
+  -moz-transform: translate3d(80%, -50%, 0) scale(1);
+  -ms-transform: translate3d(80%, -50%, 0) scale(1);
+  -o-transform: translate3d(80%, -50%, 0) scale(1);
+  transform: translate3d(80%, -50%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(6):hover {
+  width: 90px;
+  height: 90px;
+  margin-left: -30px;
+}
+.select.is-open .select-option:nth-child(7) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 210ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 210ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 210ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 7;
+  -webkit-transform: translate3d(50%, 40%, 0) scale(1);
+  -moz-transform: translate3d(50%, 40%, 0) scale(1);
+  -ms-transform: translate3d(50%, 40%, 0) scale(1);
+  -o-transform: translate3d(50%, 40%, 0) scale(1);
+  transform: translate3d(50%, 40%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(7):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.select.is-open .select-option:nth-child(8) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 245ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 245ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 245ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 8;
+  -webkit-transform: translate3d(-50%, 90%, 0) scale(1);
+  -moz-transform: translate3d(-50%, 90%, 0) scale(1);
+  -ms-transform: translate3d(-50%, 90%, 0) scale(1);
+  -o-transform: translate3d(-50%, 90%, 0) scale(1);
+  transform: translate3d(-50%, 90%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(8):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: -30px;
+}
+.select.is-open .select-option:nth-child(9) {
+  -webkit-transition: -webkit-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 280ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  -moz-transition: -moz-transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 280ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  transition: transform 320ms cubic-bezier(0.07, 0.4, 0.455, 1.5) 280ms, width 160ms ease, height 160ms ease, margin 160ms ease;
+  z-index: 9;
+  -webkit-transform: translate3d(-150%, 40%, 0) scale(1);
+  -moz-transform: translate3d(-150%, 40%, 0) scale(1);
+  -ms-transform: translate3d(-150%, 40%, 0) scale(1);
+  -o-transform: translate3d(-150%, 40%, 0) scale(1);
+  transform: translate3d(-150%, 40%, 0) scale(1);
+}
+.select.is-open .select-option:nth-child(9):hover {
+  width: 90px;
+  height: 90px;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+.icon-language {
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  height: 48px;
+  margin: 50% 0 0 50%;
+  width: 48px;
+}
+.icon-language path {
+  fill: #5a6370;
+}
+.navigation-is-open1 .select-placeholder {display: none !important;}
+.navigation-is-open1 .select-option {display: none !important;}
+.navigation-is-open .select-placeholder {display: none !important;}
+.navigation-is-open .select-option {display: none !important;}
+.navigation-is-open .cd-nav-trigger1 {display: none !important;}
+.navigation-is-open #gosterme1 {display: none !important;}
+
+#dil
+{
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  display: block;
+  height: 66px;
+  z-index: 2;
+  cursor: pointer;
+}
+#dil::before
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.5);
+  -khtml-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+  -khtml-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+  -moz-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+  -ms-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+  -o-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+  transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+}
+
+#sag {width: 33%;float: left;padding: 4px 0 8px 0px;}
+#sag a img {width: 70% !important;}
+
+@media screen and (max-width: 1000px) {
+  
+}
+
+@media screen and (max-width: 900px) {
+ 
+}
+
+@media screen and (max-width: 800px) {
+  
+}
+@media screen and (max-width: 600px) {
+  
+  #sag {width: 50%;float: left;}
+}
+@media screen and (max-width: 1300px) {
+  .popup .close {left:0;color:white !important; border-color:white !important;background: #dc143c75;text-align: center;}
+}
+
+@media screen and (max-width: 800px) {
+td img {
+width: auto;
+height: 172px;
+display: grid;
+justify-content: center;
+}
+#gizle {border:none !important;display: none !important;}
+#popup7 .tg {display: grid;justify-content: center;}
+#popup7 .tg span {text-align: center !important;}
+#popup8 .tg {display: grid;justify-content: center;}
+#popup8 .tg span {text-align: center !important;}
+#popup9 .tg {display: grid;justify-content: center;}
+#popup9 .tg span {text-align: center !important;}
+#popup10 .tg {display: grid;justify-content: center;}
+#popup10 .tg span {text-align: center !important;}
+#degisenmenu2 .tg {display: table;margin: 0;width: 96%;border-collapse: inherit;border-bottom-width: 0;}
+#degisenmenu2 .tg span {text-align: center !important;}
+}
+.shimmer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+  background: -webkit-gradient(linear, left top, right top, from(#797979), to(#000), color-stop(0.5, white));
+  background: -moz-gradient(linear, left top, right top, from(#797979), to(#000), color-stop(0.5, white));
+  background: gradient(llinear, left top, right top, from(#797979), to(#000), color-stop(0.5, white));
+  -webkit-background-size: 42px 100%;
+  -moz-background-size: 40px 100%;
+  background-size: 40px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #fff;
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+#yazi {
+  position: absolute;
+  bottom: 16px;
+  right: 15px;
+  background: #0000006e;
+  height: 30px;
+}
+    @media screen and (max-width: 600px) {
+
+main3 table tr {
+      display: block;
+    }
+
+main3 table td {
+      display: block;
+    }
+ main3 table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+        margin: 0 auto;
+    }
+    main3 #gizle {display:none}
+    .day a {font-size: 22px !important;}
+    strong a {font-size: 22px !important;}
+    .day {font-size: 22px !important;}
+  }
+#popup1 .tg td { border-color: white; }
+#popup2 .tg td { border-color: white; }
+#popup3 .tg td { border-color: white; }
+#popup4 .tg td { border-color: white; }
+#popup5 .tg td { border-color: white; }
+#popup6 .tg td { border-color: white; }
+#popup7 .tg td { border-color: white; }
+#popup8 .tg td { border-color: white; }
+#popup9 .tg td { border-color: white; }
+#popup10 .tg td { border-color: white; }
+#popup11 .tg td { border-color: white; }
+#popup12 .tg td { border-color: white; }
+#popup13 .tg td { border-color: white; }
+#popup14 .tg td { border-color: white; }
+.tg1 img {width: 40px !important;height: 40px !important;}
+.popup #img2 {display: none !important;}
+</style>
+<div class="popup">
+<div class="content">
+<div id="border">
+<h4 style="font-weight: bold; color:white;text-align: center;font-size: 35px;">Liberty Kuşadası<b style="font-family: &quot;Brisa&quot;, serif !important;font-size: 60px;"> Spa </b>Menü</h4>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2" >HAMAM / ХАММАМ</td>
+  </tr>
+  <tr>
+    <td class="tg">Foam Massage / Пенный Массаж</td>
+    <td class="tg" style="width: 30%;">30 Min. 50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Turkish Hammam Treatment / <br>классический Турецкий Хамам</td>
+    <td class="tg">30 Min. 60€</td>
+  </tr>
+  <tr>
+    <td class="tg">Unicorn Hammam Treatment / хамам  «юникорн »</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Ottoman Hammam Treatment / хамам «оттоман»</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Scheherazade Hammam Treatment<br>хамам «шехерезада»</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Detox Hammam Treatment / хамам «детокс»</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Seaweed Therapy / Маска С Морскими Водорослями</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Coffe Peeling / кофейный Пилинг</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2" >MASSAGE / МАССАЖИ</td>
+  </tr>
+  <tr>
+    <td class="tg">Manual Therapy / Мануальная терапия</td>
+    <td class="tg">30 Min. 100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Manual Therapy / Мануальная терапия</td>
+    <td class="tg">45 Min. 120€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Swedish Massage<br>Классический Шведский Массаж</td>
+    <td class="tg">30 Min. 60€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Swedish Massage<br>Классический Шведский Массаж</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Neck And Shoulder Massage / Массаж Шеи И Плеч</td>
+    <td class="tg">45 Min. 70€</td>
+  </tr>
+  <tr>
+    <td class="tg">Antistress Aroma Massage / антистресс - арома Массаж</td>
+    <td class="tg">50 Min. 85€</td>
+  </tr>
+  <tr>
+    <td class="tg">Medical Therapy / Лечебный Массаж</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Unicorn Mix Massage / юникорн Микс Массаж</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Sport Massage / спорт Массаж</td>
+    <td class="tg">50 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Local Massages / локальный Массаж</td>
+    <td class="tg">30 Min. 60€</td>
+  </tr>
+  <tr>
+    <td class="tg">Anticellulite Massage / антицеллюлитный Массаж</td>
+    <td class="tg">30 Min. 60€</td>
+  </tr>
+  <tr>
+    <td class="tg">Anticellulite Massage / антицеллюлитный Массаж</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Lenf Drainage Massage / ленфдренажный Массаж</td>
+    <td class="tg">50 Min. 100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Honey Therapy / медовый Массаж</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Candle Massage / Массаж С Аромасвечами</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Deep Ti̇ssue Massage /массаж Глубоких Тканей</td>
+    <td class="tg">50 Min. 120€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2">ASIAN MASSAGES / АЗИАТСКИЕ МАССАЖИ</td>
+  </tr>
+  <tr>
+    <td class="tg">Bali Aroma Massage / бали Арома Массаж</td>
+    <td class="tg">50 Min. 95€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hot Stone Massage / Массаж С Горячими Камнями</td>
+    <td class="tg">60 Min. 100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Thai Massage / Тайский Массаж</td>
+    <td class="tg">60 Min. 100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Thai Massage / Тайский Массаж</td>
+    <td class="tg">90 Min. 130€</td>
+  </tr>
+  <tr>
+    <td class="tg">Reflexology Massage / рефлексология Стоп</td>
+    <td class="tg">45 Min. 85€</td>
+  </tr>
+  <tr>
+    <td class="tg">Ayurveda Massage / аюверда Массаж</td>
+    <td class="tg">60 Min. 130€</td>
+  </tr>
+  <tr>
+    <td class="tg">Asian Mix Massage / азия Микс Массаж</td>
+    <td class="tg">50 Min. 130€</td>
+  </tr>
+  <tr>
+    <td class="tg">Bali 4 Hand Massage / Бали Массаж В 4 Руки</td>
+    <td class="tg">50 Min. 160€</td>
+  </tr>
+  <tr>
+    <td class="tg">Indian Head Massage / индийский Массаж Головы</td>
+    <td class="tg">30 Min. 75€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2">FACIALS CARES / УХОД  ЛИЦА</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Face Care / Классический Уход За Лицом</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hydrating Face Care / Увлажняющий Уход За Лицом</td>
+    <td class="tg">60 Min.  90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Anti Age Special Mask Face Care<br>Антивозрастная Программа Для Лица</td>
+    <td class="tg">60 Min.  90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Collagen Face Care / Коллагеновый Уход За Кожей</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Exclusive Men Face Care <br>Эксклюзивный Уход За Лицом Для Мужчин</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Luxury Exclusive Face Care</td>
+    <td class="tg">75 Min. 110€</td>
+  </tr>
+  <tr>
+    <td class="tg">Эксклюзивный Уход За Лицом</td>
+  </tr>
+  <tr>
+    <td class="tg">Signature Face &amp; Eye Care / Комплексный Уход Для Лица И Вокруг Глаз</td>
+    <td class="tg">90 Min. 120€</td>
+  </tr>
+  <tr>
+    <td class="tg">Face Lifting Massage / Лифтинговый Массаж Лица</td>
+    <td class="tg">30 Min. 50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Luxury Eye Care / Эксклюзивный Уход Вокруг Глаз</td>
+    <td class="tg">30 Min. 60€</td>
+  </tr>
+  <tr>
+    <td class="tg">BODY CARE TREATMENTS / УХОД ЗА ТЕЛОМ</td>
+  </tr>
+  <tr>
+    <td class="tg">Body Peeling / пилинг Для Тела</td>
+    <td class="tg">20 Min. 40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Body Mask / маска Для Тела</td>
+    <td class="tg">30 Min. 50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Full Body Care / Комплексный Уход За Телом</td>
+    <td class="tg">45 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hydrating Body Care Wi̇th Local Massage <br>Увлажняющий Уход За Телом С Локальным Массажем</td>
+    <td class="tg">60 Min. 100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Seawed Full Body Care <br>Водорослевое Обертывание Для Всего Тела</td>
+    <td class="tg">60 Min. 100€</td>
+
+  </tr>
+  <tr>
+    <td class="tg">Cellulite Legs Care / Терапия Против Целлюлита Для Ног</td>
+    <td class="tg">60 Min. 90€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2">UNICORN HAIR DRESSER</td>
+  </tr>
+  <tr>
+    <td class="tg">Manicure / Маникюр</td>
+    <td class="tg">30€</td>
+  </tr>
+  <tr>
+    <td class="tg">Pedicure/ Педикюр</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Luxury Pedicure / Эксклюзивный Педикюр</td>
+    <td class="tg">50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Nail Polish/ Покрытие Обычным Лаком</td>
+    <td class="tg">10€</td>
+  </tr>
+  <tr>
+    <td class="tg">Shellac Nail Polish / Покрытие Гель Лаком -шеллак</td>
+    <td class="tg">35€</td>
+  </tr>
+  <tr>
+    <td class="tg">Nail Extensions / Наращивание Ногтей</td>
+    <td class="tg">50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Eyebrow Shaping / Оформление Бровей</td>
+    <td class="tg">10€</td>
+  </tr>
+  <tr>
+    <td class="tg">Eyebrow Colouring / Окрашивание Бровей</td>
+    <td class="tg">15€</td>
+  </tr>
+  <tr>
+    <td class="tg">Eyelash Extensions / Наращивание Ресниц</td>
+    <td class="tg">50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Underarm Wax / Подмышечные Впадины</td>
+    <td class="tg">15€</td>
+  </tr>
+  <tr>
+    <td class="tg">Long Leg Wax / Депиляция Ног</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Fullbody Wax / Депиляция Всего Тела</td>
+    <td class="tg">80€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Wash / Помывка Головы</td>
+    <td class="tg">10€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Cut / Стрижка</td>
+    <td class="tg">30€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Cut And Blow Dry / Стрижка И Укладка</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Wash And Blow Dry / Укладка</td>
+    <td class="tg">25€</td>
+  </tr>
+  <tr>
+    <td class="tg">Wavy And Blow Dry/  Укладка Локонами</td>
+    <td class="tg">40€<br></td>
+  </tr>
+  <tr>
+    <td class="tg">Root Colouring And Blow Dry / Покраска Корней</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Colouring And Blow Dry / Покраска Волос</td>
+    <td class="tg">70€</td>
+  </tr>
+  <tr>
+    <td class="tg">Highligts / Осветление Волос</td>
+    <td class="tg">150€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Care With Keratin / Кератиновый Уход</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hair Care With Argan Oil And Head Massage</td>
+    <td class="tg">60€</td>
+  </tr>
+  <tr>
+    <td class="tg">Уход И Массаж За Волосами С Аргановым Маслом</td>
+	<td></td>
+  </tr>
+  <tr>
+    <td class="tg">Keratin Protein Botox / Кератин И Ботокс Воло</td>
+    <td class="tg">100€</td>
+  </tr>
+  <tr>
+    <td class="tg">Brazilian Blow Dry</td>
+    <td class="tg">200€</td>
+  </tr>
+  <tr>
+    <td class="tg">Half Hair Braid / На Половину Заплетенные Волосы</td>
+    <td class="tg">50€</td>
+  </tr>
+  <tr>
+    <td class="tg">Full Braiding / Плетенью Полностью</td>
+    <td class="tg">70€</td>
+  </tr>
+  <tr>
+    <td class="tg">Full Braiding With Extensions / Плетение Волос С Наращиванием</td>
+    <td class="tg">200€</td>
+  </tr>
+  <tr>
+    <td class="tg">Double Hair Braid / Двойное Плетение Волос</td>
+    <td class="tg">20€</td>
+  </tr>
+  <tr>
+    <td class="tg">Double Hair Braid With Extension / Двойное Плетение С Наращиванием</td>
+    <td class="tg">40€</td>
+  </tr>
+  <tr>
+    <td class="tg">Single Braid / Одна Косичка</td>
+    <td class="tg">15€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">For Man / Для мужчин</td>
+	<td></td>
+  </tr>
+  <tr>
+    <td class="tg">Turkish Shave / Турецкое бритье</td>
+    <td class="tg">20€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hai̇r Cut And Wash / Стрижка и мытье</td>
+    <td class="tg">20€</td>
+  </tr>
+  <tr>
+    <td class="tg">Hai̇r Cut And Shave / Стрижка и бритье</td>
+    <td class="tg">30€</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold;text-align:center" colspan="2">PACKAGE PROGRAMS / ПАКЕТНЫЕ ПРОГРАММЫ</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Unicorn Wellcome Package / Пакет «юникорн»</td>
+    <td class="tg">60 Min.  95€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Turkish Hammam / Классический Турецкий Хамам</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Swedish Massage / Классический Шведский Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Before Sun (Bronze) / Бронз Программа «до Загара»</td>
+    <td class="tg">110 Min.  115€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Turkish Hammam / Классический Турецкий Хамам</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Anti Stress Bronze Massage / Расслабляющий Массаж С Бронзовым Маслом</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">After Sun (Rejenerative) / медовая Терапия «после Загара»</td>
+    <td class="tg">110 Min.  115€</td>
+  </tr>
+  <tr>
+    <td class="tg">Honey Massage &amp; Foam Massage / Медовый Пилинг – Пенный Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Relax Full Body Centaury Oil Massage</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Расслабляющий Массаж С Маслом Золототысячника</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Special<b style="font-family: &quot;Brisa&quot;, serif !important;font-size: 30px;"> Spa </b>Day For Couple/ Особенный Спа День Для Пар</td>
+    <td class="tg">120 Min.  250€</td>
+  </tr>
+  <tr>
+    <td class="tg">Peeling – Body Wrap – Foam Massage</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Пилинг – Маска С Морскими Водорослями - Пенный Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Anti Stress Aroma Massage / Арома-антистресс Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Asi̇an Escape / Азиатское Путешествие</td>
+    <td class="tg">120 Min.  160€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Turkish Hamam / Классический Турецкий Хамам</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Asian Mix Massage/азия Микс Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Indian Head Massage/ Индийский Массаж Головы</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Unicorn V.i.p Package / Вип Пакет «юникорн»</td>
+    <td class="tg">250Min.  300€</td>
+  </tr>
+  <tr>
+    <td class="tg">Private Hamam</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Private Sauna</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Aroma Peeling / Арома Пилинг</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Unicorn Mix Massage / Юникорн Микс Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Face Care / Классический Уход За Лицом</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Manicure &amp; Pedicure / Маникюр &amp; Педикюр</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Unicorn Signature Package / Эксклюзивный Пакет Юникорн</td>
+    <td class="tg">120 Min.  150€</td>
+  </tr>
+  <tr>
+    <td class="tg">Classical Turkish Hamam / Классический Турецкий Хамам</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Unicorn Mix Massage / Юникорн Микс Массаж</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Reflexology / Рефлексология Стоп</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Natural Face Mask &amp; Herbal Tea / Натуральная Маска Для Лица И Травяной Чай</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Si̇gnature Package With</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Opti̇on 1</td>
+    <td class="tg">300€</td>
+  </tr>
+  <tr>
+    <td class="tg">Mix Therapy / Микс-терапия</td>
+    <td class="tg">(90 Min. )</td>
+  </tr>
+  <tr>
+    <td class="tg">Mix Therapy / Микс-терапия</td>
+    <td class="tg">(60 Min. )</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Opti̇on 2</td>
+    <td class="tg">400€</td>
+  </tr>
+  <tr>
+    <td class="tg">Medical Therapy / Лечебный Массаж</td>
+    <td class="tg">(60 Min)</td>
+  </tr>
+  <tr>
+    <td class="tg">Mix Therapy / Микс-терапия</td>
+    <td class="tg">(90 Min)</td>
+  </tr>
+  <tr>
+    <td class="tg">Mix Therapy / Микс-терапия</td>
+    <td class="tg">(90 Min)</td>
+  </tr>
+  <tr>
+    <td class="tg" style="font-weight:bold">Opti̇on 3</td>
+    <td class="tg">500€</td>
+  </tr>
+  <tr>
+    <td class="tg">Luxury Pedicure / Эксклюзивный Педикюр</td>
+    <td class="tg" id="gizle" ></td>
+  </tr>
+  <tr>
+    <td class="tg">Si̇gnature Mix Massage / Микс Массаж </td>
+    <td class="tg">(70 Min)</td>
+  </tr>
+  <tr>
+    <td class="tg">Bali̇ Aroma Massage / Бали-арома Массаж</td>
+    <td class="tg">(60 Min)</td>
+  </tr>
+  <tr>
+    <td class="tg">Collagen Face Care / Коллагеновый Уход За Кожей </td>
+    <td class="tg">(60 Min)<br></td>
+  </tr>
+  <tr>
+    <td class="tg">Seawed Full Body Care / Водорослевое Обертывание Для Всего Тела</td>
+    <td class="tg">60 (Min)<br></td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+</div></div>
