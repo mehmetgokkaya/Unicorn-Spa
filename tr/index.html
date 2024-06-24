@@ -32,6 +32,48 @@
 
   gtag('config', 'UA-126835121-3');
 </script>
+	<style>
+    /* Stil özellikleri */
+    .info-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid #333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+
+    .popup p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+</style>
 </head>
 <body>
 <script>
@@ -48,6 +90,32 @@
 <center><img style="width:300px;-webkit-filter: drop-shadow(1px 1px 5px #000);filter: drop-shadow(1px 1px 5px #000);" src="/resimler/logo.png"/></center>
 <center><img style="width:300px;-webkit-filter: drop-shadow(1px 1px 5px #000);filter: drop-shadow(1px 1px 5px #000);" src="/resimler/logoalttr.png"/></center>
 <center style="padding:35px">
+	<!-- Bildirim ikonlu buton -->
+<button class="info-button" id="infoButton">&#9432;</button>
+
+<!-- Popup ve overlay -->
+<div class="popup" id="infoPopup">
+    <p>Rezervasyonlarımız çalıştığımız otellerdeki misafirler için gerçelidir.</p>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<script>
+    // JavaScript ile popup'ı açma/kapatma işlemleri
+    const infoButton = document.getElementById('infoButton');
+    const infoPopup = document.getElementById('infoPopup');
+    const overlay = document.getElementById('overlay');
+
+    infoButton.addEventListener('click', function() {
+        infoPopup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    overlay.addEventListener('click', function() {
+        infoPopup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+</script>
+
 <a target="_blank" rel="tooltip" href="https://www.fresha.com/providers/unicorn-spa-wellness-zg8qtamj" style="color: #965a61; font-weight: bold;-webkit-filter: drop-shadow(1px 1px 5px #000);filter: drop-shadow(1px 1px 5px #000);" class="btn btn-white btn-outline-white px-4 py-3" title="Rezervasyon yapmak için tıklayınız.">Rezervasyon Yap</a>
 </center>
 <div style="background: linear-gradient(#000000a8, #000000a8);position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index:-1"></div>
